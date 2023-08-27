@@ -1,4 +1,4 @@
-import { Open_Sans, Roboto, Lato, Playfair_Display, Mulish } from 'next/font/google';
+import { Open_Sans, Roboto, Lato, Playfair_Display, Tenor_Sans } from 'next/font/google';
 
 export const playfair = Playfair_Display({
     weight: '400',
@@ -25,7 +25,7 @@ export const opensans = Open_Sans({
     display: 'swap',
 });
 
-export const mulish = Mulish({
+export const tenor = Tenor_Sans({
     weight: '400',
     subsets: ['latin'],
     display: 'swap',

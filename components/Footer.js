@@ -4,11 +4,13 @@ import { imageLoader } from "../utils/imgLoader"
 import { BsTelephone } from 'react-icons/bs'
 import { TfiEmail } from 'react-icons/tfi'
 
+//  NB flex-col turns into flex-row at md: for the whole, but for the Description and Contacts in relation to Logo it turns at sm: 
+
+
 const Footer = () => {
     return (
         <div className="h-fit w-full flex-col p-10 bg-black lg:px-40">
 
-            {/* NB flex-col turns into flex-row at md: for the whole, but for the Description and Contacts in relation to Logo it turns at sm: */}
 
             <div className='flex flex-col justify-center items-center md:flex-row md:justify-center md:items-center gap-5'>
                 {/* Logo */}
