@@ -2,7 +2,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { imageLoader } from "../utils/imgLoader"
-import LineGradient from "../components/LineGradient"
 import Maps from "@/components/Location"
 import Timeline from "@/components/Timeline"
 import ForBuilding from "@/components/ForBuidling"
@@ -71,7 +70,7 @@ export default function Home() {
                     </motion.div>
                 </div>
             </div>
-            <LineGradient></LineGradient>
+            
 
             {/* WELCOME TEXT AND IMG */}
             <div className="lg:flex lg:justify-between lg:items-center lg:p-10 bg-orange-50">
@@ -125,28 +124,28 @@ export default function Home() {
                     </div>
                 </motion.div>
             </div>
-            <LineGradient></LineGradient>
+            
 
 
             {/* TIMELINE */}
             <Timeline></Timeline>
-            <LineGradient></LineGradient>
+            
 
             
             {/* DESCRIPTION */}
             <ForBuilding></ForBuilding>
-            <LineGradient></LineGradient>
+            
 
             {/* PROMPT IMG TO PLAN */}
             <Link href={'/apartments'} className={`flex justify-center items-center text-center py-5 lg:py-0 lg:pt-10 text-white text-lg sm:text-3xl hover:scale-110`}>Изберете Вашия луксозен нов дом сега.</Link>
             <PromptToPlan></PromptToPlan>
-            <LineGradient></LineGradient>
+            
 
             {/* LOCATION */}
             <>
                 <Maps></Maps>
             </>
-            <LineGradient></LineGradient>
+            
         </div>
     )
 }

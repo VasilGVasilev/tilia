@@ -9,9 +9,6 @@ import Footer from '../components/Footer'
 export default function RootLayout({ children }) {
   const pathName = usePathname();
 
-  const toTopHandle = () => {
-    window.scrollTo(0, 0);
-  }
   
 // #837667
 // #716657
@@ -26,12 +23,12 @@ export default function RootLayout({ children }) {
  
         {/* fixed navbar requires py same for all non home pages */}
         {pathName === '/' ? (<></>) : (
-        <div className='py-9 sm:py-14 bg-tilia-white'></div>
+        <div className='py-11 sm:py-[64px] bg-tilia-white'></div>
         )}
         <main>
           {children}
         </main>
-        <Footer toTopHandle={toTopHandle}/>
+        <Footer/>
       </body>
   </html>
   )

@@ -1,48 +1,52 @@
 import Image from 'next/image'
+import { imageLoader } from "../utils/imgLoader"
 
-const Footer = ({toTopHandle}) => {
+import { BsTelephone } from 'react-icons/bs'
+import { TfiEmail } from 'react-icons/tfi'
+
+const Footer = () => {
     return (
-        <div className="h-fit w-full flex-col p-10 bg-gradient-to-t from-tilia-white from-10% via-ixorafrom-tilia-white via-70% to-[#2e281f] to-90% lg:px-40">
-        <div className='flex justify-center relative bottom-12'>
-          <img src="/up-to-top.png" className="w-16 h-16 cursor-pointer animate-bounce" onClick={toTopHandle} alt="up-to-top-btn" />
-        </div>
-        <div className='flex justify-center items-center'>
-          <div className='md:flex md:justify-center'>
+        <div className="h-fit w-full flex-col p-10 bg-black lg:px-40">
 
-            <div className='md:text-center'>
-              <div className='text-orange-500 font-mono text-xl'>Ixora Luxury Residence</div>
-              <div className='p-3 text-white font-mono text-sm'> Ixora Luxury Residence е бутикова сграда със спа център и финтес, ситуирана в подножието на Витоша</div>
-            </div>
-            <div className='md:text-center'>
-              <div className='text-orange-500 font-mono text-xl'>Контакти</div>
-              <div className='p-3'>
-                <div className="py-2 flex space-x-3 items-center">
-                  <Image
-                    src="/green-phone.svg"
-                    alt="Phone Ring"
-                    className="bg-transparent animate-pulse"
-                    width={20}
-                    height={8}
-                  />
-                  <div className="text-sm text-white"><a href={`tel:00359886879993`}>00359886879993</a></div>
+            {/* NB flex-col turns into flex-row at md: for the whole, but for the Description and Contacts in relation to Logo it turns at sm: */}
+
+            <div className='flex flex-col justify-center items-center md:flex-row md:justify-center md:items-center gap-5'>
+                {/* Logo */}
+                <Image
+                    className="h-20 w-30 sm:h-28 sm:w-56 "
+                    loader={imageLoader}
+                    src="/ixora.webp"
+                    alt="Ixora Logo"
+                    width={979}
+                    height={350}
+                />
+                <div className='flex flex-col sm:flex-row'>
+
+                    {/* Description */}
+                    <div className='md:text-center'>
+                        <div className='text-orange-500 font-mono text-xl'>Ixora Luxury Residence</div>
+                        <div className='p-3 text-white font-mono text-sm'> Ixora Luxury Residence е бутикова сграда със спа център и финтес, ситуирана в подножието на Витоша</div>
+                    </div>
+                    {/* Contacts */}
+                    <div className='md:text-center'>
+                        <div className='text-orange-500 font-mono text-xl'>Контакти</div>
+                        <div className='p-3'>
+                            <div className="py-2 flex space-x-3 items-center">
+                                <BsTelephone size={24} className='text-white' />
+                                <div className="text-sm text-white font-semibold"><a href={`tel:00359886879993`}>+359886879993</a></div>
+                            </div>
+                            <div className="py-2 flex space-x-2 items-center">
+                                <TfiEmail size={24} className='text-white' />
+
+                                <div className="text-sm text-white font-semibold"><a href="mailto:office@creativestudiobg.com">office@creativestudiobg.com</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="py-2 flex space-x-2 items-center">
-                  <Image
-                    src="/email.svg"
-                    alt="Email"
-                    className="bg-transparent animate-pulse"
-                    width={20}
-                    height={8}
-                  />
-                  <div className="text-sm text-white"><a href="mailto:office@creativestudiobg.com">office@creativestudiobg.com</a></div>
-                </div>
-              </div>
             </div>
-          </div>
+
+
         </div>
-
-
-      </div>
     )
 }
 

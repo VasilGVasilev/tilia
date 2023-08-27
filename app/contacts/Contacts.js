@@ -89,7 +89,7 @@ export default function Contacts() {
             </div>
           </div>
         {/* div for Picture */}
-          <div className="flex-col justify-center py-10 lg:p-10 bg-white lg:bg-[#2e281f] lg:w-1/2">
+          <div className="flex-col justify-center py-10 lg:p-10 bg-white lg:bg-black lg:w-1/2">
           <Link href={'/apartments'}><div className="text-center font-bold text-xl text-orange-400  lg:text-white lg:py-4 mb-10 lg:text-3xl lg:font-bold hover:scale-105 duration-200">Вашият бъдещ дом</div></Link>
             <Link href={'/apartments'}>
               <Image 
