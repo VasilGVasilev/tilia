@@ -49,7 +49,7 @@ export default function Description() {
                     >
                         <div className="text-white text-center text-2xl font-bold">Етап на проекта - Акт 14</div>
                 </motion.div>
-                <div className="p-10 bg-tilia-dark flex flex-col lg:flex-row">
+                <div className="p-10 bg-tilia-white flex flex-col lg:flex-row">
                     <motion.div
                         className={buildingProcessLayout}
                         initial="hidden"

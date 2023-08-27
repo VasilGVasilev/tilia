@@ -84,7 +84,7 @@ export default function Investor() {
                 </div>
 
                 {/* Container for Recent Projects */}
-                <div className="bg-tilia-dark">
+                <div className="bg-tilia-white">
                     <motion.div
                         className="bg-gradient-tilia py-4"
                         initial={{ opacity: 0, width: 0 }}
@@ -124,15 +124,15 @@ export default function Investor() {
                                 >
                                     {/* Conatiner for name and description */}
                                     <div className="px-10 lg:pb-10">
-                                        <Link href={'http://creativestudiobg.com/dahlia-house'}><div className="py-5 bg-tilia-dark text-tilia-orange text-center text-2xl font-mono hover:scale-105 duration-200">
+                                        <Link href={'http://creativestudiobg.com/dahlia-house'}><div className="py-5 bg-tilia-white text-tilia-orange text-center text-2xl font-mono hover:scale-105 duration-200">
                                             Еднофамилна къща Далия
                                         </div></Link>
-                                        <div className="pb-5 bg-tilia-dark text-gray-300 text-justify font-medium font-mono lg:px-80 ">Едно бижу в полите на Витоша с уникални гледки към София. Луксозен имот с над 700 кв.м. РЗП и двор от 750 кв.м. в престижния кв. Драгалевци. </div>
+                                        <div className="pb-5 bg-tilia-white text-gray-300 text-justify font-medium font-mono lg:px-80 ">Едно бижу в полите на Витоша с уникални гледки към София. Луксозен имот с над 700 кв.м. РЗП и двор от 750 кв.м. в престижния кв. Драгалевци. </div>
                                     </div>
                                 </motion.div>
 
                                 {/* Container for images */}
-                                <div className="bg-tilia-dark px-5 w-full h-full flex-col justify-center space-y-5">
+                                <div className="bg-tilia-white px-5 w-full h-full flex-col justify-center space-y-5">
                                     {/* Container for image with overflow effect, this template to be used for subsequent pictures */}
                                     <motion.div
                                         initial="hidden"
@@ -229,14 +229,14 @@ export default function Investor() {
                                 >
                                     {/* Conatiner for name and description */}
                                     <div className="px-10  lg:pb-10">
-                                        <div className="py-5 bg-tilia-dark text-tilia-orange text-center text-xl font-mono">
+                                        <div className="py-5 bg-tilia-white text-tilia-orange text-center text-xl font-mono">
                                             Комплекс от къщи West End Luxury Houses
                                         </div>
-                                        <div className="pb-5 bg-tilia-dark text-gray-300 text-justify font-medium font-mono lg:px-80">В процес на изграждане е луксозен комплекс от 18 самостоятелни еднофамилни къщи със собствени басейни в непосредствена близост до София -  само на 20 минути от центъра. Напълно автономно вилно селище със собствен водоизточник и допълнително соларно захранване.</div>
+                                        <div className="pb-5 bg-tilia-white text-gray-300 text-justify font-medium font-mono lg:px-80">В процес на изграждане е луксозен комплекс от 18 самостоятелни еднофамилни къщи със собствени басейни в непосредствена близост до София -  само на 20 минути от центъра. Напълно автономно вилно селище със собствен водоизточник и допълнително соларно захранване.</div>
                                     </div>
                                 </motion.div>
 
-                                <div className="bg-tilia-dark px-5 w-full h-full flex-col justify-center space-y-5">
+                                <div className="bg-tilia-white px-5 w-full h-full flex-col justify-center space-y-5">
                                     <motion.div
                                         initial="hidden"
                                         whileInView="visible"
@@ -331,14 +331,14 @@ export default function Investor() {
                                     >
                                     {/* Conatiner for name and description */}
                                         <div className="px-10 lg:pb-10">
-                                            <div className="py-5 bg-tilia-dark text-tilia-orange text-center text-xl font-mono">
+                                            <div className="py-5 bg-tilia-white text-tilia-orange text-center text-xl font-mono">
                                                 Жилищна сграда Tilia Residence
                                             </div>
-                                            <div className="pb-5 bg-tilia-dark text-gray-300 text-justify font-medium font-mono lg:px-80">Модерна жилищна сграда в квартал Връбница с южно изложение в непосредствена близост до метростанция.</div>
+                                            <div className="pb-5 bg-tilia-white text-gray-300 text-justify font-medium font-mono lg:px-80">Модерна жилищна сграда в квартал Връбница с южно изложение в непосредствена близост до метростанция.</div>
                                         </div>
                                     </motion.div>
 
-                                    <div className="bg-tilia-dark px-5 w-full h-full flex-col justify-center space-y-5">
+                                    <div className="bg-tilia-white px-5 w-full h-full flex-col justify-center space-y-5">
                                         <motion.div
                                             initial="hidden"
                                             whileInView="visible"

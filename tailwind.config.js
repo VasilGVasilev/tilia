@@ -16,7 +16,9 @@ module.exports = {
         'tilia-deep-blue': '#111827',
         'tilia-brown': '#464646',
         'tilia-orange': '#ea580c',
-        'tilia-dark': '#292927'
+        'tilia-white': '#FFFFFF',
+        'tilia-yellow-text': '#D29815',
+        'tilia-yellow-block': '#FBC54C'
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',

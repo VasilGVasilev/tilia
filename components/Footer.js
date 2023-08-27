@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Footer = ({toTopHandle}) => {
     return (
-        <div className="h-fit w-full flex-col p-10 bg-gradient-to-t from-tilia-dark from-10% via-ixorafrom-tilia-dark via-70% to-[#2e281f] to-90% lg:px-40">
+        <div className="h-fit w-full flex-col p-10 bg-gradient-to-t from-tilia-white from-10% via-ixorafrom-tilia-white via-70% to-[#2e281f] to-90% lg:px-40">
         <div className='flex justify-center relative bottom-12'>
           <img src="/up-to-top.png" className="w-16 h-16 cursor-pointer animate-bounce" onClick={toTopHandle} alt="up-to-top-btn" />
         </div>

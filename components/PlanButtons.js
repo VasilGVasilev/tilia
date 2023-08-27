@@ -42,7 +42,7 @@ const PlanButtons = () => {
 
   return (
     <motion.div 
-      className={'p-5 flex justify-around bg-tilia-dark'}
+      className={'p-5 flex justify-around bg-tilia-white'}
       variants={container}
       initial="hidden"
       whileInView="visible"

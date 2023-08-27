@@ -18,17 +18,17 @@ export default function RootLayout({ children }) {
 // #464646
   return (
     
-    <html lang="bg-tilia-dark" className={`scroll-smooth overflow-x-hidden`}>
-      <body className='bg-tilia-dark overflow-x-hidden'>
+    <html lang="bg-tilia-white" className={`scroll-smooth overflow-x-hidden`}>
+      <body className='bg-tilia-white overflow-x-hidden'>
 
         <Navbar
         />
  
         {/* fixed navbar requires py same for all non home pages */}
         {pathName === '/' ? (<></>) : (
-        <div className='py-[6%] sm:py-[4%] md:py-[3.2%] bg-tilia-dark'></div>
+        <div className='py-9 sm:py-14 bg-tilia-white'></div>
         )}
-        <main className='app'>
+        <main>
           {children}
         </main>
         <Footer toTopHandle={toTopHandle}/>

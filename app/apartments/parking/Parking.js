@@ -61,7 +61,7 @@ export default function Parking() {
             <PlanButtons></PlanButtons>
 
             {/* Container for floor plan */}
-            <div className="p-5 xl:px-40 bg-gradient-to-b from-tilia-dark from-10% via-ixorafrom-tilia-dark via-70% to-[#2e281f] to-90% ">
+            <div className="p-5 xl:px-40 bg-gradient-to-b from-tilia-white from-10% via-ixorafrom-tilia-white via-70% to-[#2e281f] to-90% ">
 
 
                 <div className="relative inline-block">
