@@ -45,7 +45,7 @@ export default function Investor() {
                     </div>
 
                     {/* Container for Investor Intro */}
-                    <div className="bg-[#F6F6F6] p-10 lg:px-32 space-y-10 sm:flex sm:flex-row sm:justify-center sm:items-center sm:gap-10">
+                    <div className="bg-[#F6F6F6] p-10 lg:px-32  flex flex-col sm:flex-row justify-center items-center gap-10">
                         {/* Container for Investor Logo and Name */}
                         <motion.img
                             initial="hidden"
@@ -63,7 +63,7 @@ export default function Investor() {
                             }}
                             src="/investor-logo.webp"
                             alt="investor-logo"
-                            className="h-20 w-50 rounded-lg xl:h-32 xl:w-60"
+                            className="h-20 w-50 xl:h-32 xl:w-60"
 
                         >
                         </motion.img>
@@ -104,15 +104,32 @@ export default function Investor() {
                 </div>
 
                 {/* Container for Recent Projects */}
-                <div className="bg-tilia-white">
-                    <motion.div
-                        className="bg-gradient-tilia py-4"
-                        initial={{ opacity: 0, width: 0 }}
-                        animate={{ opacity: 1, width: '100%' }}
-                        transition={{ duration: 1 }}
+                <div className="bg-tilia-yellow-block">
+                    <div
+                        className="bg-white py-14"
                     >
-                        <div className=" text-white text-center pl-4 text-2xl font-bold">Текущи проекти</div>
-                    </motion.div>
+                        <motion.div
+                            className={`${tenor.className} text-black pl-5 text-left text-6xl `}
+                            variants={container}
+                            initial="hidden"
+                            whileInView="visible"
+                        >
+                            <motion.span variants={letterVariant}>Н</motion.span>
+                            <motion.span variants={letterVariant}>А</motion.span>
+                            <motion.span variants={letterVariant}>Ш</motion.span>
+                            <motion.span variants={letterVariant}>И</motion.span>
+                            <motion.span variants={letterVariant}>Т</motion.span>
+                            <motion.span variants={letterVariant}>Е</motion.span>
+                            <motion.span variants={letterVariant}> </motion.span>
+                            <motion.span variants={letterVariant}>П</motion.span>
+                            <motion.span variants={letterVariant}>Р</motion.span>
+                            <motion.span variants={letterVariant}>О</motion.span>
+                            <motion.span variants={letterVariant}>Е</motion.span>
+                            <motion.span variants={letterVariant}>К</motion.span>
+                            <motion.span variants={letterVariant}>Т</motion.span>
+                            <motion.span variants={letterVariant}>И</motion.span>
+                        </motion.div>
+                    </div>
 
                     {/* Container for projects */}
                     <div className="">
