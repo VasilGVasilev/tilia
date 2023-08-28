@@ -8,7 +8,7 @@ import ForBuilding from "@/components/ForBuidling"
 import { motion } from "framer-motion"
 import PromptToPlan from "@/components/PromptToPlan"
 import WelcomeText from "@/components/WelcomeText"
-import { tenor } from "@/utils/fonts"
+import { noto } from "@/utils/fonts"
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
@@ -39,12 +39,12 @@ export default function Home() {
 
                 <div className="absolute top-[10%] left-4 md:top-[10%] md:left-10 w-full h-full flex flex-col items-start justify-center ">
                     <div 
-                        className={`${tenor.className} md:pb-16 welcomeTextOnImg text-white text-center md:text-2xl lg:text-4xl xl:text-6xl`}
+                        className={`${noto.className} md:pb-16 welcomeTextOnImg text-white text-center md:text-2xl lg:text-4xl xl:text-6xl`}
                     >
                         НА КРАЧКИ ОТ МЕТРОТО
                     </div>
                     <motion.div
-                        className={`${tenor.className} welcomeTextOnImg text-white text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px]`}
+                        className={`${noto.className} welcomeTextOnImg text-white text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px]`}
                         variants={container}
                         initial="hidden"
                         whileInView="visible"

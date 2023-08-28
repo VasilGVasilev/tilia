@@ -15,7 +15,7 @@ const Footer = () => {
             <div className='flex flex-col justify-center items-center md:flex-row md:justify-center md:items-center gap-5'>
                 {/* Logo */}
                 <Image
-                    className="h-20 w-30 sm:h-28 sm:w-52 "
+                    className="h-auto w-auto sm:h-20 sm:w-30"
                     loader={imageLoader}
                     src="/ixora.webp"
                     alt="Ixora Logo"

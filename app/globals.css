@@ -2,27 +2,139 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer utilities {
+
+  .flicking-arrow-prev,
+  .flicking-arrow-next {
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .flicking-arrow-prev.is-circle,
+  .flicking-arrow-next.is-circle {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+  }
+
+  .flicking-arrow-disabled.is-circle {
+    background-color: rgb(10 10 10 / 10%);
+  }
+
+  .flicking-arrow-prev.is-circle::before,
+  .flicking-arrow-prev.is-circle::after,
+  .flicking-arrow-next.is-circle::before,
+  .flicking-arrow-next.is-circle::after {
+    background-color: white;
+  }
+
+  .flicking-arrow-prev {
+    left: 10px;
+  }
+
+  .flicking-arrow-next {
+    right: 10px;
+  }
+
+  .flicking-arrow-prev.is-outside {
+    left: -74px;
+  }
+
+  .flicking-arrow-next.is-outside {
+    right: -74px;
+  }
+
+  .flicking-arrow-prev::before,
+  .flicking-arrow-prev::after,
+  .flicking-arrow-next::before,
+  .flicking-arrow-next::after {
+    content: "";
+    width: 24px;
+    height: 6px;
+    position: absolute;
+    background-color: #FFFFFF;
+  }
+
+  .flicking-arrow-prev::before {
+    top: 50%;
+    left: 22px;
+    transform: rotate(-45deg);
+    transform-origin: 0% 50%;
+  }
+
+  .flicking-arrow-prev::after {
+    top: calc(50% - 4px);
+    left: 22px;
+    transform: rotate(45deg);
+    transform-origin: 0% 50%;
+  }
+
+  .flicking-arrow-next::before {
+    top: 50%;
+    right: 22px;
+    transform: rotate(45deg);
+    transform-origin: 100% 50%;
+  }
+
+  .flicking-arrow-next::after {
+    top: calc(50% - 4px);
+    right: 22px;
+    transform: rotate(-45deg);
+    transform-origin: 100% 50%;
+  }
+
+  .flicking-arrow-disabled,
+  .flicking-arrow-disabled {
+    cursor: default;
+  }
+
+  .flicking-arrow-disabled::before,
+  .flicking-arrow-disabled::after,
+  .flicking-arrow-disabled::before,
+  .flicking-arrow-disabled::after {
+    background-color: #e6e6e6;
+  }
+
+  .flicking-arrow-prev.is-thin::before,
+  .flicking-arrow-prev.is-thin::after,
+  .flicking-arrow-next.is-thin::before,
+  .flicking-arrow-next.is-thin::after {
+    height: 3px;
+  }
+
+  .flicking-arrow-prev.is-thin::after,
+  .flicking-arrow-next.is-thin::after {
+    top: calc(50% - 2px);
+  }
+
+
+
+
+
+
+
 
   .investorIntroBg {
 
-    background: linear-gradient(
-      to top,
-      #F6F6F6 0%,
-      #F6F6F6 50%,
-      white 50%,
-      white 100%
-    );
+    background: linear-gradient(to top,
+        #F6F6F6 0%,
+        #F6F6F6 40%,
+        white 40%,
+        white 100%);
   }
 
-  .welcomeTextOnImg{
+  .welcomeTextOnImg {
     text-shadow: 0.5px 0.5px 1px white;
   }
-  .timelineBubble{
+
+  .timelineBubble {
     text-shadow: 1px 1px 3px gray;
   }
-  
+
 
   .outside {
     clip-path: polygon(27% 100%, 27% 84%, 27% 73%, 28% 61%, 28% 51%, 28% 44%, 28% 51%, 28% 44%, 39% 26%, 45% 30%, 55% 17%, 71% 33%, 75% 30%, 77% 32%, 78% 34%, 79% 35%, 92% 27%, 97% 38%, 95% 38%, 95% 46%, 97% 49%, 97% 62%, 97% 73%, 97% 83%, 100% 83%, 100% 100%, 100% 0%, 0% 0%, 0% 100%, 27% 100%);
@@ -31,134 +143,154 @@
   .penthouse {
     clip-path: polygon(28% 51%, 29% 44%, 39% 26%, 46% 30%, 55% 17%, 72% 33.9%, 75.5% 30%, 77% 32%, 78% 33%, 79% 36%, 93% 27%, 97.4% 37.7%, 96% 49%, 91% 42%, 88% 42%, 86% 41%, 78% 45%, 62% 33%, 58% 37%, 51% 32%, 43% 42%, 35% 38%, 28% 51%);
   }
-        .apartmentThirteen{
-          clip-path: polygon(90.8% 14.9%, 91.0% 38.7%, 87.4% 38.7%, 87.4% 42.7%, 74.9% 42.7%, 75.1% 69.5%, 68.8% 69.5%, 68.8% 77.0%, 68.8% 77.3%, 49.2% 77.3%, 49.0% 85.0%, 49.0% 85.1%, 36.7% 85.1%, 36.7% 87.0%, 36.7% 87.1%, 24.2% 87.1%, 24.4% 85.0%, 10.1% 85.1%, 10.3% 60.6%, 17.1% 60.6%, 16.9% 52.7%, 20.6% 52.6%, 20.8% 34.5%, 24.2% 34.4%, 24.4% 31.0%, 48.1% 31.1%, 48.1% 14.9%, 54.2% 14.9%, 54.4% 10.1%, 68.8% 10.2%, 68.8% 14.7%, 90.8% 14.9%);
-        }
-  
+
+  .apartmentThirteen {
+    clip-path: polygon(90.8% 14.9%, 91.0% 38.7%, 87.4% 38.7%, 87.4% 42.7%, 74.9% 42.7%, 75.1% 69.5%, 68.8% 69.5%, 68.8% 77.0%, 68.8% 77.3%, 49.2% 77.3%, 49.0% 85.0%, 49.0% 85.1%, 36.7% 85.1%, 36.7% 87.0%, 36.7% 87.1%, 24.2% 87.1%, 24.4% 85.0%, 10.1% 85.1%, 10.3% 60.6%, 17.1% 60.6%, 16.9% 52.7%, 20.6% 52.6%, 20.8% 34.5%, 24.2% 34.4%, 24.4% 31.0%, 48.1% 31.1%, 48.1% 14.9%, 54.2% 14.9%, 54.4% 10.1%, 68.8% 10.2%, 68.8% 14.7%, 90.8% 14.9%);
+  }
+
   .thirdFloor {
     clip-path: polygon(28% 61%, 28% 51%, 35% 38%, 43% 42%, 51% 32%, 58% 37%, 62% 33%, 78% 45%, 87% 41%, 88% 42%, 91% 42%, 97% 49%, 97% 62%, 92% 58%, 78% 58%, 62% 52%, 51% 51%, 43% 56%, 35% 55%, 28% 61%);
   }
-        .apartmentTwelve {
-          clip-path: polygon(48.5% 42.6%, 48.3% 15.0%, 54.2% 14.9%, 54.2% 10.2%, 68.7% 10.1%, 68.7% 14.5%, 68.7% 14.7%, 90.8% 14.7%, 91.0% 38.7%, 87.8% 38.7%, 87.8% 43.0%, 48.5% 43.0%);
-        }
-        
-        .apartmentEleven {
-          clip-path: polygon(48.8% 49.7%, 48.5% 30.9%, 24.2% 31.0%, 24.2% 34.2%, 24.0% 34.7%, 21.0% 34.7%, 20.6% 52.6%, 16.9% 52.7%, 16.9% 61.0%, 42.4% 61.0%, 42.4% 49.7%, 48.8% 49.7%);
-        }
 
-        .apartmentTen {
-          clip-path: polygon(46.0% 61.0%, 10.3% 60.9%, 10.3% 85.0%, 24.4% 85.1%, 24.4% 87.2%, 36.7% 87.2%, 36.7% 85.1%, 48.8% 85.1%, 48.5% 60.9%, 46.0% 60.9%);
-        }
+  .apartmentTwelve {
+    clip-path: polygon(48.5% 42.6%, 48.3% 15.0%, 54.2% 14.9%, 54.2% 10.2%, 68.7% 10.1%, 68.7% 14.5%, 68.7% 14.7%, 90.8% 14.7%, 91.0% 38.7%, 87.8% 38.7%, 87.8% 43.0%, 48.5% 43.0%);
+  }
 
-        .apartmentNine {
-          clip-path: polygon(48.7% 77.0%, 48.3% 53.8%, 61.9% 53.8%, 61.9% 48.9%, 75.1% 49.0%, 75.1% 69.6%, 68.7% 69.6%, 68.7% 77.2%, 48.8% 77.3%);
-        }
+  .apartmentEleven {
+    clip-path: polygon(48.8% 49.7%, 48.5% 30.9%, 24.2% 31.0%, 24.2% 34.2%, 24.0% 34.7%, 21.0% 34.7%, 20.6% 52.6%, 16.9% 52.7%, 16.9% 61.0%, 42.4% 61.0%, 42.4% 49.7%, 48.8% 49.7%);
+  }
+
+  .apartmentTen {
+    clip-path: polygon(46.0% 61.0%, 10.3% 60.9%, 10.3% 85.0%, 24.4% 85.1%, 24.4% 87.2%, 36.7% 87.2%, 36.7% 85.1%, 48.8% 85.1%, 48.5% 60.9%, 46.0% 60.9%);
+  }
+
+  .apartmentNine {
+    clip-path: polygon(48.7% 77.0%, 48.3% 53.8%, 61.9% 53.8%, 61.9% 48.9%, 75.1% 49.0%, 75.1% 69.6%, 68.7% 69.6%, 68.7% 77.2%, 48.8% 77.3%);
+  }
 
   .secondFloor {
     clip-path: polygon(27% 73%, 28% 61%, 35% 56%, 43% 57%, 51% 52%, 62% 52%, 78% 58%, 92% 58%, 97% 62%, 97% 73%, 92% 73%, 78% 73%, 62% 72%, 51% 71%, 43% 72%, 35% 72%, 27% 73%);
   }
 
-        .apartmentEight {
-          clip-path: polygon(48.5% 42.6%, 48.3% 15.0%, 54.2% 14.9%, 54.2% 10.2%, 68.7% 10.1%, 68.7% 14.5%, 68.7% 14.7%, 90.8% 14.7%, 91.0% 38.7%, 87.8% 38.7%, 87.8% 43.0%, 48.5% 43.0%);
-        }
-        
-        .apartmentSeven {
-          clip-path: polygon(48.8% 49.7%, 48.5% 30.9%, 24.2% 31.0%, 24.2% 34.2%, 24.0% 34.7%, 21.0% 34.7%, 20.6% 52.6%, 16.9% 52.7%, 16.9% 61.0%, 42.4% 61.0%, 42.4% 49.7%, 48.8% 49.7%);
-        }
+  .apartmentEight {
+    clip-path: polygon(48.5% 42.6%, 48.3% 15.0%, 54.2% 14.9%, 54.2% 10.2%, 68.7% 10.1%, 68.7% 14.5%, 68.7% 14.7%, 90.8% 14.7%, 91.0% 38.7%, 87.8% 38.7%, 87.8% 43.0%, 48.5% 43.0%);
+  }
 
-        .apartmentSix {
-          clip-path: polygon(46.0% 61.0%, 10.3% 60.9%, 10.3% 85.0%, 24.4% 85.1%, 24.4% 87.2%, 36.7% 87.2%, 36.7% 85.1%, 48.8% 85.1%, 48.5% 60.9%, 46.0% 60.9%);
-        }
+  .apartmentSeven {
+    clip-path: polygon(48.8% 49.7%, 48.5% 30.9%, 24.2% 31.0%, 24.2% 34.2%, 24.0% 34.7%, 21.0% 34.7%, 20.6% 52.6%, 16.9% 52.7%, 16.9% 61.0%, 42.4% 61.0%, 42.4% 49.7%, 48.8% 49.7%);
+  }
 
-        .apartmentFive {
-          clip-path: polygon(48.7% 77.0%, 48.3% 53.8%, 61.9% 53.8%, 61.9% 48.9%, 75.1% 49.0%, 75.1% 69.6%, 68.7% 69.6%, 68.7% 77.2%, 48.8% 77.3%);
-        }
+  .apartmentSix {
+    clip-path: polygon(46.0% 61.0%, 10.3% 60.9%, 10.3% 85.0%, 24.4% 85.1%, 24.4% 87.2%, 36.7% 87.2%, 36.7% 85.1%, 48.8% 85.1%, 48.5% 60.9%, 46.0% 60.9%);
+  }
+
+  .apartmentFive {
+    clip-path: polygon(48.7% 77.0%, 48.3% 53.8%, 61.9% 53.8%, 61.9% 48.9%, 75.1% 49.0%, 75.1% 69.6%, 68.7% 69.6%, 68.7% 77.2%, 48.8% 77.3%);
+  }
 
   .firstFloor {
     clip-path: polygon(27% 84%, 27% 73%, 35% 72%, 43% 73%, 51% 72%, 62% 72%, 78% 73%, 92% 72%, 97% 73%, 97% 83%, 88% 83%, 61% 89%, 41% 83%, 27% 84%);
   }
-        .apartmentFour {
-          clip-path: polygon(36.5% 61.4%, 11.2% 61.5%, 11.4% 53.7%, 06.8% 53.7%, 06.8% 35.1%, 32.4% 34.9%, 32.4% 46.6%, 36.9% 46.7%, 36.9% 61.3%);
-        }
-        
-        .apartmentThree {
-          clip-path: polygon(42.7% 61.5%, 08.1% 61.5%, 08.1% 68.8%, 04.7% 68.8%, 04.7% 94.6%, 43.2% 94.5%, 43.0% 61.5%);
-        }
 
-        .apartmentTwo {
-          clip-path: polygon(43.0% 81.5%, 42.8% 54.3%, 56.2% 54.3%, 56.2% 49.4%, 80.7% 49.5%, 80.8% 81.6%, 43.0% 81.6%);
-        }
+  .apartmentFour {
+    clip-path: polygon(36.5% 61.4%, 11.2% 61.5%, 11.4% 53.7%, 06.8% 53.7%, 06.8% 35.1%, 32.4% 34.9%, 32.4% 46.6%, 36.9% 46.7%, 36.9% 61.3%);
+  }
 
-        .apartmentOne {
-          clip-path: polygon(42.5% 43.4%, 42.4% 20.1%, 39.0% 20.0%, 39.0% 09.5%, 63.0% 09.5%, 63.0% 15.2%, 96.7% 15.4%, 96.7% 47.1%, 79.8% 47.2%, 79.8% 43.7%, 42.5% 43.8%, 42.5% 43.4%);
-        }
+  .apartmentThree {
+    clip-path: polygon(42.7% 61.5%, 08.1% 61.5%, 08.1% 68.8%, 04.7% 68.8%, 04.7% 94.6%, 43.2% 94.5%, 43.0% 61.5%);
+  }
+
+  .apartmentTwo {
+    clip-path: polygon(43.0% 81.5%, 42.8% 54.3%, 56.2% 54.3%, 56.2% 49.4%, 80.7% 49.5%, 80.8% 81.6%, 43.0% 81.6%);
+  }
+
+  .apartmentOne {
+    clip-path: polygon(42.5% 43.4%, 42.4% 20.1%, 39.0% 20.0%, 39.0% 09.5%, 63.0% 09.5%, 63.0% 15.2%, 96.7% 15.4%, 96.7% 47.1%, 79.8% 47.2%, 79.8% 43.7%, 42.5% 43.8%, 42.5% 43.4%);
+  }
 
   .parking {
     clip-path: polygon(27% 84%, 41% 83%, 61% 90%, 88% 83%, 100% 84%, 100% 100%, 27% 100%, 27% 84%);
   }
-        .parkOutOne{
-          clip-path: polygon(72.7% 17.6%, 89.0% 17.6%, 89.0% 10.4%, 72.7% 10.4%, 72.7% 17.6%);
-        }
 
-        .parkOutTwo{
-          clip-path: polygon(72.7% 22.5%, 89.0% 22.6%, 89.0% 17.5%, 72.7% 17.6%, 72.7% 22.5%);
-        }
-        .parkOutThree{
-          clip-path: polygon(72.7% 27.6%, 89.0% 27.6%, 89.0% 22.5%, 72.7% 22.6%, 72.7% 27.6%);
-        }
+  .parkOutOne {
+    clip-path: polygon(72.7% 17.6%, 89.0% 17.6%, 89.0% 10.4%, 72.7% 10.4%, 72.7% 17.6%);
+  }
 
-        .parkingOne{
-          clip-path: polygon(72.7% 28.2%, 72.8% 34.2%, 88.9% 34.2%, 89.0% 28.2%, 72.7% 28.2%);
-        }
-        .parkingTwo{
-          clip-path: polygon(88.9% 34.5%, 89.0% 40.5%, 72.7% 40.4%, 72.7% 34.5%, 88.9% 34.5%);
-        }
-        .parkingThree{
-          clip-path: polygon(88.9% 40.7%, 89.0% 47.1%, 72.8% 47.1%, 72.7% 40.7%, 88.9% 40.7%);
-        }
-        .parkingFour{
-          clip-path: polygon(88.9% 53.7%, 88.9% 47.3%, 72.7% 47.4%, 72.7% 53.6%, 88.9% 53.7%);
-        }
-        .parkingFive{
-          clip-path: polygon(78.0% 53.8%, 78.1% 59.9%, 92.0% 60.0%, 92.0% 53.9%, 89.0% 53.9%, 89.0% 53.8%, 78.0% 53.8%);
-        }
-        .parkingSix{
-          clip-path: polygon(92.0% 60.2%, 92.0% 66.3%, 78.1% 66.3%, 78.1% 60.2%, 92.0% 60.2%);
-        }
-        .parkingSeven{
-          clip-path: polygon(88.9% 66.7%, 89.0% 72.8%, 72.7% 72.8%, 72.7% 66.7%, 88.9% 66.7%);
-        }
-        .parkingEight{
-          clip-path: polygon(88.9% 73.2%, 88.9% 79.2%, 72.8% 79.2%, 72.8% 73.2%, 88.9% 73.2%);
-        }
-        .parkingNine{
-          clip-path: polygon(88.9% 79.6%, 88.9% 85.7%, 72.8% 85.7%, 72.8% 79.5%, 88.9% 79.6%);
-        }
-        .parkingTen{
-          clip-path: polygon(72.8% 93.0%, 88.9% 93.0%, 89.0% 86.1%, 74.3% 86.1%, 74.2% 86.2%, 72.6% 86.2%, 72.8% 93.0%);
-        }
-        .parkingEleven{
-          clip-path: polygon(27.9% 93.0%, 27.9% 83.8%, 38.9% 83.8%, 38.9% 86.0%, 55.9% 86.0%, 55.9% 92.9%, 27.9% 93.0%);
-        }
-        .parkingTwelve{
-          clip-path: polygon(39.6% 79.6%, 55.9% 79.6%, 56.0% 85.7%, 39.7% 85.7%, 39.6% 79.6%);
-        }
-        .parkingThirteen{
-          clip-path: polygon(39.6% 73.1%, 55.9% 73.2%, 55.9% 79.3%, 39.7% 79.3%, 39.6% 73.1%);
-        }
-        .parkingFourteen{
-          clip-path: polygon(60.8% 63.3%, 39.7% 63.3%, 39.7% 72.8%, 55.9% 72.8%, 55.9% 66.7%, 60.4% 66.7%, 60.3% 65.8%, 60.9% 65.8%, 60.8% 63.3%);
-        }
-        .parkingFifteen{
-          clip-path: polygon(39.7% 40.8%, 55.9% 40.8%, 55.9% 50.6%, 39.6% 50.6%, 39.6% 40.7%);
-        }
-        .parkingSixteen{
-          clip-path: polygon(55.9% 34.5%, 39.7% 34.5%, 39.7% 40.4%, 55.9% 40.5%, 55.9% 34.6%);
-        }
-        .parkingSeventeen{
-          clip-path: polygon(55.9% 28.2%, 55.9% 34.2%, 39.7% 34.2%, 39.7% 28.2%, 55.9% 28.2%);
-        }
+  .parkOutTwo {
+    clip-path: polygon(72.7% 22.5%, 89.0% 22.6%, 89.0% 17.5%, 72.7% 17.6%, 72.7% 22.5%);
+  }
+
+  .parkOutThree {
+    clip-path: polygon(72.7% 27.6%, 89.0% 27.6%, 89.0% 22.5%, 72.7% 22.6%, 72.7% 27.6%);
+  }
+
+  .parkingOne {
+    clip-path: polygon(72.7% 28.2%, 72.8% 34.2%, 88.9% 34.2%, 89.0% 28.2%, 72.7% 28.2%);
+  }
+
+  .parkingTwo {
+    clip-path: polygon(88.9% 34.5%, 89.0% 40.5%, 72.7% 40.4%, 72.7% 34.5%, 88.9% 34.5%);
+  }
+
+  .parkingThree {
+    clip-path: polygon(88.9% 40.7%, 89.0% 47.1%, 72.8% 47.1%, 72.7% 40.7%, 88.9% 40.7%);
+  }
+
+  .parkingFour {
+    clip-path: polygon(88.9% 53.7%, 88.9% 47.3%, 72.7% 47.4%, 72.7% 53.6%, 88.9% 53.7%);
+  }
+
+  .parkingFive {
+    clip-path: polygon(78.0% 53.8%, 78.1% 59.9%, 92.0% 60.0%, 92.0% 53.9%, 89.0% 53.9%, 89.0% 53.8%, 78.0% 53.8%);
+  }
+
+  .parkingSix {
+    clip-path: polygon(92.0% 60.2%, 92.0% 66.3%, 78.1% 66.3%, 78.1% 60.2%, 92.0% 60.2%);
+  }
+
+  .parkingSeven {
+    clip-path: polygon(88.9% 66.7%, 89.0% 72.8%, 72.7% 72.8%, 72.7% 66.7%, 88.9% 66.7%);
+  }
+
+  .parkingEight {
+    clip-path: polygon(88.9% 73.2%, 88.9% 79.2%, 72.8% 79.2%, 72.8% 73.2%, 88.9% 73.2%);
+  }
+
+  .parkingNine {
+    clip-path: polygon(88.9% 79.6%, 88.9% 85.7%, 72.8% 85.7%, 72.8% 79.5%, 88.9% 79.6%);
+  }
+
+  .parkingTen {
+    clip-path: polygon(72.8% 93.0%, 88.9% 93.0%, 89.0% 86.1%, 74.3% 86.1%, 74.2% 86.2%, 72.6% 86.2%, 72.8% 93.0%);
+  }
+
+  .parkingEleven {
+    clip-path: polygon(27.9% 93.0%, 27.9% 83.8%, 38.9% 83.8%, 38.9% 86.0%, 55.9% 86.0%, 55.9% 92.9%, 27.9% 93.0%);
+  }
+
+  .parkingTwelve {
+    clip-path: polygon(39.6% 79.6%, 55.9% 79.6%, 56.0% 85.7%, 39.7% 85.7%, 39.6% 79.6%);
+  }
+
+  .parkingThirteen {
+    clip-path: polygon(39.6% 73.1%, 55.9% 73.2%, 55.9% 79.3%, 39.7% 79.3%, 39.6% 73.1%);
+  }
+
+  .parkingFourteen {
+    clip-path: polygon(60.8% 63.3%, 39.7% 63.3%, 39.7% 72.8%, 55.9% 72.8%, 55.9% 66.7%, 60.4% 66.7%, 60.3% 65.8%, 60.9% 65.8%, 60.8% 63.3%);
+  }
+
+  .parkingFifteen {
+    clip-path: polygon(39.7% 40.8%, 55.9% 40.8%, 55.9% 50.6%, 39.6% 50.6%, 39.6% 40.7%);
+  }
+
+  .parkingSixteen {
+    clip-path: polygon(55.9% 34.5%, 39.7% 34.5%, 39.7% 40.4%, 55.9% 40.5%, 55.9% 34.6%);
+  }
+
+  .parkingSeventeen {
+    clip-path: polygon(55.9% 28.2%, 55.9% 34.2%, 39.7% 34.2%, 39.7% 28.2%, 55.9% 28.2%);
+  }
 
 
 }
-

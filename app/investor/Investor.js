@@ -8,10 +8,14 @@ import { motion } from "framer-motion";
 
 import { letterVariant, container } from "../Home";
 
-import { tenor } from "@/utils/fonts";
-// export const metadata = {
-//   title: 'Инвеститор - Ixora Residence',
-// };
+import { noto } from "@/utils/fonts";
+
+
+// image slider
+import Flicking from "@egjs/react-flicking";
+import "@egjs/react-flicking/dist/flicking.css";
+import { useState } from "react";
+
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
@@ -19,18 +23,25 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 export default function Investor() {
 
+    // image slider
+    const [dalia, setDalia] = useState(["/dalia/dalia-one.webp", "/dalia/dalia-two.webp", "/dalia/dalia-three.webp"]);
+    const [westEnd, setWestEnd] = useState(["/west-end/west-end-one.webp", "/west-end/west-end-two.webp", "/west-end/west-end-three.webp"]);
+    const [ixora, setIxora] = useState(["/ixora/ixora-one.webp", "/ixora/ixora-two.webp", "/ixora/ixora-three.webp"]);
+
 
 
     return (
         <>
 
-            <div >
+            <div className="pb-10 bg-tilia-yellow-block">
+
+                {/* INTRO */}
                 <div className="">
                     <div className="bg-white w-full h-10"></div>
                     {/* Investor tag */}
                     <div className="investorIntroBg">
                         <motion.div
-                            className={`flex flex-row justify-center items-center ${tenor.className} welcomeTextOnImg text-[#D7D7DF] text-left p-10 text-4xl md:text-6xl lg:text-[100px] xl:text-[150px]`}
+                            className={`flex flex-row justify-center items-center ${noto.className} welcomeTextOnImg text-[#D7D7DF] text-left p-10 text-6xl md:text-7xl lg:text-[120px] xl:text-[180px]`}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
@@ -40,7 +51,7 @@ export default function Investor() {
                                 visible: { opacity: 1, x: 0 },
                             }}
                         >
-                            ИНВЕСТИТОР
+                            ЕКИП
                         </motion.div>
                     </div>
 
@@ -105,11 +116,13 @@ export default function Investor() {
 
                 {/* Container for Recent Projects */}
                 <div className="bg-tilia-yellow-block">
+
+                    {/* Title */}
                     <div
                         className="bg-tilia-yellow-block py-14"
                     >
                         <motion.div
-                            className={`${tenor.className} text-white pl-5 text-left text-6xl xl:text-[100px] `}
+                            className={`${noto.className} text-white pl-5 text-left text-6xl xl:text-[100px] `}
                             variants={container}
                             initial="hidden"
                             whileInView="visible"
@@ -136,31 +149,29 @@ export default function Investor() {
 
                         {/* Container for Dalia*/}
                         <div
-                            className="p-5 flex flex-col sm:flex-row gap-10"
+                            className="flex flex-col gap-10"
                         >
+                            <div className="bg-tilia-white">
 
+                                <motion.div
+                                    className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg p-10 text-4xl md:text-5xl lg:text-[80px] xl:text-[100px]`}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.4, duration: 0.6 }}
+                                    variants={{
+                                        hidden: { opacity: 0, x: -100, },
+                                        visible: { opacity: 1, x: 0, },
+                                    }}
+                                >
 
-                            <motion.div
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.4, duration: 0.6 }}
-                                variants={{
-                                    hidden: { opacity: 0, scale: 0.5, },
-                                    visible: { opacity: 1, scale: 1, },
-                                }}
-                            >
-                                {/* Conatiner for name and description */}
-                                <div className="px-10 lg:pb-10">
-                                    <Link href={'http://creativestudiobg.com/dahlia-house'}><div className="py-5 bg-tilia-white text-tilia-orange text-center text-2xl font-mono hover:scale-105 duration-200 hover:underline">
-                                        Еднофамилна къща Далия
-                                    </div></Link>
-                                    <div className="pb-5 bg-tilia-white text-gray-300 text-justify font-medium font-mono lg:px-80 ">Едно бижу в полите на Витоша с уникални гледки към София. Луксозен имот с над 700 кв.м. РЗП и двор от 750 кв.м. в престижния кв. Драгалевци. </div>
-                                </div>
-                            </motion.div>
+                                    ДАЛИЯ
+                                </motion.div>
+                            </div>
 
                             {/* Container for images */}
-                            <div className="bg-tilia-white px-5 w-full h-full flex-col justify-center space-y-5">
+                            <div className=" px-5 w-full h-full flex-col justify-center space-y-5">
+
                                 {/* Container for image with overflow effect, this template to be used for subsequent pictures */}
                                 <motion.div
                                     initial="hidden"
@@ -168,270 +179,152 @@ export default function Investor() {
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.4, duration: 0.6 }}
                                     variants={{
-                                        hidden: { opacity: 0, x: -200 },
-                                        visible: { opacity: 1, x: 0 },
+                                        hidden: { opacity: 0, scale: 0 },
+                                        visible: { opacity: 1, scale: 1 },
                                     }}
                                 >
-                                    <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
-                                        {/* The CSS OVERFLOW property controls what happens to content that is too big to fit into an area. */}
-                                        <Image
-                                            loader={imageLoader}
-                                            src="/dalia/dalia-one.webp"
-                                            alt="Dalia"
-                                            className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
-                                            width={4242}
-                                            height={2828}
-                                        />
-                                    </div>
-                                </motion.div>
-                                <motion.div
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.4, duration: 0.6 }}
-                                    variants={{
-                                        hidden: { opacity: 0, x: 200 },
-                                        visible: { opacity: 1, x: 0 },
-                                    }}
-                                >
-                                    <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
-                                        <Image
-                                            loader={imageLoader}
-                                            src="/dalia/dalia-two.webp"
-                                            alt="Dalia"
-                                            className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
-                                            width={2313}
-                                            height={1542}
-                                        />
-                                    </div>
-                                </motion.div>
-                                <motion.div
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.4, duration: 0.6 }}
-                                    variants={{
-                                        hidden: { opacity: 0, x: -200 },
-                                        visible: { opacity: 1, x: 0 },
-                                    }}
-                                >
-                                    <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
-                                        <Image
-                                            loader={imageLoader}
-                                            src="/dalia/dalia-three.webp"
-                                            alt="Dalia"
-                                            className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
-                                            width={4242}
-                                            height={2828}
-                                        />
-                                    </div>
+                                    <Flicking circular={true} >
+                                        {dalia.map(panel =>
+                                            <Image
+                                                loader={imageLoader}
+                                                src={`${panel}`}
+                                                alt="Dalia"
+                                                width={0}
+                                                height={0}
+                                                sizes="100vw"
+                                                className="flicking-panel w-2/3 h-2/3 px-5 sm:px-10"
+                                                key={panel}
+                                            />
+                                        )}
+
+                                    </Flicking>
                                 </motion.div>
 
                             </div>
+
+
                         </div>
 
-                        {/* Container for West End Luxury Houses*/}
-                        <div className="p-5">
-                            <motion.div
-                                className="py-5"
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.4, duration: 0.6 }}
-                                variants={{
-                                    hidden: { opacity: 0, scale: 0.5, },
-                                    visible: { opacity: 1, scale: 1, borderTop: '2px solid #ea580c', borderLeft: '2px solid #ea580c', },
-                                }}
+                        {/* Container for West End*/}
+                        <div
+                            className="flex flex-col gap-10"
+                        >
+                            <div className="bg-tilia-white">
 
-                            >
+                                <motion.div
+                                    className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg p-10 text-4xl md:text-5xl lg:text-[80px] xl:text-[100px]`}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.4, duration: 0.6 }}
+                                    variants={{
+                                        hidden: { opacity: 0, x: 100, },
+                                        visible: { opacity: 1, x: 0, },
+                                    }}
+                                >
+
+                                    WEST END LUXURY HOUSES
+                                </motion.div>
+                            </div>
+
+                            {/* Container for images */}
+                            <div className=" px-5 w-full h-full flex-col justify-center space-y-5">
+
+                                {/* Container for image with overflow effect, this template to be used for subsequent pictures */}
                                 <motion.div
                                     initial="hidden"
                                     whileInView="visible"
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.4, duration: 0.6 }}
                                     variants={{
-                                        hidden: { opacity: 0, scale: 0.5 },
+                                        hidden: { opacity: 0, scale: 0 },
                                         visible: { opacity: 1, scale: 1 },
                                     }}
                                 >
-                                    {/* Conatiner for name and description */}
-                                    <div className="px-10  lg:pb-10">
-                                        <div className="py-5 bg-tilia-white text-tilia-orange text-center text-xl font-mono">
-                                            Комплекс от къщи West End Luxury Houses
-                                        </div>
-                                        <div className="pb-5 bg-tilia-white text-gray-300 text-justify font-medium font-mono lg:px-80">В процес на изграждане е луксозен комплекс от 18 самостоятелни еднофамилни къщи със собствени басейни в непосредствена близост до София -  само на 20 минути от центъра. Напълно автономно вилно селище със собствен водоизточник и допълнително соларно захранване.</div>
-                                    </div>
+                                    <Flicking circular={true} >
+                                        {westEnd.map(panel =>
+                                            <Image
+                                                loader={imageLoader}
+                                                src={`${panel}`}
+                                                alt="westEnd"
+                                                height={0}
+                                                width={0}
+                                                sizes="100vw"
+                                                className="flicking-panel w-2/3 h-2/3 px-5 sm:px-10"
+                                                key={panel}
+                                            />
+                                        )}
+
+                                    </Flicking>
                                 </motion.div>
 
-                                <div className="bg-tilia-white px-5 w-full h-full flex-col justify-center space-y-5">
-                                    <motion.div
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.4, duration: 0.6 }}
-                                        variants={{
-                                            hidden: { opacity: 0, x: -200 },
-                                            visible: { opacity: 1, x: 0 },
-                                        }}
-                                    >
-                                        <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
-                                            <Image
-                                                loader={imageLoader}
-                                                src="/west-end/west-end-one.webp"
-                                                alt="West-end"
-                                                className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
-                                                width={2400}
-                                                height={2400}
-                                            />
-                                        </div>
-                                    </motion.div>
-                                    <motion.div
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.4, duration: 0.6 }}
-                                        variants={{
-                                            hidden: { opacity: 0, x: 200 },
-                                            visible: { opacity: 1, x: 0 },
-                                        }}
-                                    >
-                                        <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
-                                            <Image
-                                                loader={imageLoader}
-                                                src="/west-end/west-end-two.webp"
-                                                alt="West-end"
-                                                className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
-                                                width={2400}
-                                                height={1700}
-                                            />
-                                        </div>
-                                    </motion.div>
-                                    <motion.div
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.4, duration: 0.6 }}
-                                        variants={{
-                                            hidden: { opacity: 0, x: -200 },
-                                            visible: { opacity: 1, x: 0 },
-                                        }}
-                                    >
-                                        <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
-                                            <Image
-                                                loader={imageLoader}
-                                                src="/west-end/west-end-three.webp"
-                                                alt="West-end"
-                                                className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
-                                                width={4000}
-                                                height={2000}
-                                            />
-                                        </div>
-                                    </motion.div>
+                            </div>
 
-                                </div>
-                            </motion.div>
                         </div>
 
-                        {/* Container for Tilia Residence */}
-                        <div className="p-5">
-                            <motion.div
-                                className="py-5"
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.4, duration: 0.6 }}
-                                variants={{
-                                    hidden: { opacity: 0, scale: 0.5, },
-                                    visible: { opacity: 1, scale: 1, borderTop: '2px solid #ea580c', borderRight: '2px solid #ea580c', },
-                                }}
 
-                            >
+
+
+                        {/* Container for West End*/}
+                        <div
+                            className="flex flex-col gap-10"
+                        >
+                            <div className="bg-tilia-white">
+
+                                <motion.div
+                                    className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg p-10 text-4xl md:text-5xl lg:text-[80px] xl:text-[100px]`}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.4, duration: 0.6 }}
+                                    variants={{
+                                        hidden: { opacity: 0, x: -100, },
+                                        visible: { opacity: 1, x: 0, },
+                                    }}
+                                >
+
+                                    IXORA LUXURY RESIDENCE
+                                </motion.div>
+                            </div>
+
+                            {/* Container for images */}
+                            <div className=" px-5 w-full h-full flex-col justify-center space-y-5">
+
+                                {/* Container for image with overflow effect, this template to be used for subsequent pictures */}
                                 <motion.div
                                     initial="hidden"
                                     whileInView="visible"
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.4, duration: 0.6 }}
                                     variants={{
-                                        hidden: { opacity: 0, scale: 0.5 },
+                                        hidden: { opacity: 0, scale: 0 },
                                         visible: { opacity: 1, scale: 1 },
                                     }}
                                 >
-                                    {/* Conatiner for name and description */}
-                                    <div className="px-10 lg:pb-10">
-                                        <div className="py-5 bg-tilia-white text-tilia-orange text-center text-xl font-mono">
-                                            Жилищна сграда Tilia Residence
-                                        </div>
-                                        <div className="pb-5 bg-tilia-white text-gray-300 text-justify font-medium font-mono lg:px-80">Модерна жилищна сграда в квартал Връбница с южно изложение в непосредствена близост до метростанция.</div>
-                                    </div>
+                                    <Flicking circular={true} >
+                                        {ixora.map(panel =>
+                                            <Image
+                                                loader={imageLoader}
+                                                src={`${panel}`}
+                                                alt="ixora"
+                                                width={0}
+                                                height={0}
+                                                sizes="100vw"
+
+                                                className="flicking-panel w-2/3 h-2/3 px-5 sm:px-10"
+                                                key={panel}
+                                            />
+                                        )}
+
+                                    </Flicking>
                                 </motion.div>
 
-                                <div className="bg-tilia-white px-5 w-full h-full flex-col justify-center space-y-5">
-                                    <motion.div
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.4, duration: 0.6 }}
-                                        variants={{
-                                            hidden: { opacity: 0, x: -200 },
-                                            visible: { opacity: 1, x: 0 },
-                                        }}
-                                    >
-                                        <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
-                                            <Image
-                                                loader={imageLoader}
-                                                src="/tilia/tilia-one.webp"
-                                                alt="Tilia"
-                                                className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
-                                                width={4946}
-                                                height={3216}
-                                            />
-                                        </div>
-                                    </motion.div>
-                                    <motion.div
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.4, duration: 0.6 }}
-                                        variants={{
-                                            hidden: { opacity: 0, x: 200 },
-                                            visible: { opacity: 1, x: 0 },
-                                        }}
-                                    >
-                                        <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
-                                            <Image
-                                                loader={imageLoader}
-                                                src="/tilia/tilia-two.webp"
-                                                alt="Tilia"
-                                                className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
-                                                width={4946}
-                                                height={3342}
-                                            />
-                                        </div>
-                                    </motion.div>
-                                    <motion.div
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.4, duration: 0.6 }}
-                                        variants={{
-                                            hidden: { opacity: 0, x: -200 },
-                                            visible: { opacity: 1, x: 0 },
-                                        }}
-                                    >
-                                        <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
-                                            <Image
-                                                loader={imageLoader}
-                                                src="/tilia/tilia-three.webp"
-                                                alt="Tilia"
-                                                className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
-                                                width={4946}
-                                                height={3341}
-                                            />
-                                        </div>
-                                    </motion.div>
-                                </div>
-                            </motion.div>
+                            </div>
+
+
                         </div>
+
+
 
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import { Open_Sans, Roboto, Lato, Playfair_Display, Tenor_Sans } from 'next/font/google';
+import { Open_Sans, Roboto, Lato, Playfair_Display, Tenor_Sans, Noto_Serif_Display } from 'next/font/google';
 
 export const playfair = Playfair_Display({
     weight: '400',
@@ -26,6 +26,12 @@ export const opensans = Open_Sans({
 });
 
 export const tenor = Tenor_Sans({
+    weight: '400',
+    subsets: ['latin'],
+    display: 'swap',
+});
+
+export const noto = Noto_Serif_Display({
     weight: '400',
     subsets: ['latin'],
     display: 'swap',
