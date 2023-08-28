@@ -106,10 +106,10 @@ export default function Investor() {
                 {/* Container for Recent Projects */}
                 <div className="bg-tilia-yellow-block">
                     <div
-                        className="bg-white py-14"
+                        className="bg-tilia-yellow-block py-14"
                     >
                         <motion.div
-                            className={`${tenor.className} text-black pl-5 text-left text-6xl `}
+                            className={`${tenor.className} text-white pl-5 text-left text-6xl xl:text-[100px] `}
                             variants={container}
                             initial="hidden"
                             whileInView="visible"
@@ -135,109 +135,99 @@ export default function Investor() {
                     <div className="">
 
                         {/* Container for Dalia*/}
-                        <div className="p-5">
+                        <div
+                            className="p-5 flex flex-col sm:flex-row gap-10"
+                        >
+
 
                             <motion.div
-                                className="py-5"
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.4, duration: 0.6 }}
                                 variants={{
                                     hidden: { opacity: 0, scale: 0.5, },
-                                    visible: { opacity: 1, scale: 1, borderTop: '2px solid #ea580c', borderRight: '2px solid #ea580c', },
+                                    visible: { opacity: 1, scale: 1, },
                                 }}
-
                             >
+                                {/* Conatiner for name and description */}
+                                <div className="px-10 lg:pb-10">
+                                    <Link href={'http://creativestudiobg.com/dahlia-house'}><div className="py-5 bg-tilia-white text-tilia-orange text-center text-2xl font-mono hover:scale-105 duration-200 hover:underline">
+                                        Еднофамилна къща Далия
+                                    </div></Link>
+                                    <div className="pb-5 bg-tilia-white text-gray-300 text-justify font-medium font-mono lg:px-80 ">Едно бижу в полите на Витоша с уникални гледки към София. Луксозен имот с над 700 кв.м. РЗП и двор от 750 кв.м. в престижния кв. Драгалевци. </div>
+                                </div>
+                            </motion.div>
+
+                            {/* Container for images */}
+                            <div className="bg-tilia-white px-5 w-full h-full flex-col justify-center space-y-5">
+                                {/* Container for image with overflow effect, this template to be used for subsequent pictures */}
                                 <motion.div
                                     initial="hidden"
                                     whileInView="visible"
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.4, duration: 0.6 }}
                                     variants={{
-                                        hidden: { opacity: 0, scale: 0.5, },
-                                        visible: { opacity: 1, scale: 1, },
+                                        hidden: { opacity: 0, x: -200 },
+                                        visible: { opacity: 1, x: 0 },
                                     }}
                                 >
-                                    {/* Conatiner for name and description */}
-                                    <div className="px-10 lg:pb-10">
-                                        <Link href={'http://creativestudiobg.com/dahlia-house'}><div className="py-5 bg-tilia-white text-tilia-orange text-center text-2xl font-mono hover:scale-105 duration-200">
-                                            Еднофамилна къща Далия
-                                        </div></Link>
-                                        <div className="pb-5 bg-tilia-white text-gray-300 text-justify font-medium font-mono lg:px-80 ">Едно бижу в полите на Витоша с уникални гледки към София. Луксозен имот с над 700 кв.м. РЗП и двор от 750 кв.м. в престижния кв. Драгалевци. </div>
+                                    <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
+                                        {/* The CSS OVERFLOW property controls what happens to content that is too big to fit into an area. */}
+                                        <Image
+                                            loader={imageLoader}
+                                            src="/dalia/dalia-one.webp"
+                                            alt="Dalia"
+                                            className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
+                                            width={4242}
+                                            height={2828}
+                                        />
+                                    </div>
+                                </motion.div>
+                                <motion.div
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.4, duration: 0.6 }}
+                                    variants={{
+                                        hidden: { opacity: 0, x: 200 },
+                                        visible: { opacity: 1, x: 0 },
+                                    }}
+                                >
+                                    <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
+                                        <Image
+                                            loader={imageLoader}
+                                            src="/dalia/dalia-two.webp"
+                                            alt="Dalia"
+                                            className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
+                                            width={2313}
+                                            height={1542}
+                                        />
+                                    </div>
+                                </motion.div>
+                                <motion.div
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.4, duration: 0.6 }}
+                                    variants={{
+                                        hidden: { opacity: 0, x: -200 },
+                                        visible: { opacity: 1, x: 0 },
+                                    }}
+                                >
+                                    <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
+                                        <Image
+                                            loader={imageLoader}
+                                            src="/dalia/dalia-three.webp"
+                                            alt="Dalia"
+                                            className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
+                                            width={4242}
+                                            height={2828}
+                                        />
                                     </div>
                                 </motion.div>
 
-                                {/* Container for images */}
-                                <div className="bg-tilia-white px-5 w-full h-full flex-col justify-center space-y-5">
-                                    {/* Container for image with overflow effect, this template to be used for subsequent pictures */}
-                                    <motion.div
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.4, duration: 0.6 }}
-                                        variants={{
-                                            hidden: { opacity: 0, x: -200 },
-                                            visible: { opacity: 1, x: 0 },
-                                        }}
-                                    >
-                                        <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
-                                            {/* The CSS OVERFLOW property controls what happens to content that is too big to fit into an area. */}
-                                            <Image
-                                                loader={imageLoader}
-                                                src="/dalia/dalia-one.webp"
-                                                alt="Dalia"
-                                                className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
-                                                width={4242}
-                                                height={2828}
-                                            />
-                                        </div>
-                                    </motion.div>
-                                    <motion.div
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.4, duration: 0.6 }}
-                                        variants={{
-                                            hidden: { opacity: 0, x: 200 },
-                                            visible: { opacity: 1, x: 0 },
-                                        }}
-                                    >
-                                        <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
-                                            <Image
-                                                loader={imageLoader}
-                                                src="/dalia/dalia-two.webp"
-                                                alt="Dalia"
-                                                className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
-                                                width={2313}
-                                                height={1542}
-                                            />
-                                        </div>
-                                    </motion.div>
-                                    <motion.div
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        viewport={{ once: true }}
-                                        transition={{ delay: 0.4, duration: 0.6 }}
-                                        variants={{
-                                            hidden: { opacity: 0, x: -200 },
-                                            visible: { opacity: 1, x: 0 },
-                                        }}
-                                    >
-                                        <div className="w-[100%] h-[100%] lg:w-5/6 lg:h-5/6 overflow-hidden mx-auto ">
-                                            <Image
-                                                loader={imageLoader}
-                                                src="/dalia/dalia-three.webp"
-                                                alt="Dalia"
-                                                className=" transition-transform duration-500 ease-in-out hover:scale-125 active:scale-125"
-                                                width={4242}
-                                                height={2828}
-                                            />
-                                        </div>
-                                    </motion.div>
-
-                                </div>
-                            </motion.div>
+                            </div>
                         </div>
 
                         {/* Container for West End Luxury Houses*/}
