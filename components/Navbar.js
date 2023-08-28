@@ -101,11 +101,11 @@ const Navbar = () => {
                 <div className="bg-tilia-yellow-block w-full flex flex-row gap-3 justify-center items-center px-2">
                     <PiBellRingingLight size={24} className="animate-bounce" />
                     <p className="font-semibold py-2 text-xs sm:text-sm">Стартираха предварителните продажби </p>
-                    <span className="text-xs sm:text-sm text-black p-1 border-black rounded-lg hover:bg-black hover:text-white"><a href={`tel:00359886879993`} className="font-semibold">+359886879993</a></span> 
+                    <span className="text-xs sm:text-sm text-black p-1 border-black rounded-lg hover:bg-green-600 hover:text-white"><a href={`tel:00359886879993`} className="font-semibold">+359886879993</a></span> 
                 </div>
                 <div className="flex items-center justify-between mx-auto w-5/6">
 
-                    <Link className='saturate-200 duration-200 flex justify-center items-center h-10 w-20 sm:h-20 sm:w-32 ' href={'/'}>
+                    <Link className='saturate-200 duration-200 flex justify-center items-center h-14 w-20 sm:h-20 sm:w-32 ' href={'/'}>
                         <Image
                             loader={imageLoader}
                             src="/ixora.webp"

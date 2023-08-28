@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
  
         {/* fixed navbar requires py same for all non home pages */}
         {pathName === '/' ? (<></>) : (
-        <div className='py-11 sm:py-[64px] bg-tilia-white'></div>
+        <div className='py-12 sm:py-[64px] bg-tilia-white'></div>
         )}
         <main>
           {children}

@@ -11,16 +11,17 @@ import WelcomeText from "@/components/WelcomeText"
 import { tenor } from "@/utils/fonts"
 
 export const revalidate = 0; // revalidate this page every 60 seconds
-const container = {
+
+export const container = {
     hidden: {},
     visible: {
         transition: {
-            staggerChildren: 0.05,
+            staggerChildren: 0.1,
         },
     },
 };
 
-const letterVariant = {
+export const letterVariant = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
 };
@@ -47,7 +48,6 @@ export default function Home() {
                         variants={container}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
                     >
                         <motion.span variants={letterVariant}>И</motion.span>
                         <motion.span variants={letterVariant}>З</motion.span>
