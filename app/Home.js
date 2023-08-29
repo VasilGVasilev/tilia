@@ -26,6 +26,11 @@ export const letterVariant = {
     visible: { opacity: 1 },
 };
 
+export const wordVariant = {
+    hidden: { opacity: 0, translateY: 20, skew: -50 },
+    visible: { opacity: 1, translateY: 0, skew: 0 },
+};
+
 export default function Home() {
     return (
         <div>

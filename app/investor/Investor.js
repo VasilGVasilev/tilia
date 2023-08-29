@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image"
 import { imageLoader } from "../../utils/imgLoader";
-import { lato } from "@/utils/fonts";
+import { lato, tenor } from "@/utils/fonts";
 import { motion } from "framer-motion";
 
 import { letterVariant, container } from "../Home";
@@ -11,9 +11,7 @@ import { letterVariant, container } from "../Home";
 import { noto } from "@/utils/fonts";
 
 
-// image slider
-import Flicking from "@egjs/react-flicking";
-import "@egjs/react-flicking/dist/flicking.css";
+
 import { useState } from "react";
 
 
@@ -32,6 +30,8 @@ export default function Investor() {
 
     return (
         <>
+            <div className="h-50 w-50 bg-black"></div>
+
 
             <div className="pb-10 bg-tilia-yellow-block">
 
@@ -41,18 +41,22 @@ export default function Investor() {
                     {/* Investor tag */}
                     <div className="investorIntroBg">
                         <motion.div
-                            className={`flex flex-row justify-center items-center ${noto.className} welcomeTextOnImg text-[#D7D7DF] text-left p-10 text-6xl md:text-7xl lg:text-[120px] xl:text-[180px]`}
+                            className={`flex flex-row justify-center items-center ${noto.className} welcomeTextOnImg text-[#D7D7DF] text-left py-5 text-6xl md:text-8xl lg:text-[150px] xl:text-[200px]`}
+
+                            variants={container}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.4, duration: 0.6 }}
-                            variants={{
-                                hidden: { opacity: 0, x: -200 },
-                                visible: { opacity: 1, x: 0 },
-                            }}
                         >
-                            ЕКИП
+                            <motion.span variants={letterVariant}>П</motion.span>
+                            <motion.span variants={letterVariant}>Р</motion.span>
+                            <motion.span variants={letterVariant}>О</motion.span>
+                            <motion.span variants={letterVariant}>Е</motion.span>
+                            <motion.span variants={letterVariant}>К</motion.span>
+                            <motion.span variants={letterVariant}>Т</motion.span>
+                            <motion.span variants={letterVariant}>И</motion.span>
+
                         </motion.div>
+
                     </div>
 
                     {/* Container for Investor Intro */}
@@ -109,6 +113,7 @@ export default function Investor() {
                                     Мотото на компанията при изпълнение на инвестиционните проекти гласи - "Creating Excellence" или "Създаване на съвършенство".
                                 </div>
                             </motion.div>
+
                         </div>
 
                     </div>
@@ -117,32 +122,40 @@ export default function Investor() {
                 {/* Container for Recent Projects */}
                 <div className="bg-tilia-yellow-block">
 
-                    {/* Title */}
+                    {/*
                     <div
                         className="bg-tilia-yellow-block py-14"
                     >
-                        <motion.div
-                            className={`${noto.className} text-white pl-5 text-left text-6xl xl:text-[100px] `}
-                            variants={container}
-                            initial="hidden"
-                            whileInView="visible"
+                        <div
+                            className={`${noto.className} welcomeTextOnImg text-white pl-5 text-5xl xl:text-7xl flex flex-row gap-5 `}
                         >
-                            <motion.span variants={letterVariant}>Н</motion.span>
-                            <motion.span variants={letterVariant}>А</motion.span>
-                            <motion.span variants={letterVariant}>Ш</motion.span>
-                            <motion.span variants={letterVariant}>И</motion.span>
-                            <motion.span variants={letterVariant}>Т</motion.span>
-                            <motion.span variants={letterVariant}>Е</motion.span>
-                            <motion.span variants={letterVariant}> </motion.span>
-                            <motion.span variants={letterVariant}>П</motion.span>
-                            <motion.span variants={letterVariant}>Р</motion.span>
-                            <motion.span variants={letterVariant}>О</motion.span>
-                            <motion.span variants={letterVariant}>Е</motion.span>
-                            <motion.span variants={letterVariant}>К</motion.span>
-                            <motion.span variants={letterVariant}>Т</motion.span>
-                            <motion.span variants={letterVariant}>И</motion.span>
-                        </motion.div>
-                    </div>
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.7 }}
+                                variants={{
+                                    hidden: { opacity: 0, translateY: 40, skewX: -80, rotateY: 50 },
+                                    visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                                }}
+                            >
+                                Нашите
+                            </motion.div>
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.7 }}
+                                variants={{
+                                    hidden: { opacity: 0, translateY: 40, skewX: -80, rotateY: 50 },
+                                    visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                                }}
+                            >
+                                проекти
+                            </motion.div>
+
+                        </div>
+                    </div> */}
 
                     {/* Container for projects */}
                     <div className="">
@@ -154,14 +167,14 @@ export default function Investor() {
                             <div className="bg-tilia-white">
 
                                 <motion.div
-                                    className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg p-10 text-4xl md:text-5xl lg:text-[80px] xl:text-[100px]`}
+                                    className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
                                     initial="hidden"
                                     whileInView="visible"
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.4, duration: 0.6 }}
+                                    transition={{ duration: 0.7 }}
                                     variants={{
-                                        hidden: { opacity: 0, x: -100, },
-                                        visible: { opacity: 1, x: 0, },
+                                        hidden: { opacity: 0, translateY: 40, skewX: -80, rotateY: 50 },
+                                        visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
                                     }}
                                 >
 
@@ -183,7 +196,7 @@ export default function Investor() {
                                         visible: { opacity: 1, scale: 1 },
                                     }}
                                 >
-                                    <Flicking circular={true} >
+                                    {/* <Flicking circular={true} >
                                         {dalia.map(panel =>
                                             <Image
                                                 loader={imageLoader}
@@ -197,7 +210,7 @@ export default function Investor() {
                                             />
                                         )}
 
-                                    </Flicking>
+                                    </Flicking> */}
                                 </motion.div>
 
                             </div>
@@ -210,21 +223,60 @@ export default function Investor() {
                             className="flex flex-col gap-10"
                         >
                             <div className="bg-tilia-white">
-
-                                <motion.div
-                                    className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg p-10 text-4xl md:text-5xl lg:text-[80px] xl:text-[100px]`}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.4, duration: 0.6 }}
-                                    variants={{
-                                        hidden: { opacity: 0, x: 100, },
-                                        visible: { opacity: 1, x: 0, },
-                                    }}
-                                >
-
-                                    WEST END LUXURY HOUSES
-                                </motion.div>
+                                <div className="flex flex-row gap-2 sm:gap-5 justify-center items-center">
+                                    <motion.div
+                                        className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.7 }}
+                                        variants={{
+                                            hidden: { opacity: 0, translateY: 40, skewX: -80, rotateY: 50 },
+                                            visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                                        }}
+                                    >
+                                        WEST
+                                    </motion.div>
+                                    <motion.div
+                                        className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.7 }}
+                                        variants={{
+                                            hidden: { opacity: 0, translateY: 40, skewX: -80, rotateY: 50 },
+                                            visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                                        }}
+                                    >
+                                        END
+                                    </motion.div>
+                                    <motion.div
+                                        className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.7 }}
+                                        variants={{
+                                            hidden: { opacity: 0, translateY: 40, skewX: -80, rotateY: 50 },
+                                            visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                                        }}
+                                    >
+                                        LUXURY
+                                    </motion.div>
+                                    <motion.div
+                                        className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.7 }}
+                                        variants={{
+                                            hidden: { opacity: 0, translateY: 40, skewX: -80, rotateY: 50 },
+                                            visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                                        }}
+                                    >
+                                        HOUSES
+                                    </motion.div>
+                                </div>
                             </div>
 
                             {/* Container for images */}
@@ -241,7 +293,7 @@ export default function Investor() {
                                         visible: { opacity: 1, scale: 1 },
                                     }}
                                 >
-                                    <Flicking circular={true} >
+                                    {/* <Flicking circular={true} >
                                         {westEnd.map(panel =>
                                             <Image
                                                 loader={imageLoader}
@@ -255,7 +307,7 @@ export default function Investor() {
                                             />
                                         )}
 
-                                    </Flicking>
+                                    </Flicking> */}
                                 </motion.div>
 
                             </div>
@@ -270,21 +322,50 @@ export default function Investor() {
                             className="flex flex-col gap-10"
                         >
                             <div className="bg-tilia-white">
+                                <div className="flex flex-row gap-2 sm:gap-5 justify-center items-center">
+                                    <motion.div
+                                        className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.7 }}
+                                        variants={{
+                                            hidden: { opacity: 0, translateY: 40, skewX: -80, rotateY: 50 },
+                                            visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                                        }}
+                                    >
 
-                                <motion.div
-                                    className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg p-10 text-4xl md:text-5xl lg:text-[80px] xl:text-[100px]`}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.4, duration: 0.6 }}
-                                    variants={{
-                                        hidden: { opacity: 0, x: -100, },
-                                        visible: { opacity: 1, x: 0, },
-                                    }}
-                                >
+                                        IXORA
+                                    </motion.div>
+                                    <motion.div
+                                        className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.7 }}
+                                        variants={{
+                                            hidden: { opacity: 0, translateY: 40, skewX: -80, rotateY: 50 },
+                                            visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                                        }}
+                                    >
 
-                                    IXORA LUXURY RESIDENCE
-                                </motion.div>
+                                        LUXURY
+                                    </motion.div>
+                                    <motion.div
+                                        className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.7 }}
+                                        variants={{
+                                            hidden: { opacity: 0, translateY: 40, skewX: -80, rotateY: 50 },
+                                            visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                                        }}
+                                    >
+
+                                        RESIDENCE
+                                    </motion.div>
+                                </div>
                             </div>
 
                             {/* Container for images */}
@@ -301,7 +382,7 @@ export default function Investor() {
                                         visible: { opacity: 1, scale: 1 },
                                     }}
                                 >
-                                    <Flicking circular={true} >
+                                    {/* <Flicking circular={true} >
                                         {ixora.map(panel =>
                                             <Image
                                                 loader={imageLoader}
@@ -316,7 +397,7 @@ export default function Investor() {
                                             />
                                         )}
 
-                                    </Flicking>
+                                    </Flicking> */}
                                 </motion.div>
 
                             </div>
