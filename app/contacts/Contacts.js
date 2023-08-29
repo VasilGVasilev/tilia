@@ -23,8 +23,6 @@ export default function Contacts() {
         <>
 
 
-
-
             {/* div for maps */}
             <motion.div
                 className='bg-gradient-tilia'
@@ -53,24 +51,24 @@ export default function Contacts() {
                             <div className="flex justify-center h-56 w-96 p-5 shadow-xl bg-gradient-to-b from-gray-50 to-white lg:hover:scale-105 duration-200 lg:hover:shadow-none lg:w-full lg:h-96">
                                 <div className="space-y-10 flex flex-col justify-center">
 
-                                    <div className="flex flex-row space-x-3 lg:p-5">
-                                        <SlLocationPin size={24} className='text-white' />
+                                    <div className="flex flex-row items-center space-x-3 lg:p-5">
+                                        <SlLocationPin size={24}  />
 
                                         <div className="text-sm sm:text-base font-bold text-gray-500 ">ул. „Пирински еделвайс“ 3, 1415 в.з. Симеоново - Драгалевци</div>
 
                                     </div>
 
-                                    <div className="flex flex-row space-x-3 lg:p-5">
+                                    <div className="flex flex-row items-center space-x-3 lg:p-5">
 
-                                        <BsTelephone size={24} className='text-white' />
+                                        <BsTelephone size={24}  />
 
                                         <div className="text-sm sm:text-base font-bold text-gray-500"><a href={`tel:00359886879993`}>00359886879993</a></div>
 
                                     </div>
 
-                                    <div className="flex flex-row space-x-3 lg:p-5">
+                                    <div className="flex flex-row items-center space-x-3 lg:p-5">
 
-                                        <TfiEmail size={24} className='text-white' />
+                                        <TfiEmail size={24}  />
 
 
                                         <div className="text-sm sm:text-base font-bold text-gray-500"><a href="mailto:office@creativestudiobg.com">office@creativestudiobg.com</a></div>
