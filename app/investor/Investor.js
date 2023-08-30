@@ -136,7 +136,7 @@ export default function Investor() {
                                 <div className="bg-tilia-white shadow-2xl">
                                     <div className="flex flex-row gap-2 sm:gap-5 justify-center items-center">
                                         <motion.div
-                                            className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                            className={` text-tilia-yellow-text text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
                                             initial="hidden"
                                             whileInView="visible"
                                             viewport={{ once: true }}
@@ -150,7 +150,7 @@ export default function Investor() {
                                             IXORA
                                         </motion.div>
                                         <motion.div
-                                            className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                            className={` text-tilia-yellow-text text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
                                             initial="hidden"
                                             whileInView="visible"
                                             viewport={{ once: true }}
@@ -164,7 +164,7 @@ export default function Investor() {
                                             LUXURY
                                         </motion.div>
                                         <motion.div
-                                            className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                            className={` text-tilia-yellow-text text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
                                             initial="hidden"
                                             whileInView="visible"
                                             viewport={{ once: true }}
@@ -221,7 +221,7 @@ export default function Investor() {
                             <div className="bg-tilia-white shadow-2xl">
 
                                 <motion.div
-                                    className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                    className={` text-tilia-yellow-text text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
                                     initial="hidden"
                                     whileInView="visible"
                                     viewport={{ once: true }}
@@ -276,7 +276,7 @@ export default function Investor() {
                             <div className="bg-tilia-white shadow-2xl">
                                 <div className="flex flex-row gap-2 sm:gap-5 justify-center items-center">
                                     <motion.div
-                                        className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                        className={` text-tilia-yellow-text text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
                                         initial="hidden"
                                         whileInView="visible"
                                         viewport={{ once: true }}
@@ -289,7 +289,7 @@ export default function Investor() {
                                         WEST
                                     </motion.div>
                                     <motion.div
-                                        className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                        className={` text-tilia-yellow-text text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
                                         initial="hidden"
                                         whileInView="visible"
                                         viewport={{ once: true }}
@@ -302,7 +302,7 @@ export default function Investor() {
                                         END
                                     </motion.div>
                                     <motion.div
-                                        className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                        className={` text-tilia-yellow-text text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
                                         initial="hidden"
                                         whileInView="visible"
                                         viewport={{ once: true }}
@@ -315,7 +315,7 @@ export default function Investor() {
                                         LUXURY
                                     </motion.div>
                                     <motion.div
-                                        className={` text-tilia-yellow-text text-center font-mono ${noto.className} welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                        className={` text-tilia-yellow-text text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
                                         initial="hidden"
                                         whileInView="visible"
                                         viewport={{ once: true }}
