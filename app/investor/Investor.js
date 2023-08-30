@@ -14,6 +14,7 @@ import { noto } from "@/utils/fonts";
 
 import { useState } from "react";
 import { ImageSquare } from "@/components/InvestorImage";
+import PicsLightbox from "@/components/Lightbox";
 
 
 export const revalidate = 0; // revalidate this page every 60 seconds
@@ -21,17 +22,30 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 
 export default function Investor() {
+    const [modalOpen, setModalOpen] = useState(false);
+
+
+    const [selectedPic, setSelectedPic] = useState(null);
+
 
     // image slider
     const [dalia, setDalia] = useState(["/dalia/dalia-one.webp", "/dalia/dalia-two.webp", "/dalia/dalia-three.webp"]);
     const [westEnd, setWestEnd] = useState(["/west-end/west-end-one.webp", "/west-end/west-end-two.webp", "/west-end/west-end-three.webp"]);
     const [ixora, setIxora] = useState(["/ixora/ixora-one.webp", "/ixora/ixora-two.webp", "/ixora/ixora-three.webp"]);
 
+    const openModal = () => {
+        setModalOpen(true);
+    };
 
+    const closeModal = () => {
+        setModalOpen(false);
+    };
 
     return (
         <>
-            <div className="h-50 w-50 bg-black"></div>
+
+            <PicsLightbox isOpen={modalOpen} onClose={closeModal} url={selectedPic} alt={selectedPic} ></PicsLightbox>
+
 
 
             <div className="pb-10 bg-tilia-yellow-block">
@@ -200,9 +214,12 @@ export default function Investor() {
                                         </div>
                                         {ixora.map(panel =>
                                             <ImageSquare
-                                                alt="westEnd"
+                                                alt="ixora"
                                                 url={panel}
                                                 key={panel}
+                                                openModal={openModal}
+                                                setSelectedPic={setSelectedPic}
+                                                selectedPic={selectedPic}
                                             />
                                         )}
                                     </motion.div>
@@ -256,9 +273,12 @@ export default function Investor() {
                                         </div>
                                         {dalia.map(panel =>
                                             <ImageSquare
-                                                alt="westEnd"
+                                                alt="dalia"
                                                 url={panel}
                                                 key={panel}
+                                                openModal={openModal}
+                                                setSelectedPic={setSelectedPic}
+                                                selectedPic={selectedPic}
                                             />
                                         )}
                                     </motion.div>
@@ -355,6 +375,9 @@ export default function Investor() {
                                                 alt="westEnd"
                                                 url={panel}
                                                 key={panel}
+                                                openModal={openModal}
+                                                setSelectedPic={setSelectedPic}
+                                                selectedPic={selectedPic}
                                             />
                                         )}
                                     </motion.div>
