@@ -15,6 +15,7 @@ import { noto } from "@/utils/fonts";
 import { useState } from "react";
 import { ImageSquare } from "@/components/InvestorImage";
 import PicsLightbox from "@/components/Lightbox";
+import { DaliaDescription, IxoraDescription, WestEndDescription } from "@/components/OtherProjectDescriptions";
 
 
 export const revalidate = 0; // revalidate this page every 60 seconds
@@ -22,13 +23,13 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 
 export default function Investor() {
+    
+    
+    // picture click modal states
     const [modalOpen, setModalOpen] = useState(false);
-
-
     const [selectedPic, setSelectedPic] = useState(null);
 
-
-    // image slider
+    // image info
     const [dalia, setDalia] = useState(["/dalia/dalia-one.webp", "/dalia/dalia-two.webp", "/dalia/dalia-three.webp"]);
     const [westEnd, setWestEnd] = useState(["/west-end/west-end-one.webp", "/west-end/west-end-two.webp", "/west-end/west-end-three.webp"]);
     const [ixora, setIxora] = useState(["/ixora/ixora-one.webp", "/ixora/ixora-two.webp", "/ixora/ixora-three.webp"]);
@@ -82,15 +83,10 @@ export default function Investor() {
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.5 }}
                             variants={{
-                                hidden: { opacity: 0, scale: 0.5 },
-                                visible: { opacity: 1, scale: 1 },
+                                hidden: { opacity: 0, x: -100 },
+                                visible: { opacity: 1, x: 0 },
                             }}
-                            transition={{
-                                duration: 0.6,
-                                ease: "easeInOut",
-                                times: [0, 0.4, 0.6],
-                                repeatDelay: 1
-                            }}
+                            transition={{ delay: 1, duration: 0.5 }}
                             src="/investor-logo.webp"
                             alt="investor-logo"
                             className="h-20 w-50 xl:h-32 xl:w-60"
@@ -105,7 +101,7 @@ export default function Investor() {
                                 viewport={{ once: true, amount: 0.5 }}
                                 transition={{ delay: 0.3, duration: 0.5 }}
                                 variants={{
-                                    hidden: { opacity: 0, scale: 0.5 },
+                                    hidden: { opacity: 0, scale: 1.3 },
                                     visible: { opacity: 1, scale: 1 },
                                 }}
                             >
@@ -120,7 +116,7 @@ export default function Investor() {
                                 viewport={{ once: true, amount: 0.5 }}
                                 transition={{ delay: 0.6, duration: 0.5 }}
                                 variants={{
-                                    hidden: { opacity: 0, scale: 0.5 },
+                                    hidden: { opacity: 0, scale: 1.3 },
                                     visible: { opacity: 1, scale: 1 },
                                 }}
                             >
@@ -195,23 +191,25 @@ export default function Investor() {
                                 </div>
                             </Link>
                             {/* Container for images */}
-                            <div className=" px-5 w-full h-full flex-col justify-center space-y-5">
+                            <div className=" px-5 xl:px-24 w-full h-full flex-col justify-center space-y-5">
 
                                 <div className="flex justify-center">
                                     <motion.div
                                         className="sm:grid sm:grid-cols-2 "
-                                        variants={container}
+                                        variants={{
+                                            hidden: {},
+                                            visible: {
+                                                transition: {
+                                                    staggerChildren: 0.7,
+                                                },
+                                            },
+                                        }}
                                         initial="hidden"
                                         whileInView="visible"
                                         viewport={{ once: true, amount: 0.2 }}
                                     >
-                                        <div
-                                            className={`m-auto w-full h-fit p-5`}
-                                        >
-                                            <div className="text-left text-black md:text-xl">
-                                                Ixora Luxury Residence е бутикова сграда със спа център и финтес, ситуирана в подножието на Витоша. Изпълнението и всички довършителни работи са заложени в изключително висок - бутиков клас. Вертикалната планировка по специален ландшафтен проект оформя зелен пояс около сградата, който създава усещане за живот в паркова среда.
-                                            </div>
-                                        </div>
+                                        <IxoraDescription />
+
                                         {ixora.map(panel =>
                                             <ImageSquare
                                                 alt="ixora"
@@ -254,23 +252,26 @@ export default function Investor() {
                             </div>
 
                             {/* Container for images */}
-                            <div className=" px-5 w-full h-full flex-col justify-center space-y-5">
+                            <div className=" px-5 xl:px-24 w-full h-full flex-col justify-center space-y-5">
 
                                 <div className="flex justify-center">
                                     <motion.div
                                         className="sm:grid sm:grid-cols-2 "
-                                        variants={container}
+                                        variants={{
+                                            hidden: {},
+                                            visible: {
+                                                transition: {
+                                                    staggerChildren: 0.7,
+                                                },
+                                            },
+                                        }}
                                         initial="hidden"
                                         whileInView="visible"
                                         viewport={{ once: true, amount: 0.2 }}
                                     >
-                                        <div
-                                            className={`m-auto w-full h-fit p-5`}
-                                        >
-                                            <div className="text-left text-black md:text-xl">
-                                                Едно бижу в полите на Витоша с уникални гледки към София. Луксозен имот с над 700 кв.м. РЗП и двор от 750 кв.м. в престижния кв. Драгалевци.
-                                            </div>
-                                        </div>
+
+                                        <DaliaDescription />
+
                                         {dalia.map(panel =>
                                             <ImageSquare
                                                 alt="dalia"
@@ -353,23 +354,26 @@ export default function Investor() {
 
 
                             {/* Container for images */}
-                            <div className=" px-5 w-full h-full flex-col justify-center space-y-5">
+                            <div className="px-5 xl:px-24 w-full h-full flex-col justify-center space-y-5">
 
                                 <div className="flex justify-center">
                                     <motion.div
                                         className="sm:grid sm:grid-cols-2 "
-                                        variants={container}
+                                        variants={{
+                                            hidden: {},
+                                            visible: {
+                                                transition: {
+                                                    staggerChildren: 0.7,
+                                                },
+                                            },
+                                        }}
                                         initial="hidden"
                                         whileInView="visible"
                                         viewport={{ once: true, amount: 0.2 }}
                                     >
-                                        <div
-                                            className={`m-auto w-full h-fit p-5`}
-                                        >
-                                            <div className="text-left text-black md:text-xl">
-                                                В процес на изграждане е луксозен комплекс от 18 самостоятелни еднофамилни къщи със собствени басейни в непосредствена близост до София - само на 20 минути от центъра. Напълно автономно вилно селище със собствен водоизточник и допълнително соларно захранване.
-                                            </div>
-                                        </div>
+
+                                        <WestEndDescription />
+
                                         {westEnd.map(panel =>
                                             <ImageSquare
                                                 alt="westEnd"

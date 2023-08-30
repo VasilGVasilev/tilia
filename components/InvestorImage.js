@@ -19,7 +19,7 @@ export const ImageSquare = ({ alt, url, openModal, setSelectedPic, selectedPic})
                 }}
                 className="flex flex-col justify-center items-center w-full h-fit p-5"
             >
-                <img src={url} alt={alt} className="shadow-2xl hover:scale-110 transition" />
+                <img src={url} alt={alt} className="shadow-2xl hover:scale-110 transition duration-300" />
             </div>
         </motion.div>
     );
