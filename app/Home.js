@@ -6,10 +6,9 @@ import Maps from "@/components/Location"
 import Timeline from "@/components/Timeline"
 import ForBuilding from "@/components/ForBuidling"
 import { motion } from "framer-motion"
-import PromptToPlan from "@/components/PromptToPlan"
-import WelcomeText from "@/components/WelcomeText"
 import { noto } from "@/utils/fonts"
 import ApartmentTypes from "@/components/ApartmentTypes"
+import WalkingDistance from "@/components/WalkingDistance"
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
@@ -82,7 +81,7 @@ export default function Home() {
             {/* WELCOME IMG AND TEXT */}
 
 
-            <div className="flex flex-col justify-center items-center gap-10 px-10 pt-20 pb-10 bg-white">
+            <div className="flex flex-col justify-center items-center gap-10 px-10 pt-20 md:pt-32 pb-10 bg-white">
 
                 {/* IMG */}
                 <div className={`relative text-center`}>
@@ -146,12 +145,15 @@ export default function Home() {
             </div>
 
             {/* DESCRIPTION */}
-            <ForBuilding></ForBuilding>
+            <div className="bg-tilia-yellow-block p-10">
+                <ForBuilding></ForBuilding>
+            </div>
 
 
-            {/* PROMPT IMG TO PLAN */}
-            <Link href={'/apartments'} className={`flex justify-center items-center text-center py-5 lg:py-0 lg:pt-10 text-white text-lg sm:text-3xl hover:scale-110`}>Изберете Вашия луксозен нов дом сега.</Link>
-            <PromptToPlan></PromptToPlan>
+            {/* NEXT TO METRO */}
+            <div className="bg-tilia-gray p-10">
+                <WalkingDistance></WalkingDistance>
+            </div>
 
 
             {/* LOCATION */}

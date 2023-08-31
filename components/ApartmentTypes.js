@@ -8,7 +8,7 @@ const TypeApp = ({ title, img }) => {
     return (
         <div className="bg-tilia-gray p-7 flex flex-col justify-center items-center gap-7 sm:h-[500px] sm:w-[500px]">
             <div className="font-semibold md:text-xl lg:text-2xl">{title}</div>
-            <img src={img} alt="" className="hover:scale-110 transition sm:w-[300px] sm:h-[300px]" />
+            <img src={img} alt="" className="hover:scale-110 transition duration-300 sm:w-[300px] sm:h-[300px]" />
         </div>
     )
 }
