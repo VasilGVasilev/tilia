@@ -98,10 +98,10 @@ const Navbar = () => {
 
         >
             <nav className={`bg-tilia-white flex flex-col z-40 w-full fixed top-0 shadow-xl`} >
-                <div className="bg-tilia-yellow-block w-full flex flex-row gap-3 justify-center items-center px-2">
-                    <PiBellRingingLight size={24} className="animate-bounce" />
-                    <p className="font-semibold py-2 text-xs sm:text-sm">Стартираха предварителните продажби </p>
-                    <span className="text-xs sm:text-sm text-black p-1 border-black rounded-lg hover:bg-green-600 hover:text-white"><a href={`tel:00359886879993`} className="font-semibold">+359886879993</a></span> 
+                <div className="group bg-tilia-yellow-block hover:bg-black w-full flex flex-row gap-3 justify-center items-center px-2">
+                    <PiBellRingingLight size={24} className="animate-bounce group-hover:text-white" />
+                    <p className="font-semibold py-2 text-xs sm:text-sm group-hover:text-white">Стартираха предварителните продажби </p>
+                    <span className="text-xs sm:text-sm text-black p-1 border-black rounded-lg bg-green-600 group-hover:text-white"><a href={`tel:00359886879993`} className="font-semibold">+359886879993</a></span> 
                 </div>
                 <div className="flex items-center justify-between mx-auto w-5/6">
 
