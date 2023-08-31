@@ -16,7 +16,7 @@ import { container, letterVariant } from "../Home";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
-// todo: small icons dont show
+// todo: remove /test
 
 export default function Contacts() {
 
@@ -57,13 +57,13 @@ export default function Contacts() {
             {/* Desktop res makes Contact Card and Form flex */}
             <div className="lg:flex">
                 {/* div for Contact Card */}
-                <div className="lg:w-1/2 bg-[#F6F6F6]">
+                <div className="lg:w-1/2 bg-tilia-gray">
 
 
                     {/* Container to flex on Desktop */}
                     <div className="flex-col w-full h-fit lg:w-full">
 
-                        <div className="bg-[#F6F6F6]">
+                        <div className="bg-tilia-gray">
                             <div className="flex justify-center text-tilia-yellow-text py-4 pt-10 text-center text-3xl font-bold hover:scale-105 duration-200">Sales офис</div>
                         </div>
 

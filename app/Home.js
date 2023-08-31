@@ -43,7 +43,7 @@ export default function Home() {
                 </video>
 
                 <div className="absolute top-[10%] left-4 md:top-[10%] md:left-10 w-full h-full flex flex-col items-start justify-center ">
-                    <div 
+                    <div
                         className={`${noto.className} md:pb-16 welcomeTextOnImg text-white text-center md:text-2xl lg:text-4xl xl:text-6xl`}
                     >
                         НА КРАЧКИ ОТ МЕТРОТО
@@ -78,63 +78,66 @@ export default function Home() {
             </div>
 
 
-            {/* WELCOME TEXT AND IMG */}
-            <div className="lg:flex lg:justify-between lg:items-center lg:p-10 bg-orange-50">
-                {/* WELCOME TEXT */}
-                <div className="lg:basis-[30%]">
-                    <div className={` p-10`}>
+            {/* WELCOME IMG AND TEXT */}
+
+
+            <div className="flex flex-col justify-center items-center gap-10 px-10 pt-20 pb-10 bg-white">
+
+                {/* IMG */}
+                <div className={`relative text-center`}>
+                    <div
+                        // before:w-full before:max-w-[400px] md:before:max-w-[600px], biggest width but not more than 400px, 600px
+                        className="relative z-0 ml-5 before:absolute before:-top-25 before:-left-5 sm:before:-top-20 sm:before:-left-20  before:rounded-t-[400px]
+            before:w-full before:max-w-[400px] md:before:max-w-[600px]  before:opacity-20 before:h-full before:border-2 before:border-tilia-yellow-block before:z-[-1]"
+                    >
+                        <img
+                            alt="profile"
+                            // filter is not actually necessary, you can go ahead with saturate-200 directly
+                            className="z-10 w-full rounded-t-[400px] max-w-[400px] md:max-w-[600px]"
+                            src="/tilia/tilia-yellow.webp"
+                        />
+                    </div>
+                    {/* <img  alt="" className="relative" /> */}
+
+                    <div className="absolute top-0 left-1/2 translate-x-[-50%] translate-y-[-50%] flex flex-col justify-center items-center">
+                        <div className="text-black text-lg md:text-2xl lg:text-4xl ">
+                            ЖИЛИЩНА СГРАДА
+                        </div>
                         <motion.div
-                            className="py-5 text-tilia-orange text-left text-3xl font-extrabold"
+                            className={`${noto.className} text-black text-center py-5 text-4xl md:text-7xl lg:text-[140px]`}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, amount: 0.5 }}
-                            transition={{ delay: 0.3, duration: 0.5 }}
+                            transition={{ duration: 0.5 }}
                             variants={{
-                                hidden: { opacity: 0, x: -50 },
-                                visible: { opacity: 1, x: 0 },
+                                hidden: { opacity: 0, translateY: 40, skewX: -80, rotateY: 50 },
+                                visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
                             }}
-                        >Ixora Luxury Residence: </motion.div>
-                        <WelcomeText></WelcomeText>
+                        >
+
+                            ТИЛИЯ
+                        </motion.div>
+
                     </div>
                 </div>
 
-                {/* WELCOME IMAGE */}
-                <motion.div
-                    className="lg:basis-[70%] "
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ delay: 0.4, duration: 0.5 }}
-                    variants={{
-                        hidden: { opacity: 0, x: 50 },
-                        visible: { opacity: 1, x: 0 },
-                    }}
-                >
-                    <div className="p-5 md:p-10 relative before:absolute before:top-[3%] before:left-[1%]
-                    before:w-full before:h-full before:border-l-2 before:border-t-2 before:border-[#f83600] before:z-10">
-                        {/* Parallax effect on hover */}
-                        <div className="relative w-full h-fit overflow-hidden mx-auto z-20">
-                            <Link href={'/apartments'}>
-                                <Image
-                                    className="transition-transform duration-700 ease-in-out hover:scale-125 "
-                                    loader={imageLoader}
-                                    src="/ixora-welcome.webp"
-                                    width={5000}
-                                    height={2813}
-                                    alt="Image"
-                                />
-                            </Link>
-                        </div>
+                {/* TEXT */}
+                <div className="text-left flex flex-col gap-5">
+                    <span>
+                        Изпълнението и всички довършителни работи са заложени в изключително висок - бутиков клас. Ixora Residence се състои от 13 просторни апартамента и 17 гаража.
+                    </span>
+                    <span>
+                        Апартаментите разкриват чудесна панорамна гледка към София и Витоша, а сградата разполага с напълно оборудвани спа център и фитнес зала за ексклузивно ползване от бъдещите обитатели. Вертикалната планировка по специален ландшафтен проект оформя зелен пояс около сградата, който създава усещане за живот в паркова среда.
+                    </span>
+                </div>
 
-
-                    </div>
-                </motion.div>
             </div>
 
 
 
             {/* TIMELINE */}
-            <Timeline></Timeline>
+            <div className="bg-tilia-gray p-10">
+                <Timeline></Timeline>
+            </div>
 
 
 

@@ -18,7 +18,8 @@ module.exports = {
         'tilia-orange': '#ea580c',
         'tilia-white': '#FFFFFF',
         'tilia-yellow-text': '#D29815',
-        'tilia-yellow-block': '#FBC54C'
+        'tilia-yellow-block': '#FBC54C',
+        'tilia-gray': '#F6F6F6',
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',

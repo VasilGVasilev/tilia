@@ -76,7 +76,7 @@ export default function Investor() {
                     </div>
 
                     {/* Container for Investor Intro */}
-                    <div className="bg-[#F6F6F6] p-10 lg:px-32  flex flex-col sm:flex-row justify-center items-center gap-10">
+                    <div className="bg-tilia-gray p-10 lg:px-32  flex flex-col sm:flex-row justify-center items-center gap-10">
                         {/* Container for Investor Logo and Name */}
                         <motion.img
                             initial="hidden"

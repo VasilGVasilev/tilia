@@ -16,7 +16,6 @@ import { useState } from "react";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
-// todo: small icons dont show
 
 export default function Test() {
     const [dalia, setDalia] = useState(["/dalia/dalia-one.webp", "/dalia/dalia-two.webp", "/dalia/dalia-three.webp"]);
