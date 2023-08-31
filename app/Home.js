@@ -9,6 +9,7 @@ import { motion } from "framer-motion"
 import PromptToPlan from "@/components/PromptToPlan"
 import WelcomeText from "@/components/WelcomeText"
 import { noto } from "@/utils/fonts"
+import ApartmentTypes from "@/components/ApartmentTypes"
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
@@ -109,7 +110,7 @@ export default function Home() {
                             whileInView="visible"
                             transition={{ duration: 0.5 }}
                             variants={{
-                                hidden: { opacity: 0, translateY: 40, skewX: -80, rotateY: 50 },
+                                hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
                                 visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
                             }}
                         >
@@ -139,7 +140,10 @@ export default function Home() {
                 <Timeline></Timeline>
             </div>
 
-
+            {/* TYPES OF APARTMENTS */}
+            <div className="bg-white p-10">
+                <ApartmentTypes></ApartmentTypes>
+            </div>
 
             {/* DESCRIPTION */}
             <ForBuilding></ForBuilding>
