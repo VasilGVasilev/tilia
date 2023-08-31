@@ -10,6 +10,8 @@ import { motion } from "framer-motion";
 import { SlLocationPin } from 'react-icons/sl'
 import { BsTelephone } from 'react-icons/bs'
 import { TfiEmail } from 'react-icons/tfi'
+import { noto } from "@/utils/fonts";
+import { container, letterVariant } from "../Home";
 
 
 export const revalidate = 0; // revalidate this page every 60 seconds
@@ -23,28 +25,46 @@ export default function Contacts() {
         <>
 
 
-            {/* div for maps */}
-            <motion.div
-                className='bg-gradient-tilia'
-                initial={{ opacity: 0, width: 0 }}
-                animate={{ opacity: 1, width: '100%' }}
-                transition={{ duration: 1 }}
-            >
-                <div className="text-center py-4 text-3xl text-white font-bold">Местоположение</div>
-            </motion.div>
+            <div className="">
+                <div className="bg-white w-full h-10"></div>
+                {/* Investor tag */}
+                <div className="investorIntroBg pb-10">
+                    <motion.div
+                        className={`flex flex-row justify-center items-center ${noto.className} welcomeTextOnImg text-[#D7D7DF] text-left py-5 text-6xl md:text-8xl lg:text-[150px] xl:text-[200px]`}
 
+                        variants={container}
+                        initial="hidden"
+                        whileInView="visible"
+                    >
+                        <motion.span variants={letterVariant}>Л</motion.span>
+                        <motion.span variants={letterVariant}>О</motion.span>
+                        <motion.span variants={letterVariant}>К</motion.span>
+                        <motion.span variants={letterVariant}>А</motion.span>
+                        <motion.span variants={letterVariant}>Ц</motion.span>
+                        <motion.span variants={letterVariant}>И</motion.span>
+                        <motion.span variants={letterVariant}>Я</motion.span>
+
+                    </motion.div>
+
+                </div>
+
+
+            </div>
+
+            {/* div for maps */}
             <Maps></Maps>
+
             {/* Desktop res makes Contact Card and Form flex */}
             <div className="lg:flex">
                 {/* div for Contact Card */}
-                <div className="lg:w-1/2 bg-white">
+                <div className="lg:w-1/2 bg-[#F6F6F6]">
 
 
                     {/* Container to flex on Desktop */}
                     <div className="flex-col w-full h-fit lg:w-full">
 
-                        <div className="bg-white">
-                            <div className="flex justify-center text-tilia-orange py-4 pt-10 text-center text-3xl font-bold hover:scale-105 duration-200">Sales офис</div>
+                        <div className="bg-[#F6F6F6]">
+                            <div className="flex justify-center text-tilia-yellow-text py-4 pt-10 text-center text-3xl font-bold hover:scale-105 duration-200">Sales офис</div>
                         </div>
 
                         <div className="flex justify-center p-8 lg:p-20">
@@ -52,7 +72,7 @@ export default function Contacts() {
                                 <div className="space-y-10 flex flex-col justify-center">
 
                                     <div className="flex flex-row items-center space-x-3 lg:p-5">
-                                        <SlLocationPin size={24}  />
+                                        <SlLocationPin size={24} />
 
                                         <div className="text-sm sm:text-base font-bold text-gray-500 ">ул. „Пирински еделвайс“ 3, 1415 в.з. Симеоново - Драгалевци</div>
 
@@ -60,7 +80,7 @@ export default function Contacts() {
 
                                     <div className="flex flex-row items-center space-x-3 lg:p-5">
 
-                                        <BsTelephone size={24}  />
+                                        <BsTelephone size={24} />
 
                                         <div className="text-sm sm:text-base font-bold text-gray-500"><a href={`tel:00359886879993`}>00359886879993</a></div>
 
@@ -68,7 +88,7 @@ export default function Contacts() {
 
                                     <div className="flex flex-row items-center space-x-3 lg:p-5">
 
-                                        <TfiEmail size={24}  />
+                                        <TfiEmail size={24} />
 
 
                                         <div className="text-sm sm:text-base font-bold text-gray-500"><a href="mailto:office@creativestudiobg.com">office@creativestudiobg.com</a></div>
@@ -82,8 +102,8 @@ export default function Contacts() {
                     </div>
                 </div>
                 {/* div for Picture */}
-                <div className="flex-col justify-center py-10 lg:p-10 bg-white lg:bg-black lg:w-1/2">
-                    <Link href={'/apartments'}><div className="text-center font-bold text-xl text-orange-400  lg:text-white lg:py-4 mb-10 lg:text-3xl lg:font-bold hover:scale-105 duration-200">Вашият бъдещ дом</div></Link>
+                <div className="flex-col justify-center py-10 lg:p-10 bg-white lg:bg-tilia-yellow-block lg:w-1/2">
+                    <Link href={'/apartments'}><div className="text-center font-bold text-xl text-tilia-yellow-text  lg:text-white lg:py-4 mb-10 lg:text-3xl lg:font-bold hover:scale-105 duration-200">Вашият бъдещ дом</div></Link>
                     <Link href={'/apartments'}>
                         <Image
                             loader={imageLoader}
