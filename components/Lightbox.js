@@ -45,7 +45,7 @@ const PicsLightbox = ({ isOpen, onClose, url, alt }) => {
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
             <motion.div
-                className="h-fit sm:h-screen w-screen bg-white p-4 flex flex-col"
+                className="h-auto sm:h-screen w-screen bg-white p-4 flex flex-col"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
@@ -56,7 +56,7 @@ const PicsLightbox = ({ isOpen, onClose, url, alt }) => {
                         <AiOutlineClose size={24} className="text-neutral-600" />
                     </button>
                 </div>
-                <img src={url} alt={alt} className='h-fit sm:h-full w-fit'/>
+                <img src={url} alt={alt} className='h-auto sm:h-full w-fit'/>
 
 
 
