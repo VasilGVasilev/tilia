@@ -122,12 +122,33 @@ export default function Home() {
 
                 {/* TEXT */}
                 <div className="text-left flex flex-col gap-5">
-                    <span>
+                    <motion.span
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ delay: 0.3, duration: 0.5 }}
+                        variants={{
+                            hidden: { opacity: 0, scale: 1.3 },
+                            visible: { opacity: 1, scale: 1 },
+                        }}
+                    >
                         Изпълнението и всички довършителни работи са заложени в изключително висок - бутиков клас. Ixora Residence се състои от 13 просторни апартамента и 17 гаража.
-                    </span>
-                    <span>
+
+                    </motion.span>
+                    <motion.span
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ delay: 0.3, duration: 0.5 }}
+                        variants={{
+                            hidden: { opacity: 0, scale: 1.3 },
+                            visible: { opacity: 1, scale: 1 },
+                        }}
+                    >
                         Апартаментите разкриват чудесна панорамна гледка към София и Витоша, а сградата разполага с напълно оборудвани спа център и фитнес зала за ексклузивно ползване от бъдещите обитатели. Вертикалната планировка по специален ландшафтен проект оформя зелен пояс около сградата, който създава усещане за живот в паркова среда.
-                    </span>
+
+                    </motion.span>
+
                 </div>
 
             </div>

@@ -1,3 +1,4 @@
+import { container } from "@/app/Home"
 import { noto } from "@/utils/fonts"
 import { motion } from "framer-motion"
 import Link from "next/link"
@@ -6,10 +7,16 @@ import { HiExternalLink } from 'react-icons/hi'
 
 const TypeApp = ({ title, img }) => {
     return (
-        <div className="bg-tilia-gray p-7 flex flex-col justify-center items-center gap-7 sm:h-[500px] sm:w-[500px]">
+        <motion.div 
+            className="bg-tilia-gray p-7 flex flex-col justify-center items-center gap-7 sm:h-[500px] sm:w-[500px]"
+            variants={{
+                hidden: { opacity: 0, scale: 1.3 },
+                visible: { opacity: 1, scale: 1 },
+            }}
+        >
             <div className="font-semibold md:text-xl lg:text-2xl">{title}</div>
             <img src={img} alt="" className="hover:scale-110 transition duration-300 sm:w-[300px] sm:h-[300px]" />
-        </div>
+        </motion.div>
     )
 }
 
@@ -61,9 +68,24 @@ const ApartmentTypes = () => {
                     ИМОТИ
                 </motion.div>
             </div>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-5">
+            <motion.div
+                className="flex flex-col sm:flex-row justify-center items-center gap-5"
+                variants={{
+                    hidden: {},
+                    visible: {
+                        transition: {
+                            staggerChildren: 0.3,
+                        },
+                    },
+                }}
+                initial="hidden"
+                whileInView="visible"
+            >
                 {typeAparts.map(t => <TypeApp key={t.title} title={t.title} img={t.imgUrl} />)}
-            </div>
+
+            </motion.div>
+
+
             <Link href={'/apartments'} >
                 <div className="flex flex-row gap-1 rounded-full bg-tilia-yellow-block w-fit h-fit p-2 font-semibold sm:text-xl hover:bg-black hover:text-white transition">
                     <div>

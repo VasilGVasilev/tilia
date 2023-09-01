@@ -64,18 +64,39 @@ const ForBuilding = () => {
 
             <div className="flex flex-col md:flex-row md:gap-10">
 
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-5">
 
                     {/* small intro text 1 */}
-                    <div className=" xl:text-xl">
+                    <motion.div
+                        className=" xl:text-xl"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ delay: 0.3, duration: 0.5 }}
+                        variants={{
+                            hidden: { opacity: 0, scale: 1.3 },
+                            visible: { opacity: 1, scale: 1 },
+                        }}
+                    >
                         Lorem Ipsum is simply dumy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
-                    {/* break */}
-                    <br />
+
+                    </motion.div>
+
                     {/* small intro text  */}
-                    <div className=" xl:text-xl">
+                    <motion.div
+                        className=" xl:text-xl"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ delay: 0.3, duration: 0.5 }}
+                        variants={{
+                            hidden: { opacity: 0, scale: 1.3 },
+                            visible: { opacity: 1, scale: 1 },
+                        }}
+                    >
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </div>
+
+                    </motion.div>
                 </div>
 
                 {/* IMAGE */}
@@ -89,7 +110,7 @@ const ForBuilding = () => {
                 </div>
 
             </div>
-            
+
 
             {/* DESCRIPTION */}
 

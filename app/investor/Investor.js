@@ -97,6 +97,7 @@ export default function Investor() {
                         {/* Container for Description of Investor */}
                         <div className={`${lato.className}`}>
                             <motion.div
+                                className="text-black text-justify font-bold"
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.5 }}
@@ -106,12 +107,11 @@ export default function Investor() {
                                     visible: { opacity: 1, scale: 1 },
                                 }}
                             >
-                                <div className="text-black text-justify font-bold">
-                                    Creative Studio е строително-инвестиционно холдингово дружество, което финансира, проектира и изгражда луксозни многофамилни и еднофамилни жилищни сгради и ги реализира на пазара.
-                                </div>
+                                Creative Studio е строително-инвестиционно холдингово дружество, което финансира, проектира и изгражда луксозни многофамилни и еднофамилни жилищни сгради и ги реализира на пазара.
                             </motion.div>
                             <br />
                             <motion.div
+                                className="text-black text-justify "
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.5 }}
@@ -121,9 +121,7 @@ export default function Investor() {
                                     visible: { opacity: 1, scale: 1 },
                                 }}
                             >
-                                <div className="text-black text-justify ">
-                                    Мотото на компанията при изпълнение на инвестиционните проекти гласи - "Creating Excellence" или "Създаване на съвършенство".
-                                </div>
+                                Мотото на компанията при изпълнение на инвестиционните проекти гласи - "Creating Excellence" или "Създаване на съвършенство".
                             </motion.div>
 
                         </div>
