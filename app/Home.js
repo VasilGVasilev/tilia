@@ -135,7 +135,7 @@ export default function Home() {
 
 
             {/* TIMELINE */}
-            <div className="bg-tilia-gray p-10">
+            <div className="bg-tilia-gray">
                 <Timeline></Timeline>
             </div>
 
@@ -151,15 +151,10 @@ export default function Home() {
 
 
             {/* NEXT TO METRO */}
-            <div className="bg-tilia-gray p-10">
+            <div className="bg-white">
                 <WalkingDistance></WalkingDistance>
             </div>
 
-
-            {/* LOCATION */}
-            <>
-                <Maps></Maps>
-            </>
 
         </div>
     )

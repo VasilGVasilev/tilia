@@ -16,6 +16,7 @@ import { useState } from "react";
 import { ImageSquare } from "@/components/InvestorImage";
 import PicsLightbox from "@/components/Lightbox";
 import { DaliaDescription, IxoraDescription, WestEndDescription } from "@/components/OtherProjectDescriptions";
+import { HiExternalLink } from "react-icons/hi";
 
 
 export const revalidate = 0; // revalidate this page every 60 seconds
@@ -23,8 +24,8 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 
 export default function Investor() {
-    
-    
+
+
     // picture click modal states
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedPic, setSelectedPic] = useState(null);
@@ -143,7 +144,7 @@ export default function Investor() {
                             className="flex flex-col gap-10"
                         >
                             <Link href={`https://ixorabg.com/`}>
-                                <div className="bg-tilia-white shadow-2xl">
+                                <div className="bg-tilia-white shadow-2xl flex flex-row gap-3 justify-center items-center">
                                     <div className="flex flex-row gap-2 sm:gap-5 justify-center items-center">
                                         <motion.div
                                             className={` text-tilia-yellow-text text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
@@ -188,6 +189,8 @@ export default function Investor() {
                                             RESIDENCE
                                         </motion.div>
                                     </div>
+                                    <HiExternalLink size={24} className="text-tilia-yellow-text" />
+
                                 </div>
                             </Link>
                             {/* Container for images */}
