@@ -22,27 +22,8 @@ export default function Description() {
 
 
             {/* LOCATION*/}
-            <div className="">
-                <div className="investorIntroBg">
-                    <motion.div
-                        className={` text-tilia-yellow-text text-left p-5 text-2xl md:text-5xl lg:text-[80px]`}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7 }}
-                        variants={{
-                            hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
-                            visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
-                        }}
-                    >
 
-                        МЕСТОПОЛОЖЕНИЕ
-                    </motion.div>
-
-                </div>
-
-                <Maps></Maps>
-            </div>
+            <img src="/tilia/tilia-location-architect.webp" alt="" />
 
         </>
     )

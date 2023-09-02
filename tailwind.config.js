@@ -10,7 +10,7 @@ module.exports = {
       backgroundImage: (theme) => ({
         "gradient-tilia":
           "linear-gradient(81.66deg, #f83600 7.21%, #fe8c00 78.07%)",
-          "ixora-img-description": "url('/ixora-description.webp')",
+          "tilia-img-walking-people": "url('/tilia/tilia-walking-people.webp')",
       }),
       colors: {
         'tilia-deep-blue': '#111827',

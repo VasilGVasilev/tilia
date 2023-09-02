@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 import { SlLocationPin } from 'react-icons/sl'
 import { BsTelephone } from 'react-icons/bs'
 import { TfiEmail } from 'react-icons/tfi'
-import { noto } from "@/utils/fonts";
+import { noto, playfair, roboto } from "@/utils/fonts";
 import { container, letterVariant } from "../Home";
 
 
@@ -22,9 +22,7 @@ export default function Contacts() {
 
 
     return (
-        <>
-
-
+        <div>
             <div className="">
                 <div className="bg-white w-full h-10"></div>
                 {/* Investor tag */}
@@ -36,13 +34,14 @@ export default function Contacts() {
                         initial="hidden"
                         whileInView="visible"
                     >
-                        <motion.span variants={letterVariant}>Л</motion.span>
-                        <motion.span variants={letterVariant}>О</motion.span>
                         <motion.span variants={letterVariant}>К</motion.span>
+                        <motion.span variants={letterVariant}>О</motion.span>
+                        <motion.span variants={letterVariant}>Н</motion.span>
+                        <motion.span variants={letterVariant}>Т</motion.span>
                         <motion.span variants={letterVariant}>А</motion.span>
-                        <motion.span variants={letterVariant}>Ц</motion.span>
+                        <motion.span variants={letterVariant}>К</motion.span>
+                        <motion.span variants={letterVariant}>Т</motion.span>
                         <motion.span variants={letterVariant}>И</motion.span>
-                        <motion.span variants={letterVariant}>Я</motion.span>
 
                     </motion.div>
 
@@ -51,73 +50,31 @@ export default function Contacts() {
 
             </div>
 
-            {/* div for maps */}
-            <Maps></Maps>
-
-            {/* Desktop res makes Contact Card and Form flex */}
-            <div className="lg:flex">
-                {/* div for Contact Card */}
-                <div className="lg:w-1/2 bg-tilia-gray">
-
-
-                    {/* Container to flex on Desktop */}
-                    <div className="flex-col w-full h-fit lg:w-full">
-
-                        <div className="bg-tilia-gray">
-                            <div className="flex justify-center text-tilia-yellow-text py-4 pt-10 text-center text-3xl font-bold hover:scale-105 duration-200">Sales офис</div>
+            <div className="flex flex-col justify-center items-center gap-10 bg-tilia-gray p-12 md:p-20">
+                <img src="/tilia/tilia-location-architect.webp" className="h-fit w-fit lg:h-1/2 lg:w-1/2 rounded-lg" alt="" />
+                <div className={`${roboto.className} flex flex-col justify-center items-center text-xl text-center gap-5`}>
+                    <h3 className="text-2xl font-bold">
+                        Офис "Продажби"
+                    </h3>
+                    <div>
+                        <div className="text-neutral-600">
+                            "Върбница 2", Район Връбница, гр. София
                         </div>
-
-                        <div className="flex justify-center p-8 lg:p-20">
-                            <div className="flex justify-center h-56 w-96 p-5 shadow-xl bg-gradient-to-b from-gray-50 to-white lg:hover:scale-105 duration-200 lg:hover:shadow-none lg:w-full lg:h-96">
-                                <div className="space-y-10 flex flex-col justify-center">
-
-                                    <div className="flex flex-row items-center space-x-3 lg:p-5">
-                                        <SlLocationPin size={24} />
-
-                                        <div className="text-sm sm:text-base font-bold text-gray-500 ">ул. „Пирински еделвайс“ 3, 1415 в.з. Симеоново - Драгалевци</div>
-
-                                    </div>
-
-                                    <div className="flex flex-row items-center space-x-3 lg:p-5">
-
-                                        <BsTelephone size={24} />
-
-                                        <div className="text-sm sm:text-base font-bold text-gray-500"><a href={`tel:00359886879993`}>00359886879993</a></div>
-
-                                    </div>
-
-                                    <div className="flex flex-row items-center space-x-3 lg:p-5">
-
-                                        <TfiEmail size={24} />
-
-
-                                        <div className="text-sm sm:text-base font-bold text-gray-500"><a href="mailto:office@creativestudiobg.com">office@creativestudiobg.com</a></div>
-
-                                    </div>
-
-                                </div>
-                            </div>
+                        <div className="text-neutral-600">
+                            <a href={`tel:00359886879993`} className="text-green-700">+359886879993</a>
                         </div>
-
+                    </div>
+                    <div>
+                        <div className="text-neutral-600">
+                            понеделник – петък: 8:30 до 17:30
+                        </div>
+                        <div className="text-neutral-600">
+                            <a href="mailto:office@creativestudiobg.com" className="text-green-700">office@creativestudiobg.com</a>
+                        </div>
                     </div>
                 </div>
-                {/* div for Picture */}
-                <div className="flex-col justify-center py-10 lg:p-10 bg-white lg:bg-tilia-yellow-block lg:w-1/2">
-                    <Link href={'/apartments'}><div className="text-center font-bold text-xl text-tilia-yellow-text  lg:text-white lg:py-4 mb-10 lg:text-3xl lg:font-bold hover:scale-105 duration-200">Вашият бъдещ дом</div></Link>
-                    <Link href={'/apartments'}>
-                        {/* <Image
-                            loader={imageLoader}
-                            src="/tilia/tilia-plan.webp"
-                            className="shadow-3xl lg:hover:scale-105 duration-200 lg:hover:shadow-none"
-                            width={9891}
-                            height={5339}
-                            alt="tilia-plan">
-                        </Image> */}
-                        <img src="/tilia/tilia-plan.webp" alt="" className="shadow-3xl lg:hover:scale-105 duration-200 lg:hover:shadow-none"/>
-                    </Link>
-                </div>
             </div>
-        </>
+        </div>
     )
 }
 

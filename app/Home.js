@@ -12,6 +12,12 @@ import WalkingDistance from "@/components/WalkingDistance"
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
+// TODO:
+// sitemap update
+// img to Image
+// all images to webp
+
+
 export const container = {
     hidden: {},
     visible: {
@@ -37,19 +43,20 @@ export default function Home() {
             {/* WELCOME VIDEO */}
 
             <div className="relative">
-                <video className="w-full h-full" autoPlay={true} muted={true} loop={true} playsInline={true} >
+                {/* <video className="w-full h-full" autoPlay={true} muted={true} loop={true} playsInline={true} >
                     <source src="/video.MP4" type="video/MP4" />
                     Your browser does not support the video tag.
-                </video>
+                </video> */}
+                <img src="/tilia/tilia-dvor.jpg" alt="" className="opacity-80 bg-black" />
 
-                <div className="absolute top-[10%] left-4 md:top-[10%] md:left-10 w-full h-full flex flex-col items-start justify-center ">
+                <div className="absolute top-[10%] left-4 md:top-[10%] md:left-10 w-full h-full flex flex-col items-start justify-center opacity-100 ">
                     <div
-                        className={`${noto.className} md:pb-16 welcomeTextOnImg text-white text-center md:text-2xl lg:text-4xl xl:text-6xl`}
+                        className={`${noto.className} md:pb-16 text-white text-center md:text-2xl lg:text-4xl xl:text-6xl`}
                     >
                         НА КРАЧКИ ОТ МЕТРОТО
                     </div>
                     <motion.div
-                        className={`${noto.className} welcomeTextOnImg text-white text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px]`}
+                        className={`${noto.className} text-white text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px]`}
                         variants={container}
                         initial="hidden"
                         whileInView="visible"
@@ -168,6 +175,11 @@ export default function Home() {
             {/* DESCRIPTION */}
             <div className="bg-tilia-yellow-block p-10">
                 <ForBuilding></ForBuilding>
+            </div>
+
+            {/* PARALLAX TILIA WALKING PEOPLE */}
+
+            <div className="bg-tilia-img-walking-people h-60 bg-center bg-contain bg-no-repeat bg-tilia-yellow-block md:min-h-[28rem] md:grid md:place-items-center md:bg-fixed md:bg-no-repeat md:bg-cover md:bg-center md:opacity-75">
             </div>
 
 
