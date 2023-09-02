@@ -27,13 +27,14 @@ const Plan = () => {
             {/* <img src="/ixora-apartments-plan.webp" alt="Ixora Plan" className="relative" /> */}
                 
             <div className='relative'>
-            <Image 
+            {/* <Image 
                 loader={imageLoader}
-                src='/ixora-apartments.webp'
+                src='/tilia-plan.webp'
                 alt="Ixora Plan"
                 width={5000}
                 height={2813} 
-            ></Image>
+            ></Image> */}
+            <img src="/tilia/tilia-plan.webp" alt="" />
             </div>
         
 

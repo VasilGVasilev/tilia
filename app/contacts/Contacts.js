@@ -105,14 +105,15 @@ export default function Contacts() {
                 <div className="flex-col justify-center py-10 lg:p-10 bg-white lg:bg-tilia-yellow-block lg:w-1/2">
                     <Link href={'/apartments'}><div className="text-center font-bold text-xl text-tilia-yellow-text  lg:text-white lg:py-4 mb-10 lg:text-3xl lg:font-bold hover:scale-105 duration-200">Вашият бъдещ дом</div></Link>
                     <Link href={'/apartments'}>
-                        <Image
+                        {/* <Image
                             loader={imageLoader}
-                            src="/ixora-apartments.webp"
+                            src="/tilia/tilia-plan.webp"
                             className="shadow-3xl lg:hover:scale-105 duration-200 lg:hover:shadow-none"
-                            width={5000}
-                            height={2813}
-                            alt="Description">
-                        </Image>
+                            width={9891}
+                            height={5339}
+                            alt="tilia-plan">
+                        </Image> */}
+                        <img src="/tilia/tilia-plan.webp" alt="" className="shadow-3xl lg:hover:scale-105 duration-200 lg:hover:shadow-none"/>
                     </Link>
                 </div>
             </div>

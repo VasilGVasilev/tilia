@@ -142,10 +142,10 @@ export default function Investor() {
                             className="flex flex-col gap-10"
                         >
                             <Link href={`https://ixorabg.com/`}>
-                                <div className="bg-tilia-white shadow-2xl flex flex-row gap-3 justify-center items-center">
-                                    <div className="flex flex-row gap-2 sm:gap-5 justify-center items-center">
+                                <div className="bg-tilia-white hover:bg-black text-tilia-yellow-text hover:text-white shadow-2xl flex flex-row gap-3 justify-center items-top">
+                                    <div className="flex flex-row gap-2 sm:gap-5 justify-center items-center ">
                                         <motion.div
-                                            className={` text-tilia-yellow-text text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                            className={`  text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
                                             initial="hidden"
                                             whileInView="visible"
                                             viewport={{ once: true }}
@@ -159,7 +159,7 @@ export default function Investor() {
                                             IXORA
                                         </motion.div>
                                         <motion.div
-                                            className={` text-tilia-yellow-text text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                            className={`  text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
                                             initial="hidden"
                                             whileInView="visible"
                                             viewport={{ once: true }}
@@ -173,7 +173,7 @@ export default function Investor() {
                                             LUXURY
                                         </motion.div>
                                         <motion.div
-                                            className={` text-tilia-yellow-text text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                            className={`  text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
                                             initial="hidden"
                                             whileInView="visible"
                                             viewport={{ once: true }}
@@ -187,7 +187,7 @@ export default function Investor() {
                                             RESIDENCE
                                         </motion.div>
                                     </div>
-                                    <HiExternalLink size={24} className="text-tilia-yellow-text" />
+                                    <HiExternalLink size={24} className="" />
 
                                 </div>
                             </Link>
