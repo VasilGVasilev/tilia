@@ -173,7 +173,7 @@ export default function Home() {
             </div>
 
             {/* DESCRIPTION */}
-            <div className="bg-tilia-yellow-block p-10">
+            <div className="bg-tilia-yellow-block">
                 <ForBuilding></ForBuilding>
             </div>
 

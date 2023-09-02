@@ -16,9 +16,7 @@ export default function Description() {
         <>
 
 
-            <div className="bg-tilia-yellow-block p-10">
-                <ForBuilding></ForBuilding>
-            </div>
+            <ForBuilding></ForBuilding>
 
 
             {/* LOCATION*/}
