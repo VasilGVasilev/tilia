@@ -51,7 +51,7 @@ export default function Contacts() {
             </div>
 
             <div className="flex flex-col justify-center items-center gap-10 bg-tilia-gray p-12 md:p-20">
-                <img src="/tilia/tilia-location-architect.webp" className="h-fit w-fit lg:h-1/2 lg:w-1/2 rounded-lg" alt="" />
+                <img src="/tilia/tilia-location-architect.webp" className="h-auto w-fit lg:h-1/2 lg:w-1/2 rounded-lg" alt="" />
                 <div className={`${roboto.className} flex flex-col justify-center items-center text-xl text-center gap-5`}>
                     <h3 className="text-2xl font-bold">
                         Офис "Продажби"
