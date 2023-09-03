@@ -62,12 +62,14 @@ const ForBuilding = () => {
                 </motion.div>
             </div>
 
+
             {/* DESCRIPTION */}
 
             <div className="flex flex-col md:flex-row gap-10 bg-tilia-yellow-block p-10">
                 {/* IMAGE */}
-                <motion.div 
-                    className="flex flex-col justify-center items-center mx-10"
+                <motion.div
+                    className="basis-1/2 relative z-0 ml-5 before:absolute before:-top-10 before:-left-10  before:rounded-t-[400px]
+                     before:w-full before:max-w-[400px] md:before:max-w-[600px]  before:opacity-20 before:h-full before:border-4 before:border-white before:z-[-1]"
                     initial="hidden"
                     whileInView="visible"
                     transition={{ duration: 0.5 }}
@@ -76,15 +78,16 @@ const ForBuilding = () => {
                         visible: { opacity: 1, scale: 1 },
                     }}
                 >
+
                     <img
                         alt="profile"
-                        // filter is not actually necessary, you can go ahead with saturate-200 directly
-                        className=" rounded-2xl object-contain w-fit"
+                        className="z-10 w-full rounded-t-[400px] max-w-[400px] md:max-w-[600px]"
                         src="/tilia/tilia-one.webp"
                     />
+
                 </motion.div>
 
-                <div className="flex flex-col gap-5">
+                <div className="basis-1/2 flex flex-col gap-5">
 
                     {/* small intro text 1 */}
                     <motion.div
@@ -141,7 +144,13 @@ const ForBuilding = () => {
                         }}
                     >
 
-                        <img src="/tilia/tilia-dvor-2.jpg" className=" rounded-full object-contain" alt="" />
+                        <div className="relative rounded-full overflow-hidden ">
+
+                            <img src="/tilia/tilia-dvor-2.jpg" className="z-0" alt="" />
+                            <span className="absolute inset-0 z-10 rounded-full shadow-inner-3xl"></span>
+
+                        </div>
+
                     </motion.div>
 
                     <div className="lg:basis-1/2 lg:order-1">
@@ -203,8 +212,12 @@ const ForBuilding = () => {
                             visible: { opacity: 1, scale: 1 },
                         }}
                     >
+                        <div className="relative rounded-full overflow-hidden ">
 
-                        <img src="/tilia/tilia-dvor-3.jpg" className=" rounded-full object-contain" alt="" />
+                            <img src="/tilia/tilia-dvor-3.jpg" className="z-0" alt="" />
+                            <span className="absolute inset-0 z-10 rounded-full shadow-inner-3xl"></span>
+
+                        </div>
                     </motion.div>
 
                     <div className="lg:basis-1/2">
@@ -270,8 +283,12 @@ const ForBuilding = () => {
                             visible: { opacity: 1, scale: 1 },
                         }}
                     >
+                        <div className="relative rounded-full overflow-hidden ">
 
-                        <img src="/tilia/tilia-three.webp" className=" rounded-full object-contain" alt="" />
+                            <img src="/tilia/tilia-three.webp" className="z-0" alt="" />
+                            <span className="absolute inset-0 z-10 rounded-full shadow-inner-3xl"></span>
+
+                        </div>
                     </motion.div>
 
                     <div className="lg:basis-1/2 lg:order-1">
