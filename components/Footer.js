@@ -22,7 +22,13 @@ const Footer = () => {
                     width={979}
                     height={350}
                 /> */}
-                <img src="/assets/tilia-logo.webp" className="h-auto w-auto sm:h-32 sm:w-48 shadow-lg" alt="" />
+                <div className="relative overflow-hidden">
+
+                    <img src="/assets/tilia-logo.webp" className='h-auto w-auto sm:h-28 sm:w-44' alt="" />
+                    <span className="absolute inset-0 z-10 shadow-inner-xl"></span>
+
+                </div>
+
                 <div className='flex flex-col sm:flex-row'>
 
                     {/* Description */}

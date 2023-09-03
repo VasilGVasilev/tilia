@@ -26,7 +26,9 @@ module.exports = {
       },
       boxShadow: {
         '3xl': '0 20px 120px -15px rgba(0, 0, 0, 0.3)',
-        'inner-3xl': 'inset 0 0 10px 10px rgba(0,0,0,0.3);'
+        'inner-xl': 'inset 0 0 15px 10px rgba(0,0,0,0.1)',
+        'inner-3xl': 'inset 0 0 10px 10px rgba(0,0,0,0.3)'
+
       },
       width: {
         '128': '32rem',

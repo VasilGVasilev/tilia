@@ -113,7 +113,12 @@ const Navbar = () => {
                             width={979}
                             height={350}
                         /> */}
-                        <img src="/assets/tilia-logo.webp" className="h-10 w-14 sm:h-16 sm:w-24 shadow-lg" alt="" />
+                        <div className="relative rounded-full overflow-hidden h-10 w-14 sm:h-16 sm:w-24 shadow-lg hover:scale-110 transition duration-200">
+
+                            <img src="/assets/tilia-logo.webp" className="" alt="" />
+                            <span className="absolute inset-0 z-10 rounded-full shadow-inner"></span>
+
+                        </div>
 
                     </Link>
                     {/* DESKTOP NAV */}
