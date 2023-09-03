@@ -101,18 +101,20 @@ const Navbar = () => {
                 <div className="group bg-tilia-yellow-block hover:bg-black w-full flex flex-row gap-3 justify-center items-center px-2">
                     <PiBellRingingLight size={24} className="animate-bounce group-hover:text-white" />
                     <p className="font-semibold py-2 text-xs sm:text-sm group-hover:text-white">Стартираха предварителните продажби </p>
-                    <span className="text-xs sm:text-sm text-black p-1 border-black rounded-lg bg-green-600 group-hover:text-white"><a href={`tel:00359886879993`} className="font-semibold">+359886879993</a></span> 
+                    <span className="text-xs sm:text-sm text-black p-1 border-black rounded-lg bg-green-600 group-hover:text-white"><a href={`tel:00359886879993`} className="font-semibold">+359886879993</a></span>
                 </div>
                 <div className="flex items-center justify-between mx-auto w-5/6">
 
                     <Link className='saturate-200 duration-200 flex justify-center items-center h-14 w-20 sm:h-20 sm:w-32 ' href={'/'}>
-                        <Image
+                        {/* <Image
                             loader={imageLoader}
-                            src="/ixora.webp"
-                            alt="Ixora Logo"
+                            src="/assets/tilia-logo.webp"
+                            alt="Tilia Logo"
                             width={979}
                             height={350}
-                        />
+                        /> */}
+                        <img src="/assets/tilia-logo.webp" className="h-10 w-14 sm:h-16 sm:w-24 shadow-lg" alt="" />
+
                     </Link>
                     {/* DESKTOP NAV */}
                     {isDesktop ? (
