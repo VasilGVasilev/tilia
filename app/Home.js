@@ -6,7 +6,7 @@ import Maps from "@/components/Location"
 import Timeline from "@/components/Timeline"
 import ForBuilding from "@/components/ForBuidling"
 import { motion } from "framer-motion"
-import { noto } from "@/utils/fonts"
+import { noto, playfair, roboto } from "@/utils/fonts"
 import ApartmentTypes from "@/components/ApartmentTypes"
 import WalkingDistance from "@/components/WalkingDistance"
 
@@ -47,16 +47,16 @@ export default function Home() {
                     <source src="/video.MP4" type="video/MP4" />
                     Your browser does not support the video tag.
                 </video> */}
-                <img src="/tilia/tilia-dvor.jpg" alt="" className="opacity-80 bg-black" />
+                <img src="/tilia/tilia-dvor.jpg" alt="" className="" />
 
-                <div className="absolute top-[10%] left-4 md:top-[10%] md:left-10 w-full h-full flex flex-col items-start justify-center opacity-100 ">
+                <div className="absolute top-[10%] left-4 md:top-[10%] md:left-10 w-full h-full flex flex-col items-start justify-center">
                     <div
-                        className={`${noto.className} md:pb-16 text-white text-center md:text-2xl lg:text-4xl xl:text-6xl`}
+                        className={`${roboto.className} welcomeTextOnImg md:pb-16 text-white text-center md:text-xl lg:text-3xl xl:text-5xl`}
                     >
                         НА КРАЧКИ ОТ МЕТРОТО
                     </div>
                     <motion.div
-                        className={`${noto.className} text-white text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px]`}
+                        className={`${roboto.className} welcomeTextOnImg text-white text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px]`}
                         variants={container}
                         initial="hidden"
                         whileInView="visible"
@@ -101,10 +101,9 @@ export default function Home() {
                             alt="profile"
                             // filter is not actually necessary, you can go ahead with saturate-200 directly
                             className="z-10 w-full rounded-t-[400px] max-w-[400px] md:max-w-[600px]"
-                            src="/tilia/tilia-yellow.webp"
+                            src="/tilia/tilia-one.webp"
                         />
                     </div>
-                    {/* <img  alt="" className="relative" /> */}
 
                     <div className="absolute top-0 left-1/2 translate-x-[-50%] translate-y-[-50%] flex flex-col justify-center items-center">
                         <div className="text-black text-lg md:text-2xl lg:text-4xl ">
