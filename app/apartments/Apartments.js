@@ -1,7 +1,7 @@
 'use client'
 
 import Plan from '@/components/Plan';
-import PlanButtons from '@/components/PlanButtons';
+import { noto } from '@/utils/fonts';
 import { motion } from 'framer-motion';
 
 export const revalidate = 0; // revalidate this page every 60 seconds
@@ -12,30 +12,33 @@ export default function Apartments() {
 
 
     return (
-      <>
+        <>
 
 
-        <motion.div 
-          className='bg-gradient-tilia'
-          initial={{ opacity: 0, width: 0 }}
-          animate={{ opacity: 1, width: '100%' }}
-          transition={{ duration: 1 }}
-          >
-          <div className="py-4 text-white text-center text-3xl font-bold">Разпределение</div>
-        </motion.div>
+            {/* TITLE */}
+            <div className="text-tilia-yellow-text flex flex-row pb-5 gap-5 bg-white p-10 ">
+                <motion.div
+                    className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ duration: 0.7, delay: 0.3 }}
+                    variants={{
+                        hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
+                        visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                    }}
+                >
 
-        {/* FLOOR BTNS */}
+                    АПАРТАМЕНТИ
+                </motion.div>
+
+            </div>
 
 
-        <PlanButtons classNameProps={'p-5 flex justify-around bg-tilia-white'}></PlanButtons>
-
-
-        {/* FLOOR PLAN */}
-        
-        <div className="p-4 pt-0 to-90% flex">
-          <Plan></Plan>
-        </div>
-      </>
+            {/* FLOOR PLAN */}
+            <div className='lg:p-40'>
+                <Plan></Plan>
+            </div>
+        </>
     )
 }
-  
+

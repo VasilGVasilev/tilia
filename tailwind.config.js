@@ -6,11 +6,15 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+
     extend: {
+      fontSize: {
+        xxs: ['10px', '12px']
+      },
       backgroundImage: (theme) => ({
         "gradient-tilia":
           "linear-gradient(81.66deg, #f83600 7.21%, #fe8c00 78.07%)",
-          "tilia-img-walking-people": "url('/tilia/tilia-walking-people.webp')",
+        "tilia-img-walking-people": "url('/tilia/tilia-walking-people.webp')",
       }),
       colors: {
         'tilia-deep-blue': '#111827',
@@ -35,7 +39,7 @@ module.exports = {
       },
       height: {
         '128': '32rem',
-      }, 
+      },
     },
   },
   plugins: [],

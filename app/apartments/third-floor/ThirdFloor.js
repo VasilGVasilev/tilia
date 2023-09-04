@@ -5,7 +5,6 @@ import { useState } from "react";
 import { imageLoader } from "@/utils/imgLoader";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import PlanButtons from "@/components/PlanButtons";
 import Modal from "@/components/Modal";
 
 
@@ -58,9 +57,7 @@ export default function ThirdFloor() {
                 <div className="py-4 text-white text-center text-2xl font-extrabold">Трети етаж</div>
             </motion.div>
 
-            {/* Container for buttons */}
 
-            <PlanButtons></PlanButtons>
 
 
             {/* Container for floor plan */}

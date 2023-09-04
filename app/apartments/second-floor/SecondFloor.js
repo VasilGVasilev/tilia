@@ -5,7 +5,6 @@ import { useState } from "react";
 import { imageLoader } from "@/utils/imgLoader";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import PlanButtons from "@/components/PlanButtons";
 import Modal from "@/components/Modal";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
@@ -59,9 +58,7 @@ export default function SecondFloor() {
                 <div className="py-4 text-white text-center text-2xl font-extrabold">Втори етаж</div>
             </motion.div>
 
-            {/* Container for buttons */}
 
-            <PlanButtons></PlanButtons>
 
             {/* Container for floor plan */}
             <div className="p-5 xl:px-40 bg-gradient-to-b from-tilia-white from-10% via-ixorafrom-tilia-white via-70% to-[#2e281f] to-90% ">
