@@ -1,23 +1,14 @@
 
 'use client'
 
-import Image from "next/image"
-import { imageLoader } from "../../utils/imgLoader";
-import Maps from "@/components/Location";
-import Link from "next/link";
-import { motion } from "framer-motion";
 
-import { SlLocationPin } from 'react-icons/sl'
-import { BsTelephone } from 'react-icons/bs'
-import { TfiEmail } from 'react-icons/tfi'
-import PicsLightbox from "@/components/Lightbox";
 import { useRef, useState } from "react";
 
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
 
-export default function Test() {
+export default function Apartament() {
     const [dalia, setDalia] = useState(["/dalia/dalia-one.webp", "/dalia/dalia-two.webp", "/dalia/dalia-three.webp"]);
     const [westEnd, setWestEnd] = useState(["/west-end/west-end-one.webp", "/west-end/west-end-two.webp", "/west-end/west-end-three.webp"]);
     const [ixora, setIxora] = useState(["/ixora/ixora-one.webp", "/ixora/ixora-two.webp", "/ixora/ixora-three.webp"]);
@@ -98,7 +89,7 @@ export default function Test() {
                 <div className="sm:ml-10 font-bold">
                     Схема на етажа:
                 </div>
-                <div className="mx-auto h-1/3 w-1/2">
+                <div className="mx-auto h-fit w-fit lg:px-60">
                     <img src="/plans/third-floor.webp" alt="" />
                 </div>
             </div>

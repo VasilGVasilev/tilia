@@ -6,6 +6,8 @@ import { imageLoader } from "@/utils/imgLoader";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Modal from "@/components/Modal";
+import Link from "next/link";
+import { noto } from "@/utils/fonts";
 
 
 export const revalidate = 0; // revalidate this page every 60 seconds
@@ -48,28 +50,46 @@ export default function ThirdFloor() {
         <>
             <Modal isOpen={modalOpen} onClose={closeModal} apartment={apartment} />
 
-            <motion.div
-                className='bg-gradient-tilia'
-                initial={{ opacity: 0, width: 0 }}
-                animate={{ opacity: 1, width: '100%' }}
-                transition={{ duration: 1 }}
-            >
-                <div className="py-4 text-white text-center text-2xl font-extrabold">Трети етаж</div>
-            </motion.div>
 
+            {/* TITLE */}
+            <div className="text-tilia-yellow-text flex flex-row pb-5 gap-5 bg-white p-10 ">
+                <motion.div
+                    className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ duration: 0.7, delay: 0.3 }}
+                    variants={{
+                        hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
+                        visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                    }}
+                >
+
+                    Трети етаж
+                </motion.div>
+
+            </div>
 
 
 
             {/* Container for floor plan */}
-            <div className="p-5 xl:px-40 bg-gradient-to-b from-tilia-white from-10% via-ixorafrom-tilia-white via-70% to-[#2e281f] to-90% ">
+            <div className="p-5 xl:px-40 ">
 
                 <div>
                     <div className="relative inline-block">
+                        <Link href={'/apartments/third-floor/app-12'}>
+                            <div className={`absolute apartmentTwelve h-full w-full z-10 ${available}`} title="СВОБОДЕН"></div>
+                        </Link>
+                        
+                        <div className={`absolute apartmentEleven h-full w-full z-10 ${sold}`} title="ПРОДАДЕН"></div>
 
-                        <div className={`absolute apartmentTwelve h-full w-full z-10 ${available}`} onClick={() => updateInfo(12, 200.10, 155.10)}></div>
-                        <div className={`absolute apartmentEleven h-full w-full z-10 ${sold}`}></div>
-                        <div className={`absolute apartmentTen h-full w-full z-10 ${available} `} onClick={() => updateInfo(10, 154.43, 119.70)}></div>
-                        <div className={`absolute apartmentNine h-full w-full z-10 ${available} `} onClick={() => updateInfo(9, 100.76, 78.10)}></div>
+                        <Link href={'/apartments/third-floor/app-12'}>
+                            <div className={`absolute apartmentTen h-full w-full z-10 ${available}`} title="СВОБОДЕН" ></div>
+
+                        </Link>
+                        <Link href={'/apartments/third-floor/app-12'}>
+                            <div className={`absolute apartmentNine h-full w-full z-10 ${available} `} title="СВОБОДЕН"></div>
+
+                        </Link>
 
 
                         {/* <img src="/plans/third-floor.webp" alt="Ixora Plan" className="relative" /> */}

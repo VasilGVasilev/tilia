@@ -5,7 +5,7 @@ const imageVariant = {
     visible: { opacity: 1, scale: 1 },
 };
 
-export const ImageSquare = ({ alt, url, openModal, setSelectedPic, selectedPic}) => {
+export const ImageSquare = ({ alt, url, openModal, setSelectedPic}) => {
     const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-100 transition duration-700
       bg-deep-blue z-30 flex flex-col justify-center items-center text-center p-10 text-white`;
 
