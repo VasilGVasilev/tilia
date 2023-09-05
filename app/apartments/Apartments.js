@@ -3,6 +3,7 @@
 import Plan from '@/components/Plan';
 import { noto } from '@/utils/fonts';
 import { motion } from 'framer-motion';
+import { container, letterVariant } from '../Home';
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
@@ -13,29 +14,39 @@ export default function Apartments() {
 
     return (
         <>
+            {/* INTRO */}
+            <div>
+                {/* Necessary to lower the Title be visible */}
+                <div className="bg-white w-full h-10"></div>
+                {/* Investor tag */}
+                <div className="investorIntroBg">
+                    <motion.div
+                        className={`flex flex-row justify-center items-center ${noto.className} welcomeTextOnImg text-[#D7D7DF] text-left py-5 text-4xl sm:text-6xl lg:text-8xl`}
 
+                        variants={container}
+                        initial="hidden"
+                        whileInView="visible"
+                    >
+                        <motion.span variants={letterVariant}>А</motion.span>
+                        <motion.span variants={letterVariant}>П</motion.span>
+                        <motion.span variants={letterVariant}>А</motion.span>
+                        <motion.span variants={letterVariant}>Р</motion.span>
+                        <motion.span variants={letterVariant}>Т</motion.span>
+                        <motion.span variants={letterVariant}>А</motion.span>
+                        <motion.span variants={letterVariant}>М</motion.span>
+                        <motion.span variants={letterVariant}>Е</motion.span>
+                        <motion.span variants={letterVariant}>Н</motion.span>
+                        <motion.span variants={letterVariant}>Т</motion.span>
+                        <motion.span variants={letterVariant}>И</motion.span>
 
-            {/* TITLE */}
-            <div className="text-tilia-yellow-text flex flex-row pb-5 gap-5 bg-white p-10 ">
-                <motion.div
-                    className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{ duration: 0.7, delay: 0.3 }}
-                    variants={{
-                        hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
-                        visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
-                    }}
-                >
+                    </motion.div>
 
-                    АПАРТАМЕНТИ
-                </motion.div>
-
+                </div>
             </div>
 
 
             {/* FLOOR PLAN */}
-            <div className='lg:p-40'>
+            <div className='lg:p-40 bg-tilia-gray'>
                 <Plan></Plan>
             </div>
         </>

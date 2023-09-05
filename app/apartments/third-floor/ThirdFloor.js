@@ -20,36 +20,14 @@ const reserved = "hover:bg-blue-400 hover:opacity-40 active:bg-blue-400 active:o
 
 
 export default function ThirdFloor() {
-    const [modalOpen, setModalOpen] = useState(false);
-
-    const openModal = () => {
-        setModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setModalOpen(false);
-    };
-    const [apartment, setApartment] = useState({
-        ap: null,
-        plosht: null,
-        zp: null,
-    });
 
 
-    const updateInfo = (ap, plosht, zp) => {
-        setApartment({
-            ap,
-            plosht,
-            zp,
-        });
-        openModal()
-    }
 
 
     return (
         <>
-            <Modal isOpen={modalOpen} onClose={closeModal} apartment={apartment} />
-
+            {/* Necessary to lower the Title be visible */}
+            <div className="bg-white w-full h-10"></div>
 
             {/* TITLE */}
             <div className="text-tilia-yellow-text flex flex-row pb-5 gap-5 bg-white p-10 ">
@@ -79,7 +57,7 @@ export default function ThirdFloor() {
                         <Link href={'/apartments/third-floor/app-12'}>
                             <div className={`absolute apartmentTwelve h-full w-full z-10 ${available}`} title="СВОБОДЕН"></div>
                         </Link>
-                        
+
                         <div className={`absolute apartmentEleven h-full w-full z-10 ${sold}`} title="ПРОДАДЕН"></div>
 
                         <Link href={'/apartments/third-floor/app-12'}>

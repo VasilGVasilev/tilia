@@ -23,9 +23,13 @@ export default function Contacts() {
 
     return (
         <div>
+            {/* INTRO */}
             <div className="">
+                
+                {/* Necessary for title be visible */}
                 <div className="bg-white w-full h-10"></div>
-                {/* Investor tag */}
+
+                {/* Contacts tag */}
                 <div className="investorIntroBg pb-10">
                     <motion.div
                         className={`flex flex-row justify-center items-center ${noto.className} welcomeTextOnImg text-[#D7D7DF] text-left py-5 text-6xl md:text-8xl lg:text-[150px] xl:text-[200px]`}
@@ -46,7 +50,6 @@ export default function Contacts() {
                     </motion.div>
 
                 </div>
-
 
             </div>
 
