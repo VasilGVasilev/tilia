@@ -110,11 +110,11 @@ const Plan = () => {
 
             {/* Hover Building Floor Buttons */}
 
-            <Link href={`/apartments/penthouse/`}><div className="absolute penthouse cursor-pointer h-full w-full z-20 hover:bg-tilia-orange opacity-60" ></div></Link>
+            <Link href={`/apartments/third-floor/`}><div className="absolute penthouse cursor-pointer h-full w-full z-20 hover:bg-tilia-orange opacity-60" ></div></Link>
             <Link href={`/apartments/third-floor/`}><div className="absolute thirdFloor cursor-pointer h-full w-full z-20 hover:bg-tilia-orange opacity-60" ></div></Link>
-            <Link href={`/apartments/second-floor/`}><div className="absolute secondFloor cursor-pointer  h-full w-full z-20 hover:bg-tilia-orange opacity-60"></div></Link>
-            <Link href={`/apartments/first-floor/`}><div className="absolute firstFloor cursor-pointer h-full w-full z-20 hover:bg-tilia-orange opacity-60" ></div></Link>
-            <Link href={`/apartments/parking/`}><div className="absolute parking cursor-pointer h-full w-full z-20 hover:bg-tilia-orange opacity-60" ></div></Link>
+            <Link href={`/apartments/third-floor/`}><div className="absolute secondFloor cursor-pointer  h-full w-full z-20 hover:bg-tilia-orange opacity-60"></div></Link>
+            <Link href={`/apartments/third-floor/`}><div className="absolute firstFloor cursor-pointer h-full w-full z-20 hover:bg-tilia-orange opacity-60" ></div></Link>
+            <Link href={`/apartments/third-floor/`}><div className="absolute parking cursor-pointer h-full w-full z-20 hover:bg-tilia-orange opacity-60" ></div></Link>
             {/* <div className='absolute outside cursor-pointer h-full w-full bg-white opacity-50 z-10'  ></div> */}
             {/* <img src="/ixora-apartments-plan.webp" alt="Ixora Plan" className="relative" /> */}
 
