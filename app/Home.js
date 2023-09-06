@@ -16,7 +16,7 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 // sitemap update
 // img to Image
 // all images to webp
-// lighthouse optimal
+// lighthouse optimal 
 
 
 export const container = {
