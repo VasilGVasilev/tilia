@@ -48,7 +48,7 @@ export default function Home() {
                     <source src="/video.MP4" type="video/MP4" />
                     Your browser does not support the video tag.
                 </video> */}
-                <img src="/tilia/tilia-dvor.jpg" alt="" className="" />
+                <img src="/tilia/tilia-dvor.webp" alt="" className="" />
 
                 <div className="absolute top-[10%] left-4 md:top-[10%] md:left-10 w-full h-full flex flex-col items-start justify-center">
                     <div

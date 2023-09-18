@@ -47,7 +47,7 @@ export default function Test() {
         <div className="p-5 flex flex-col">
             {/* IMG APARTMENT */}
             <div className="mx-auto grid grid-cols-1 py-10">
-                <img src="/assets/apartment-type-one.jpg" alt="" />
+                <img src="/assets/apartment-type-one.webp" alt="" />
             </div>
 
             {/* APARTMENT DESCRIPTION */}

@@ -146,7 +146,7 @@ const ForBuilding = () => {
 
                         <div className="relative rounded-full overflow-hidden ">
 
-                            <img src="/tilia/tilia-dvor-2.jpg" className="z-0" alt="" />
+                            <img src="/tilia/tilia-dvor-2.webp" className="z-0" alt="" />
                             <span className="absolute inset-0 z-10 rounded-full shadow-inner-3xl"></span>
 
                         </div>
@@ -214,7 +214,7 @@ const ForBuilding = () => {
                     >
                         <div className="relative rounded-full overflow-hidden ">
 
-                            <img src="/tilia/tilia-dvor-3.jpg" className="z-0" alt="" />
+                            <img src="/tilia/tilia-dvor-3.webp" className="z-0" alt="" />
                             <span className="absolute inset-0 z-10 rounded-full shadow-inner-3xl"></span>
 
                         </div>

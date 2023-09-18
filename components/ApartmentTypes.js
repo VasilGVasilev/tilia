@@ -24,15 +24,15 @@ const ApartmentTypes = () => {
     const [typeAparts, setTypeAparts] = useState([
         {
             title: 'ДВУСТАЙНИ АПАРТАМЕНТИ',
-            imgUrl: '/assets/apartment-type-one.jpg'
+            imgUrl: '/assets/apartment-type-one.webp'
         },
         {
             title: 'ТРИСТАЙНИ АПАРТАМЕНТИ',
-            imgUrl: '/assets/apartment-type-two.png'
+            imgUrl: '/assets/apartment-type-two.webp'
         },
         {
             title: 'МЕЗОНЕТИ',
-            imgUrl: '/assets/apartment-type-three.png'
+            imgUrl: '/assets/apartment-type-three.webp'
         },
     ])
 

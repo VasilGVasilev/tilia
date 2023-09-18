@@ -1,6 +1,6 @@
 export const data = {
     apartmentTest: {
-        apartmentImgUrl: '/assets/apartment-type-one.jpg',
+        apartmentImgUrl: '/assets/apartment-type-one.webp',
         floor: '3',
         beds: '1',
         direction: 'северозапад',
