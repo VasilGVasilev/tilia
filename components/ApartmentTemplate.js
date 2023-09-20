@@ -1,5 +1,7 @@
+import { imageLoader } from "@/utils/imgLoader"
+import Image from "next/image"
 
-const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, price, title, textOne, textTwo, floorPlan }) => {
+const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, price, title, textOne, textTwo, floorPlan, apartmentW, apartmentH, floorW, floorH }) => {
     return (
         <>
             {/* Necessary to lower the Title be visible */}
@@ -8,7 +10,13 @@ const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, pric
             <div className="p-5 flex flex-col gap-10">
                 {/* IMG APARTMENT */}
                 <div className="mx-auto grid grid-cols-1 py-10">
-                    <img src={apartmentImgUrl} alt="" />
+                    <Image
+                        loader={imageLoader}
+                        src={apartmentImgUrl}
+                        alt="apartment"
+                        width={apartmentW}
+                        height={apartmentH}
+                    ></Image>
                 </div>
 
                 {/* APARTMENT DESCRIPTION */}
@@ -62,7 +70,13 @@ const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, pric
                         Схема на етажа:
                     </div>
                     <div className="mx-auto h-fit w-fit lg:px-72">
-                        <img src={floorPlan} alt="" />
+                        <Image
+                            loader={imageLoader}
+                            src={floorPlan}
+                            alt="floor"
+                            width={floorW}
+                            height={floorH}
+                        ></Image>
                     </div>
                 </div>
             </div>

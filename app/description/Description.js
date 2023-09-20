@@ -20,8 +20,13 @@ export default function Description() {
 
 
             {/* LOCATION*/}
-
-            <img src="/tilia/tilia-location-architect.webp" alt="" />
+            <Image
+                loader={imageLoader}
+                src="/tilia/tilia-location-architect.webp"
+                alt="location"
+                width={9329}
+                height={5297}
+            ></Image>
 
         </>
     )

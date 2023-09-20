@@ -1,5 +1,7 @@
 import { lato, noto } from "@/utils/fonts";
+import { imageLoader } from "@/utils/imgLoader";
 import { motion } from "framer-motion"
+import Image from "next/image";
 import Link from "next/link";
 import { HiExternalLink } from "react-icons/hi";
 
@@ -26,7 +28,13 @@ const Tree = ({ title, subtitle }) => {
             <div className="text-sm lg:text-xl">
                 {title}
             </div>
-            <img src="/assets/tilia-basic-tree-nobg.png" alt="" />
+            <Image
+                loader={imageLoader}
+                src="/assets/tilia-basic-tree-nobg.webp"
+                alt='plan'
+                width={612}
+                height={407}
+            ></Image>
             <div className="text-sm lg:text-base text-tilia-yellow-text font-extrabold">
                 {subtitle}
             </div>
@@ -66,7 +74,14 @@ const WalkingDistance = () => {
                         <HiExternalLink size={16} />
                     </div>
                 </Link>
-                <img src="/maps-big.png" alt="" className="rounded-sm shadow-lg md:h-1/2 md:w-1/2" />
+                <Image
+                    className="rounded-sm shadow-lg md:h-1/2 md:w-1/2"
+                    loader={imageLoader}
+                    src="/maps-big.webp"
+                    alt='maps'
+                    width={1669}
+                    height={1213}
+                ></Image>
             </div>
 
 

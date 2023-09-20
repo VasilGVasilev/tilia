@@ -115,7 +115,13 @@ const Navbar = () => {
                         /> */}
                         <div className="relative rounded-full overflow-hidden h-10 w-14 sm:h-16 sm:w-24 shadow-lg hover:scale-110 transition duration-200">
 
-                            <img src="/assets/tilia-logo.webp" className="" alt="" />
+                            <Image
+                                loader={imageLoader}
+                                src="/assets/tilia-logo.webp"
+                                alt='logo'
+                                width={1834}
+                                height={1480}
+                            ></Image>
                             <span className="absolute inset-0 z-10 rounded-full shadow-inner"></span>
 
                         </div>

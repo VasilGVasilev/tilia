@@ -25,7 +25,7 @@ export default function Contacts() {
         <div>
             {/* INTRO */}
             <div className="">
-                
+
                 {/* Necessary for title be visible */}
                 <div className="bg-white w-full h-10"></div>
 
@@ -54,7 +54,14 @@ export default function Contacts() {
             </div>
 
             <div className="flex flex-col justify-center items-center gap-10 bg-tilia-gray p-12 md:p-20">
-                <img src="/tilia/tilia-location-architect.webp" className="h-auto w-fit lg:h-1/2 lg:w-1/2 rounded-lg" alt="" />
+                <Image
+                    className="h-auto w-fit lg:h-1/2 lg:w-1/2 rounded-lg"
+                    loader={imageLoader}
+                    src="/tilia/tilia-location-architect.webp"
+                    alt="location"
+                    width={9329}
+                    height={5297}
+                ></Image>
                 <div className={`${roboto.className} flex flex-col justify-center items-center text-xl text-center gap-5`}>
                     <h3 className="text-2xl font-bold">
                         Офис "Продажби"

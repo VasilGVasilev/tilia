@@ -48,7 +48,13 @@ export default function Home() {
                     <source src="/video.MP4" type="video/MP4" />
                     Your browser does not support the video tag.
                 </video> */}
-                <img src="/tilia/tilia-dvor.webp" alt="" className="" />
+                <Image
+                    loader={imageLoader}
+                    src="/tilia/tilia-dvor.webp"
+                    alt="dvor"
+                    width={5568}
+                    height={3132}
+                ></Image>
 
                 <div className="absolute top-[10%] left-4 md:top-[10%] md:left-10 w-full h-full flex flex-col items-start justify-center">
                     <div
@@ -98,12 +104,14 @@ export default function Home() {
                         className="relative z-0 ml-5 before:absolute before:-top-25 before:-left-5 sm:before:-top-20 sm:before:-left-20  before:rounded-t-[400px]
             before:w-full before:max-w-[400px] md:before:max-w-[600px]  before:opacity-20 before:h-full before:border-2 before:border-tilia-yellow-block before:z-[-1]"
                     >
-                        <img
-                            alt="profile"
-                            // filter is not actually necessary, you can go ahead with saturate-200 directly
+                        <Image
                             className="z-10 w-full rounded-t-[400px] max-w-[400px] md:max-w-[600px]"
+                            loader={imageLoader}
                             src="/tilia/tilia-one.webp"
-                        />
+                            alt="tilia one"
+                            width={4946}
+                            height={3216}
+                        ></Image>
                     </div>
 
                     <div className="absolute top-0 left-1/2 translate-x-[-50%] translate-y-[-50%] flex flex-col justify-center items-center">

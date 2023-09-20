@@ -1,5 +1,7 @@
 import { lato, noto } from "@/utils/fonts";
+import { imageLoader } from "@/utils/imgLoader";
 import { motion } from "framer-motion"
+import Image from "next/image";
 const container = {
     hidden: {},
     visible: {
@@ -79,12 +81,14 @@ const ForBuilding = () => {
                     }}
                 >
 
-                    <img
-                        alt="profile"
+                    <Image
                         className="z-10 w-full rounded-t-[400px] max-w-[400px] md:max-w-[600px]"
+                        loader={imageLoader}
                         src="/tilia/tilia-one.webp"
-                    />
-
+                        alt="picture"
+                        width={4946}
+                        height={3216}
+                    ></Image>
                 </motion.div>
 
                 <div className="basis-1/2 flex flex-col gap-5">
@@ -146,7 +150,14 @@ const ForBuilding = () => {
 
                         <div className="relative rounded-full overflow-hidden ">
 
-                            <img src="/tilia/tilia-dvor-2.webp" className="z-0" alt="" />
+                            <Image
+                                className="z-0"
+                                loader={imageLoader}
+                                src="/tilia/tilia-dvor-2.webp" 
+                                alt="picture"
+                                width={5120}
+                                height={2880}
+                            ></Image>
                             <span className="absolute inset-0 z-10 rounded-full shadow-inner-3xl"></span>
 
                         </div>
@@ -214,7 +225,14 @@ const ForBuilding = () => {
                     >
                         <div className="relative rounded-full overflow-hidden ">
 
-                            <img src="/tilia/tilia-dvor-3.webp" className="z-0" alt="" />
+                            <Image
+                                className="z-0"
+                                loader={imageLoader}
+                                src="/tilia/tilia-dvor-3.webp" 
+                                alt="picture"
+                                width={5568}
+                                height={3132}
+                            ></Image>
                             <span className="absolute inset-0 z-10 rounded-full shadow-inner-3xl"></span>
 
                         </div>
@@ -285,7 +303,14 @@ const ForBuilding = () => {
                     >
                         <div className="relative rounded-full overflow-hidden ">
 
-                            <img src="/tilia/tilia-three.webp" className="z-0" alt="" />
+                            <Image
+                                className="z-0"
+                                loader={imageLoader}
+                                src="/tilia/tilia-three.webp" 
+                                alt="picture"
+                                width={4946}
+                                height={3341}
+                            ></Image>
                             <span className="absolute inset-0 z-10 rounded-full shadow-inner-3xl"></span>
 
                         </div>

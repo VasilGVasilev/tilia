@@ -21,6 +21,10 @@ export default function Apartament() {
             textOne={data.apartmentTest.textOne}
             textTwo={data.apartmentTest.textTwo}
             floorPlan={data.apartmentTest.floorPlan}
+            apartmentW={data.apartmentTest.apartmentW}
+            apartmentH={data.apartmentTest.apartmentH}
+            floorW={data.apartmentTest.floorW}
+            floorH={data.apartmentTest.floorH}
         ></ApartmentTemplate>
     )
 }

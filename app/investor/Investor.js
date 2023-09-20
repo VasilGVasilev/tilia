@@ -222,6 +222,8 @@ export default function Investor() {
                                                 openModal={openModal}
                                                 setSelectedPic={setSelectedPic}
                                                 selectedPic={selectedPic}
+                                                urlW={5000}
+                                                urlH={2813}
                                             />
                                         )}
                                     </motion.div>
@@ -284,6 +286,8 @@ export default function Investor() {
                                                 openModal={openModal}
                                                 setSelectedPic={setSelectedPic}
                                                 selectedPic={selectedPic}
+                                                urlW={5000}
+                                                urlH={3000}
                                             />
                                         )}
                                     </motion.div>
@@ -386,6 +390,8 @@ export default function Investor() {
                                                 openModal={openModal}
                                                 setSelectedPic={setSelectedPic}
                                                 selectedPic={selectedPic}
+                                                urlW={4000}
+                                                urlH={3000}
                                             />
                                         )}
                                     </motion.div>

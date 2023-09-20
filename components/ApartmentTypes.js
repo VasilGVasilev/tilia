@@ -1,13 +1,15 @@
 import { container } from "@/app/Home"
 import { noto } from "@/utils/fonts"
+import { imageLoader } from "@/utils/imgLoader"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import { HiExternalLink } from 'react-icons/hi'
 
-const TypeApp = ({ title, img }) => {
+const TypeApp = ({ title, img, imgW, imgH }) => {
     return (
-        <motion.div 
+        <motion.div
             className="bg-tilia-gray p-7 flex flex-col justify-center items-center gap-7 sm:h-[500px] sm:w-[500px]"
             variants={{
                 hidden: { opacity: 0, scale: 1.3 },
@@ -15,7 +17,14 @@ const TypeApp = ({ title, img }) => {
             }}
         >
             <div className="font-semibold md:text-xl lg:text-2xl">{title}</div>
-            <img src={img} alt="" className="hover:scale-110 transition duration-300 sm:w-[300px] sm:h-[300px]" />
+            <Image
+                className="hover:scale-110 transition duration-300 sm:w-[300px] sm:h-[300px]"
+                loader={imageLoader}
+                src={img}
+                alt="type"
+                width={imgW}
+                height={imgH}
+            ></Image>
         </motion.div>
     )
 }
@@ -24,15 +33,21 @@ const ApartmentTypes = () => {
     const [typeAparts, setTypeAparts] = useState([
         {
             title: 'ДВУСТАЙНИ АПАРТАМЕНТИ',
-            imgUrl: '/assets/apartment-type-one.webp'
+            imgUrl: '/assets/apartment-type-one.webp',
+            imgW: '670',
+            imgH: '423'
         },
         {
             title: 'ТРИСТАЙНИ АПАРТАМЕНТИ',
-            imgUrl: '/assets/apartment-type-two.webp'
+            imgUrl: '/assets/apartment-type-two.webp',
+            imgW: '397',
+            imgH: '400'
         },
         {
             title: 'МЕЗОНЕТИ',
-            imgUrl: '/assets/apartment-type-three.webp'
+            imgUrl: '/assets/apartment-type-three.webp',
+            imgW: '315',
+            imgH: '400'
         },
     ])
 
@@ -81,7 +96,7 @@ const ApartmentTypes = () => {
                 initial="hidden"
                 whileInView="visible"
             >
-                {typeAparts.map(t => <TypeApp key={t.title} title={t.title} img={t.imgUrl} />)}
+                {typeAparts.map(t => <TypeApp key={t.title} title={t.title} img={t.imgUrl} imgW={t.imgW} imgH={t.imgH} />)}
 
             </motion.div>
 

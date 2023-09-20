@@ -1,5 +1,7 @@
 import { lato, noto } from "@/utils/fonts";
+import { imageLoader } from "@/utils/imgLoader";
 import { motion } from "framer-motion"
+import Image from "next/image";
 
 const container = {
     hidden: {},
@@ -24,7 +26,13 @@ const Tree = ({ title, subtitle }) => {
             <div className="text-sm lg:text-xl">
                 {title}
             </div>
-            <img src="/assets/tilia-basic-tree-nobg.png" alt="" />
+            <Image
+                loader={imageLoader}
+                src="/assets/tilia-basic-tree-nobg.webp"
+                alt='plan'
+                width={612}
+                height={407}
+            ></Image>
             <div className="text-sm lg:text-base text-tilia-yellow-text font-extrabold">
                 {subtitle}
             </div>

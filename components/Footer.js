@@ -24,7 +24,15 @@ const Footer = () => {
                 /> */}
                 <div className="relative overflow-hidden">
 
-                    <img src="/assets/tilia-logo.webp" className='h-auto w-auto sm:h-28 sm:w-44' alt="" />
+                    <Image
+                        className='h-auto w-auto sm:h-28 sm:w-44'
+                        loader={imageLoader}
+                        src="/assets/tilia-logo.webp"
+                        alt="logo"
+                        width={1834}
+                        height={1480}
+                    ></Image>
+
                     <span className="absolute inset-0 z-10 shadow-inner-xl"></span>
 
                 </div>

@@ -64,14 +64,14 @@ const Plan = () => {
             {/* <img src="/ixora-apartments-plan.webp" alt="Ixora Plan" className="relative" /> */}
 
             <div>
-                {/* <Image 
-                loader={imageLoader}
-                src='/tilia-plan.webp'
-                alt="Ixora Plan"
-                width={5000}
-                height={2813} 
-                ></Image> */}
-                <img src="/tilia/tilia-plan.webp" alt="" />
+
+                <Image
+                    loader={imageLoader}
+                    src="/tilia/tilia-plan.webp"
+                    alt='plan'
+                    width={5000}
+                    height={2813}
+                ></Image>
             </div>
 
 
