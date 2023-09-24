@@ -15,16 +15,20 @@ export const data = {
         floorW: '3509',
         floorH: '4967'
     },
-    apartment1A: {
+    appA1: {
         apartmentImgUrl: '/assets/apartment-type-one.webp',
-        floor: '1',
-        beds: '2',
+        floor: '1 и 2',
+        beds: '3',
         direction: 'Юг',
-        size: '100',
-        price: '200 000',
-        title: 'Апартамент 12',
+        size: '78,73',
+        title: 'Апартамент 1A',
         textOne: 'Апартаментът се състои от входно антре, дневна зона с кухненски бокс, три спални, две бани с тоалет, тоалет, перално помещение, три тераси и прилежащ самостоятелен двор от 126,65 кв.м. Всички помещения в имота са със светла височина 3.05 м.',
         textTwo: 'В стойността на жилището са включени мазе и паркомясто в подземен гараж. Възможност за закупуване на второ паркомясто.',
-        floorPlan: '/plans/third-floor.webp'
+        floorPlan: '/plans/third-floor.webp',
+        apartmentW: '670',
+        apartmentH: '423',
+        floorW: '3509',
+        floorH: '4967',
+        available: true 
     }
 }

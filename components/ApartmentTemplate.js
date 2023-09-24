@@ -1,7 +1,7 @@
 import { imageLoader } from "@/utils/imgLoader"
 import Image from "next/image"
 
-const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, price, title, textOne, textTwo, floorPlan, apartmentW, apartmentH, floorW, floorH }) => {
+const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, title, textOne, textTwo, floorPlan, apartmentW, apartmentH, floorW, floorH }) => {
     return (
         <>
             {/* Necessary to lower the Title be visible */}
@@ -37,15 +37,19 @@ const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, pric
                         </li>
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
                             <span>площ</span>
-                            <span className="text-tilia-yellow-text">{size} ㎡</span>
+                            <span className="text-tilia-yellow-text">{size} кв. м.</span>
                         </li>
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
                             <span>статус</span>
-                            <span className="text-green-500">свободен</span>
+                            <span className="text-green-500 font-semibold">свободен</span>
                         </li>
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
                             <span>цена</span>
-                            <span className="text-tilia-yellow-text">{price} €</span>
+                            <span className="text-tilia-yellow-text">По запитване</span>
+                        </li>
+                        <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
+                            <span>телефон</span>
+                            <span className="text-tilia-yellow-text"><a href={`tel:00359886879993`} className="hover:font-semibold">+359886879993</a></span>
                         </li>
                     </ul>
                     {/* DETAILS */}

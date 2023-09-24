@@ -54,17 +54,17 @@ export default function ThirdFloor() {
 
                 <div>
                     <div className="relative inline-block">
-                        <Link href={'/apartments/third-floor/app-12'}>
+                        <Link href={'/apartments/app/1A'}>
                             <div className={`absolute apartmentTwelve h-full w-full z-10 ${available}`} title="СВОБОДЕН"></div>
                         </Link>
 
                         <div className={`absolute apartmentEleven h-full w-full z-10 ${sold}`} title="ПРОДАДЕН"></div>
 
-                        <Link href={'/apartments/third-floor/app-12'}>
+                        <Link href={'/apartments/app/1A'}>
                             <div className={`absolute apartmentTen h-full w-full z-10 ${available}`} title="СВОБОДЕН" ></div>
 
                         </Link>
-                        <Link href={'/apartments/third-floor/app-12'}>
+                        <Link href={'/apartments/app/1A'}>
                             <div className={`absolute apartmentNine h-full w-full z-10 ${available} `} title="СВОБОДЕН"></div>
 
                         </Link>

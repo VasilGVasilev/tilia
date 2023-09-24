@@ -17,6 +17,7 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 // img to Image
 // all images to webp
 // lighthouse optimal 
+// when an apartment is sold, set available status to false
 
 
 export const container = {
