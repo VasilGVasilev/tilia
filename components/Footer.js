@@ -50,12 +50,12 @@ const Footer = () => {
                         <div className='p-3'>
                             <div className="py-2 flex space-x-3 items-center">
                                 <BsTelephone size={24} className='text-black' />
-                                <div className="text-sm text-neutral-700 font-semibold"><a href={`tel:00359886879993`}>+359886879993</a></div>
+                                <div className="text-sm text-neutral-700 font-semibold hover:text-white"><a href={`tel:00359886879993`}>+359886879993</a></div>
                             </div>
                             <div className="py-2 flex space-x-2 items-center">
                                 <TfiEmail size={24} className='text-black' />
 
-                                <div className="text-sm text-neutral-700 font-semibold"><a href="mailto:office@creativestudiobg.com">office@creativestudiobg.com</a></div>
+                                <div className="text-sm text-neutral-700 font-semibold hover:text-white"><a href="mailto:office@creativestudiobg.com">office@creativestudiobg.com</a></div>
                             </div>
                         </div>
                     </div>

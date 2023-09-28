@@ -19,7 +19,7 @@ export default function Apartments() {
                 {/* Necessary to lower the Title be visible */}
                 <div className="bg-white w-full h-10"></div>
                 {/* Investor tag */}
-                <div className="investorIntroBg">
+                <div className="bg-white">
                     <motion.div
                         className={`flex flex-row justify-center items-center ${noto.className} welcomeTextOnImg text-[#D7D7DF] text-left py-5 text-4xl sm:text-6xl lg:text-8xl`}
 
@@ -46,7 +46,7 @@ export default function Apartments() {
 
 
             {/* FLOOR PLAN */}
-            <div className='lg:p-40 bg-tilia-gray'>
+            <div className='bg-tilia-gray'>
                 <Plan></Plan>
             </div>
         </>
