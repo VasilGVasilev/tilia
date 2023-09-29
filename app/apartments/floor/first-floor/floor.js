@@ -8,21 +8,24 @@ import { motion } from "framer-motion";
 import Modal from "@/components/Modal";
 import Link from "next/link";
 import { noto } from "@/utils/fonts";
-
+import { data } from "@/data";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
 
-const sold = "hover:bg-red-700 hover:opacity-40 active:bg-red-700 active:opacity-40";
-const available = "hover:bg-green-400 hover:opacity-40 active:bg-green-400 active:opacity-40 cursor-pointer";
-const reserved = "hover:bg-blue-400 hover:opacity-40 active:bg-blue-400 active:opacity-40 cursor-pointer";
+const red = "hover:bg-red-700 hover:opacity-50";
+const green = "hover:bg-green-400 hover:opacity-50 cursor-pointer";
+const reserved = "hover:bg-blue-400 hover:opacity-50 cursor-pointer";
 
-
+export const LinkWrapper = ({status, appLink, appCss}) => {
+    if(status){
+        return <Link href={`/apartments/app/${appLink}`} className={`absolute ${appCss} h-full w-full z-10 ${green}`} title='СВОБОДЕН'></Link>
+    } else {
+        return <div className={`absolute ${appCss} h-full w-full z-10 ${red}`} title='ПРОДАДЕН' ></div>
+    }
+}
 
 export default function Floor() {
-
-
-
 
     return (
         <>
@@ -53,20 +56,21 @@ export default function Floor() {
 
                 <div>
                     <div className="relative inline-block">
+                        <LinkWrapper status={data.appA1.available} appLink={data.appA1.appLink} appCss={data.appA1.appCss}></LinkWrapper>
+                        <LinkWrapper status={data.appA2.available} appLink={data.appA2.appLink} appCss={data.appA2.appCss}></LinkWrapper>
+                        <LinkWrapper status={data.appB3.available} appLink={data.appB3.appLink} appCss={data.appB3.appCss}></LinkWrapper>
+                        
+                        {/* <Link href={'/apartments/app/A1'} ><div className={`absolute app-A1 h-full w-full z-10 ${data.appA1.available ? green : red}`} title={`${data.appA1.available ? 'СВОБОДЕН' : 'ПРОДАДЕН'}`} ></div></Link> */}
+                        {/* <div className={`absolute app-A2 h-full w-full z-10 ${data.appA1.available ? green : red}`} title={`${data.appA1.available ? 'СВОБОДЕН' : 'ПРОДАДЕН'}`} ><Link href={'/apartments/app/A2'} className="pointer-events-none"></Link></div>
+                        <div className={`absolute app-B3 h-full w-full z-10 ${data.appA1.available ? green : red}`} title={`${data.appA1.available ? 'СВОБОДЕН' : 'ПРОДАДЕН'}`} ><Link href={'/apartments/app/B3'} className="pointer-events-none"></Link></div>
+ */}
+
+                        {/* <div className={`absolute app-2A h-full w-full z-10 ${data.appA1.available ? green : red}`} title="ПРОДАДЕН"></div>
+
                         <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentTwelve h-full w-full z-10 ${available}`} title="СВОБОДЕН"></div>
-                        </Link>
+                            <div className={`absolute app-3B h-full w-full z-10 ${data.appA1.available ? green : red}`} title="СВОБОДЕН" ></div>
 
-                        <div className={`absolute apartmentEleven h-full w-full z-10 ${sold}`} title="ПРОДАДЕН"></div>
-
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentTen h-full w-full z-10 ${available}`} title="СВОБОДЕН" ></div>
-
-                        </Link>
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentNine h-full w-full z-10 ${available} `} title="СВОБОДЕН"></div>
-
-                        </Link>
+                        </Link> */}
 
 
                         {/* <img src="/plans/third-floor.webp" alt="Ixora Plan" className="relative" /> */}
