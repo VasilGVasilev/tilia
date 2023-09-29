@@ -27,16 +27,10 @@ export default function Apartments() {
                         initial="hidden"
                         whileInView="visible"
                     >
-                        <motion.span variants={letterVariant}>А</motion.span>
-                        <motion.span variants={letterVariant}>П</motion.span>
-                        <motion.span variants={letterVariant}>А</motion.span>
-                        <motion.span variants={letterVariant}>Р</motion.span>
-                        <motion.span variants={letterVariant}>Т</motion.span>
-                        <motion.span variants={letterVariant}>А</motion.span>
-                        <motion.span variants={letterVariant}>М</motion.span>
                         <motion.span variants={letterVariant}>Е</motion.span>
-                        <motion.span variants={letterVariant}>Н</motion.span>
                         <motion.span variants={letterVariant}>Т</motion.span>
+                        <motion.span variants={letterVariant}>А</motion.span>
+                        <motion.span variants={letterVariant}>Ж</motion.span>
                         <motion.span variants={letterVariant}>И</motion.span>
 
                     </motion.div>
