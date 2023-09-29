@@ -17,10 +17,14 @@ const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, titl
                         width={apartmentW}
                         height={apartmentH}
                     ></Image>
+
                 </div>
+                <h2 className="mx-auto md:text-5xl text-3xl text-tilia-yellow-text font-normal md:mb-8 mb-4">
+                    {title}
+                </h2>
 
                 {/* APARTMENT DESCRIPTION */}
-                <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-10 lg:gap-16 mb-12 md:mb-20 sm:px-16 md:px-32">
+                <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-10 lg:gap-16 md:mb-14 sm:px-16 md:px-32">
                     {/* TABLE */}
                     <ul className="text-xl font-thin sm:text-2xl md:text-3xl text-green-900 border-tilia-yellow-text border-t">
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
@@ -49,13 +53,13 @@ const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, titl
                         </li>
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
                             <span>телефон</span>
-                            <span className="text-tilia-yellow-text"><a href={`tel:00359886879993`} className="hover:font-semibold">+359886879993</a></span>
+                            <span className="text-tilia-yellow-text"><a href={`tel:00359886879993`} className="font-semibold">+359886879993</a></span>
                         </li>
                     </ul>
                     {/* DETAILS */}
-                    <div >
-                        <h2 className="md:text-5xl text-3xl text-tilia-yellow-text font-normal md:mb-8 mb-4">
-                            {title}
+                    <div className="grid gap-5">
+                        <h2 className="md:text-3xl text-xl text-tilia-yellow-text font-normal ">
+                            Описание
                         </h2>
                         <div className="flex flex-col gap-5 text-neutral-700">
                             <p>

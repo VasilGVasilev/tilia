@@ -12,6 +12,7 @@ import { data } from "@/data";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
+// THERE IS A PROBLEM WITH TEMPLATE LITERALS AND CONDITIONS
 
 const red = "hover:bg-red-700 hover:opacity-50";
 const green = "hover:bg-green-400 hover:opacity-50 cursor-pointer";
@@ -19,9 +20,9 @@ const reserved = "hover:bg-blue-400 hover:opacity-50 cursor-pointer";
 
 export const LinkWrapper = ({status, appLink, appCss}) => {
     if(status){
-        return <Link href={`/apartments/app/${appLink}`} className={`absolute ${appCss} h-full w-full z-10 ${green}`} title='СВОБОДЕН'></Link>
+        return (<Link href={`/apartments/app/${appLink}`} className={`absolute ${appCss} h-full w-full z-10 ${green}`} title='СВОБОДЕН'></Link>)
     } else {
-        return <div className={`absolute ${appCss} h-full w-full z-10 ${red}`} title='ПРОДАДЕН' ></div>
+        return (<div className={`absolute ${appCss} h-full w-full z-10 ${red}`} title='ПРОДАДЕН' ></div>)
     }
 }
 
@@ -60,20 +61,7 @@ export default function Floor() {
                         <LinkWrapper status={data.appA2.available} appLink={data.appA2.appLink} appCss={data.appA2.appCss}></LinkWrapper>
                         <LinkWrapper status={data.appB3.available} appLink={data.appB3.appLink} appCss={data.appB3.appCss}></LinkWrapper>
                         
-                        {/* <Link href={'/apartments/app/A1'} ><div className={`absolute app-A1 h-full w-full z-10 ${data.appA1.available ? green : red}`} title={`${data.appA1.available ? 'СВОБОДЕН' : 'ПРОДАДЕН'}`} ></div></Link> */}
-                        {/* <div className={`absolute app-A2 h-full w-full z-10 ${data.appA1.available ? green : red}`} title={`${data.appA1.available ? 'СВОБОДЕН' : 'ПРОДАДЕН'}`} ><Link href={'/apartments/app/A2'} className="pointer-events-none"></Link></div>
-                        <div className={`absolute app-B3 h-full w-full z-10 ${data.appA1.available ? green : red}`} title={`${data.appA1.available ? 'СВОБОДЕН' : 'ПРОДАДЕН'}`} ><Link href={'/apartments/app/B3'} className="pointer-events-none"></Link></div>
- */}
 
-                        {/* <div className={`absolute app-2A h-full w-full z-10 ${data.appA1.available ? green : red}`} title="ПРОДАДЕН"></div>
-
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute app-3B h-full w-full z-10 ${data.appA1.available ? green : red}`} title="СВОБОДЕН" ></div>
-
-                        </Link> */}
-
-
-                        {/* <img src="/plans/third-floor.webp" alt="Ixora Plan" className="relative" /> */}
 
                         <div className='relative '>
                             <img src="/plans/first-floor.webp" alt="" />

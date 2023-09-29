@@ -8,16 +8,23 @@ import { motion } from "framer-motion";
 import Modal from "@/components/Modal";
 import Link from "next/link";
 import { noto } from "@/utils/fonts";
+import { data } from "@/data";
 
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
 
-const sold = "hover:bg-red-700 hover:opacity-40 active:bg-red-700 active:opacity-40";
-const available = "hover:bg-green-400 hover:opacity-40 active:bg-green-400 active:opacity-40 cursor-pointer";
-const reserved = "hover:bg-blue-400 hover:opacity-40 active:bg-blue-400 active:opacity-40 cursor-pointer";
+const red = "hover:bg-red-700 hover:opacity-50";
+const green = "hover:bg-green-400 hover:opacity-50 cursor-pointer";
 
 
+const LinkWrapper = ({status, appLink, appCss}) => {
+    if(status){
+        return <Link href={`/apartments/app/${appLink}`} className={`absolute ${appCss} h-full w-full z-10 ${green}`} title='СВОБОДЕН'></Link>
+    } else {
+        return <div className={`absolute ${appCss} h-full w-full z-10 ${red}`} title='ПРОДАДЕН' ></div>
+    }
+}
 
 export default function Floor() {
 
@@ -53,23 +60,7 @@ export default function Floor() {
 
                 <div>
                     <div className="relative inline-block">
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentTwelve h-full w-full z-10 ${available}`} title="СВОБОДЕН"></div>
-                        </Link>
-
-                        <div className={`absolute apartmentEleven h-full w-full z-10 ${sold}`} title="ПРОДАДЕН"></div>
-
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentTen h-full w-full z-10 ${available}`} title="СВОБОДЕН" ></div>
-
-                        </Link>
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentNine h-full w-full z-10 ${available} `} title="СВОБОДЕН"></div>
-
-                        </Link>
-
-
-                        {/* <img src="/plans/third-floor.webp" alt="Ixora Plan" className="relative" /> */}
+                        <LinkWrapper status={data.appA1.available} appLink={data.appA1.appLink} appCss={data.appA1.appCss}></LinkWrapper>
 
                         <div className='relative '>
                             <img src="/plans/second-floor.webp" alt="" />

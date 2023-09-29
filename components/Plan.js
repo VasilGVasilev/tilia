@@ -4,34 +4,6 @@ import { imageLoader } from "@/utils/imgLoader";
 import { motion } from "framer-motion";
 import { container, letterVariant } from "@/app/Home";
 
-export const FloorLayout = () => {
-    return (
-        <div>
-            <Link href={'/apartments/floor/third-floor'}><div className="absolute z-10 text-xxs top-4 right-0 rounded-l-none rounded-r-2xl w-20 h-3 sm:top-8 sm:text-base sm:right-5 sm:w-28 sm:h-5 bg-tilia-yellow-block opacity-75 sm:rounded-2xl flex flex-col justify-center items-center hover:opacity-100 hover:text-white hover:shadow-inner-3xl ">Мансарден</div></Link>
-
-            <Link href={'/apartments/floor/third-floor'}><div className="absolute z-10 text-xxs top-8 right-0 rounded-l-none rounded-r-2xl w-20 h-3 sm:top-16 sm:text-base sm:right-5 sm:w-28 sm:h-5 bg-tilia-yellow-block opacity-75 sm:rounded-2xl flex flex-col justify-center items-center hover:opacity-100 hover:text-white hover:shadow-inner-3xl ">Подпокривен</div></Link>
-
-            <Link href={'/apartments/floor/third-floor'}><div className="absolute z-10 text-xxs top-12 right-0 rounded-l-none rounded-r-2xl w-20 h-3 sm:top-24 sm:text-base sm:right-5 sm:w-28 sm:h-5 bg-tilia-yellow-block opacity-75 sm:rounded-2xl flex flex-col justify-center items-center hover:opacity-100 hover:text-white hover:shadow-inner-3xl ">Етаж 7</div></Link>
-
-            <Link href={'/apartments/floor/third-floor'}><div className="absolute z-10 text-xxs top-16 right-0 rounded-l-none rounded-r-2xl w-20 h-3 sm:top-32 sm:text-base sm:right-5 sm:w-28 sm:h-5 bg-tilia-yellow-block opacity-75 sm:rounded-2xl flex flex-col justify-center items-center hover:opacity-100 hover:text-white hover:shadow-inner-3xl ">Етаж 6</div></Link>
-
-            <Link href={'/apartments/floor/third-floor'}><div className="absolute z-10 text-xxs top-20 right-0 rounded-l-none rounded-r-2xl w-20 h-3 sm:top-40 sm:text-base sm:right-5 sm:w-28 sm:h-5 bg-tilia-yellow-block opacity-75 sm:rounded-2xl flex flex-col justify-center items-center hover:opacity-100 hover:text-white hover:shadow-inner-3xl ">Етаж 5</div></Link>
-
-            <Link href={'/apartments/floor/third-floor'}><div className="absolute z-10 text-xxs top-24 right-0 rounded-l-none rounded-r-2xl w-20 h-3 sm:top-48 sm:text-base sm:right-5 sm:w-28 sm:h-5 bg-tilia-yellow-block opacity-75 sm:rounded-2xl flex flex-col justify-center items-center hover:opacity-100 hover:text-white hover:shadow-inner-3xl ">Етаж 4</div></Link>
-
-            <Link href={'/apartments/floor/third-floor'}><div className="absolute z-10 text-xxs top-28 right-0 rounded-l-none rounded-r-2xl w-20 h-3 sm:top-56 sm:text-base sm:right-5 sm:w-28 sm:h-5 bg-tilia-yellow-block opacity-75 sm:rounded-2xl flex flex-col justify-center items-center hover:opacity-100 hover:text-white hover:shadow-inner-3xl ">Етаж 3</div></Link>
-
-            <Link href={'/apartments/floor/third-floor'}><div className="absolute z-10 text-xxs top-32 right-0 rounded-l-none rounded-r-2xl w-20 h-3 sm:top-64 sm:text-base sm:right-5 sm:w-28 sm:h-5 bg-tilia-yellow-block opacity-75 sm:rounded-2xl flex flex-col justify-center items-center hover:opacity-100 hover:text-white hover:shadow-inner-3xl ">Етаж 2</div></Link>
-
-            <Link href={'/apartments/floor/third-floor'}><div className="absolute z-10 text-xxs top-36 right-0 rounded-l-none rounded-r-2xl w-20 h-3 sm:top-72 sm:text-base sm:right-5 sm:w-28 sm:h-5 bg-tilia-yellow-block opacity-75 sm:rounded-2xl flex flex-col justify-center items-center hover:opacity-100 hover:text-white hover:shadow-inner-3xl ">Етаж 1</div></Link>
-
-            <Link href={'/apartments/floor/third-floor'}><div className="absolute z-10 text-xxs top-40 right-0 rounded-l-none rounded-r-2xl w-20 h-3 sm:top-80 sm:text-base sm:right-5 sm:w-28 sm:h-5 bg-tilia-yellow-block opacity-75 sm:rounded-2xl flex flex-col justify-center items-center hover:opacity-100 hover:text-white hover:shadow-inner-3xl ">Паркинг -1</div></Link>
-
-            <Link href={'/apartments/floor/third-floor'}><div className="absolute z-10 text-xxs top-44 right-0 rounded-l-none rounded-r-2xl w-20 h-3 sm:top-[390px] sm:text-base sm:right-5 sm:w-28 sm:h-5 bg-tilia-yellow-block opacity-75 sm:rounded-2xl flex flex-col justify-center items-center hover:opacity-100 hover:text-white hover:shadow-inner-3xl ">Пaркинг -2</div></Link>
-
-        </div>
-    )
-}
 
 const Plan = () => {
 
@@ -39,8 +11,6 @@ const Plan = () => {
         <div
             className="relative shadow-2xl"
         >
-            <FloorLayout />
-            {/* LeftSide Floor Buttons */}
 
 
             {/* <div className="absolute z-10 left-5 top-3 w-10 h-4 rounded-r-2xl bg-yellow-500 opacity-40">Етаж 7</div> */}
