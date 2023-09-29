@@ -65,7 +65,7 @@ export const data = {
         apartmentH: '423',
         floorW: '3509',
         floorH: '4967',
-        available: false,
+        available: true,
         appLink: 'B3',
         appCss: 'app-B3' 
     },

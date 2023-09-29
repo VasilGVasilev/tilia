@@ -38,3 +38,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Performance, Accessibility, Best Practices, SEO:
 
 ![alt text](https://github.com/VasilGVasilev/nextJS/blob/ixoraInter/ixora/lighthouse.png)
+
+Main drawback is that Tailwind does not go well with conditional rendering. Explicitly, making a Link Wrapper is impossible, since Next.js does not disable conditionally Link, too. But on Link Wrapper - it does not render well if I have to feed the html attributes such as href, className dynamic data depending on whether it will be a clickable Link or a non-clickable div. So, when an appartment is sold, I will have to manually change Link to div.  

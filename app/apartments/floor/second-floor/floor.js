@@ -18,13 +18,6 @@ const red = "hover:bg-red-700 hover:opacity-50";
 const green = "hover:bg-green-400 hover:opacity-50 cursor-pointer";
 
 
-const LinkWrapper = ({status, appLink, appCss}) => {
-    if(status){
-        return <Link href={`/apartments/app/${appLink}`} className={`absolute ${appCss} h-full w-full z-10 ${green}`} title='СВОБОДЕН'></Link>
-    } else {
-        return <div className={`absolute ${appCss} h-full w-full z-10 ${red}`} title='ПРОДАДЕН' ></div>
-    }
-}
 
 export default function Floor() {
 
@@ -60,8 +53,7 @@ export default function Floor() {
 
                 <div>
                     <div className="relative inline-block">
-                        <LinkWrapper status={data.appA1.available} appLink={data.appA1.appLink} appCss={data.appA1.appCss}></LinkWrapper>
-
+                        <Link href={`/apartments/app/A4`}><div className={`absolute app-A4 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         <div className='relative '>
                             <img src="/plans/second-floor.webp" alt="" />
                             {/* <Image

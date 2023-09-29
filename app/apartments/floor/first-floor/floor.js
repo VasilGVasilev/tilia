@@ -18,9 +18,11 @@ const red = "hover:bg-red-700 hover:opacity-50";
 const green = "hover:bg-green-400 hover:opacity-50 cursor-pointer";
 const reserved = "hover:bg-blue-400 hover:opacity-50 cursor-pointer";
 
-export const LinkWrapper = ({status, appLink, appCss}) => {
-    if(status){
-        return (<Link href={`/apartments/app/${appLink}`} className={`absolute ${appCss} h-full w-full z-10 ${green}`} title='СВОБОДЕН'></Link>)
+
+// this is exemplary because tailwind does not work adequatly with dynamic template strings
+export const LinkWrapper = ({ status, appLink, appCss }) => {
+    if (status) {
+        return (<Link href={`/apartments/app/${appLink}`}><div className={`absolute ${appCss} h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>)
     } else {
         return (<div className={`absolute ${appCss} h-full w-full z-10 ${red}`} title='ПРОДАДЕН' ></div>)
     }
@@ -57,10 +59,9 @@ export default function Floor() {
 
                 <div>
                     <div className="relative inline-block">
-                        <LinkWrapper status={data.appA1.available} appLink={data.appA1.appLink} appCss={data.appA1.appCss}></LinkWrapper>
-                        <LinkWrapper status={data.appA2.available} appLink={data.appA2.appLink} appCss={data.appA2.appCss}></LinkWrapper>
-                        <LinkWrapper status={data.appB3.available} appLink={data.appB3.appLink} appCss={data.appB3.appCss}></LinkWrapper>
-                        
+                        <Link href={`/apartments/app/A1`}><div className={`absolute app-A1 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                        <Link href={`/apartments/app/A2`}><div className={`absolute app-A2 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                        <Link href={`/apartments/app/B3`}><div className={`absolute app-B3 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
 
 
                         <div className='relative '>
