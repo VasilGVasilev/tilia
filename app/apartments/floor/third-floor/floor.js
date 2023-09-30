@@ -13,9 +13,8 @@ import { noto } from "@/utils/fonts";
 export const revalidate = 0; // revalidate this page every 60 seconds
 
 
-const sold = "hover:bg-red-700 hover:opacity-40 active:bg-red-700 active:opacity-40";
-const available = "hover:bg-green-400 hover:opacity-40 active:bg-green-400 active:opacity-40 cursor-pointer";
-const reserved = "hover:bg-blue-400 hover:opacity-40 active:bg-blue-400 active:opacity-40 cursor-pointer";
+const red = "hover:bg-red-700 hover:opacity-50";
+const green = "hover:bg-green-400 hover:opacity-50 cursor-pointer";
 
 
 
@@ -53,26 +52,14 @@ export default function Floor() {
 
                 <div>
                     <div className="relative inline-block">
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentTwelve h-full w-full z-10 ${available}`} title="СВОБОДЕН"></div>
-                        </Link>
+                        <Link href={`/apartments/app/B6`}><div className={`absolute app-B7 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
 
-                        <div className={`absolute apartmentEleven h-full w-full z-10 ${sold}`} title="ПРОДАДЕН"></div>
-
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentTen h-full w-full z-10 ${available}`} title="СВОБОДЕН" ></div>
-
-                        </Link>
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentNine h-full w-full z-10 ${available} `} title="СВОБОДЕН"></div>
-
-                        </Link>
 
 
                         {/* <img src="/plans/third-floor.webp" alt="Ixora Plan" className="relative" /> */}
 
                         <div className='relative '>
-                            <img src="/plans/third-to-seventh-floor.webp" alt="" />
+                            <img src="/plans/third-floor.webp" alt="" />
                             {/* <Image
                                 loader={imageLoader}
                                 src='/plans/third-floor.webp'
