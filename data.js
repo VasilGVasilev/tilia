@@ -1,6 +1,6 @@
 export const data = {
     apartmentTest: {
-        apartmentImgUrl: '/assets/apartment-type-one.webp',
+        apartmentImgUrl: '/apps/floor/app-A1.png',
         floor: '3',
         beds: '1',
         direction: 'северозапад',
@@ -16,7 +16,7 @@ export const data = {
         floorH: '4967'
     },
     appA1: {
-        apartmentImgUrl: '/assets/apartment-type-one.webp',
+        apartmentImgUrl: '/apps/floor-1/app-A1.png',
         floor: '1',
         beds: '2',
         direction: 'Юг',
@@ -34,7 +34,7 @@ export const data = {
         appCss: 'app-A1' 
     },
     appA2: {
-        apartmentImgUrl: '/assets/apartment-type-one.webp',
+        apartmentImgUrl: '/apps/floor-1/app-A2-1.png',
         floor: '1 и 2',
         beds: '2',
         direction: 'Юг',
@@ -52,7 +52,7 @@ export const data = {
         appCss: 'app-A2' 
     },
     appB3: {
-        apartmentImgUrl: '/assets/apartment-type-one.webp',
+        apartmentImgUrl: '/apps/floor-1/app-B3-1.png',
         floor: '1 и 2',
         beds: '2',
         direction: 'Юг',

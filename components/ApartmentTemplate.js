@@ -8,20 +8,25 @@ const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, titl
             <div className="bg-white w-full h-10"></div>
 
             <div className="p-5 flex flex-col gap-10">
-                {/* IMG APARTMENT */}
-                <div className="mx-auto grid grid-cols-1 py-10">
-                    <Image
-                        loader={imageLoader}
-                        src={apartmentImgUrl}
-                        alt="apartment"
-                        width={apartmentW}
-                        height={apartmentH}
-                    ></Image>
-
-                </div>
+                
                 <h2 className="mx-auto md:text-5xl text-3xl text-tilia-yellow-text font-normal md:mb-8 mb-4">
                     {title}
                 </h2>
+
+                {/* IMG APARTMENT */}
+                <div className="mx-auto grid grid-cols-1 py-5">
+                    <div className="grid md:h-1/3 md:w-1/3 mx-auto">
+                        <img src={apartmentImgUrl} alt="" />
+                        {/* <Image
+                            loader={imageLoader}
+                            src={apartmentImgUrl}
+                            alt="apartment"
+                            width={apartmentW}
+                            height={apartmentH}
+                        ></Image> */}
+                    </div>
+
+                </div>
 
                 {/* APARTMENT DESCRIPTION */}
                 <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-10 lg:gap-16 md:mb-14 sm:px-16 md:px-32">
