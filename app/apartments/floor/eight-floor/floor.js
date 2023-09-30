@@ -52,20 +52,8 @@ export default function Floor() {
 
                 <div>
                     <div className="relative inline-block">
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentTwelve h-full w-full z-10 ${available}`} title="СВОБОДЕН"></div>
-                        </Link>
+                        <Link href={`/apartments/app/A12`}><div className={`absolute app-A12 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
 
-                        <div className={`absolute apartmentEleven h-full w-full z-10 ${sold}`} title="ПРОДАДЕН"></div>
-
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentTen h-full w-full z-10 ${available}`} title="СВОБОДЕН" ></div>
-
-                        </Link>
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentNine h-full w-full z-10 ${available} `} title="СВОБОДЕН"></div>
-
-                        </Link>
 
 
                         {/* <img src="/plans/third-floor.webp" alt="Ixora Plan" className="relative" /> */}

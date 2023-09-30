@@ -52,26 +52,16 @@ export default function Floor() {
 
                 <div>
                     <div className="relative inline-block">
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentTwelve h-full w-full z-10 ${available}`} title="СВОБОДЕН"></div>
-                        </Link>
-
-                        <div className={`absolute apartmentEleven h-full w-full z-10 ${sold}`} title="ПРОДАДЕН"></div>
-
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentTen h-full w-full z-10 ${available}`} title="СВОБОДЕН" ></div>
-
-                        </Link>
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentNine h-full w-full z-10 ${available} `} title="СВОБОДЕН"></div>
-
-                        </Link>
+                        <Link href={`/apartments/app/A24`}><div className={`absolute app-A24 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                        <Link href={`/apartments/app/A25`}><div className={`absolute app-A25 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                        <Link href={`/apartments/app/B26`}><div className={`absolute app-B26 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                        <Link href={`/apartments/app/B27`}><div className={`absolute app-B27 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
 
 
                         {/* <img src="/plans/third-floor.webp" alt="Ixora Plan" className="relative" /> */}
 
                         <div className='relative '>
-                            <img src="/plans/third-to-seventh-floor.webp" alt="" />
+                            <img src="/plans/fourth-to-seventh-floor.webp" alt="" />
                             {/* <Image
                                 loader={imageLoader}
                                 src='/plans/third-floor.webp'
