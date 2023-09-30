@@ -14,7 +14,7 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 
 const red = "hover:bg-red-700 hover:opacity-50";
-const green = "hover:bg-green-400 hover:opacity-50 cursor-pointer";
+const green = "hover:bg-green-400 hover:opacity-50";
 
 
 
@@ -52,20 +52,25 @@ export default function Floor() {
 
                 <div>
                     <div className="relative inline-block">
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentTwelve h-full w-full z-10 ${available}`} title="СВОБОДЕН"></div>
-                        </Link>
 
-                        <div className={`absolute apartmentEleven h-full w-full z-10 ${sold}`} title="ПРОДАДЕН"></div>
+                        <div className={`absolute parking-12 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute parking-13 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute parking-14 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute parking-15 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute parking-16 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute parking-17 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute parking-18 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute parking-19 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute parking-20 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute parking-21 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute parking-22 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
 
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentTen h-full w-full z-10 ${available}`} title="СВОБОДЕН" ></div>
 
-                        </Link>
-                        <Link href={'/apartments/app/A1'}>
-                            <div className={`absolute apartmentNine h-full w-full z-10 ${available} `} title="СВОБОДЕН"></div>
-
-                        </Link>
+                        <div className={`absolute maze-4 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute maze-5 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute maze-6 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute maze-7 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute maze-8 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
 
 
                         {/* <img src="/plans/third-floor.webp" alt="Ixora Plan" className="relative" /> */}
