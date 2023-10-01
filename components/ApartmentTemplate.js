@@ -15,7 +15,7 @@ const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, titl
 
                 {/* IMG APARTMENT */}
                 <div className="mx-auto grid grid-cols-1 py-5">
-                    <div className="grid md:h-1/3 md:w-1/3 mx-auto">
+                    <div className="grid md:h-1/2 md:w-1/2 mx-auto">
                         <img src={apartmentImgUrl} alt="" />
                         {/* <Image
                             loader={imageLoader}
@@ -82,7 +82,7 @@ const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, titl
                     <div className="sm:ml-10 font-bold">
                         Схема на етажа:
                     </div>
-                    <div className="mx-auto h-fit w-fit lg:px-72">
+                    <div className="mx-auto h-fit w-fit">
                         <Image
                             loader={imageLoader}
                             src={floorPlan}

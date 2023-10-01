@@ -14,21 +14,21 @@ export default function Apartament() {
         <>
         {/* no need for ?. since data is local, but future proofing */}
             {
-                data?.app1A?.available
+                data?.appA12?.available
                     ? <ApartmentTemplate
-                        apartmentImgUrl={data.app1A.apartmentImgUrl}
-                        floor={data.app1A.floor}
-                        beds={data.app1A.beds}
-                        direction={data.app1A.direction}
-                        size={data.app1A.size}
-                        title={data.app1A.title}
-                        textOne={data.app1A.textOne}
-                        textTwo={data.app1A.textTwo}
-                        floorPlan={data.app1A.floorPlan}
-                        apartmentW={data.app1A.apartmentW}
-                        apartmentH={data.app1A.apartmentH}
-                        floorW={data.app1A.floorW}
-                        floorH={data.app1A.floorH}
+                        apartmentImgUrl={data.appA12.apartmentImgUrl}
+                        floor={data.appA12.floor}
+                        beds={data.appA12.beds}
+                        direction={data.appA12.direction}
+                        size={data.appA12.size}
+                        title={data.appA12.title}
+                        textOne={data.appA12.textOne}
+                        textTwo={data.appA12.textTwo}
+                        floorPlan={data.appA12.floorPlan}
+                        apartmentW={data.appA12.apartmentW}
+                        apartmentH={data.appA12.apartmentH}
+                        floorW={data.appA12.floorW}
+                        floorH={data.appA12.floorH}
                         ></ApartmentTemplate>
                     : <AppUnavailable></AppUnavailable>
             }
