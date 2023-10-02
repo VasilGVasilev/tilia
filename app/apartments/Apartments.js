@@ -22,7 +22,7 @@ export default function Apartments() {
                 <div className="bg-white">
                     <motion.div
                         className={`flex flex-row justify-center items-center ${noto.className} welcomeTextOnImg text-[#D7D7DF] text-left py-5 text-4xl sm:text-6xl lg:text-8xl`}
-
+                        viewport={{ once: true }}
                         variants={container}
                         initial="hidden"
                         whileInView="visible"

@@ -12,7 +12,11 @@ export const ImageSquare = ({ alt, url, openModal, setSelectedPic, urlW, urlH })
       bg-deep-blue z-30 flex flex-col justify-center items-center text-center p-10 text-white`;
 
     return (
-        <motion.div variants={imageVariant} className="relative">
+        <motion.div 
+            viewport={{ once: true }} 
+            variants={imageVariant} 
+            className="relative"
+        >
 
             <div
                 onClick={() => {

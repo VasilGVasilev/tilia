@@ -15,6 +15,7 @@ const Modal = ({ isOpen, onClose, apartment, unit }) => {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1.0 }}
                 transition={{ duration: 0.3 }}
+                viewport={{ once: true }}
             >
                 {/* Add your modal content here */}
                 <>

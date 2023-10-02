@@ -28,6 +28,7 @@ const ForBuilding = () => {
                     initial="hidden"
                     whileInView="visible"
                     transition={{ duration: 0.7, delay: 0.3 }}
+                    viewport={{ once: true }}
                     variants={{
                         hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
                         visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
@@ -40,6 +41,7 @@ const ForBuilding = () => {
                     className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
                     transition={{ duration: 0.7, delay: 0.6 }}
                     variants={{
                         hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
@@ -53,6 +55,7 @@ const ForBuilding = () => {
                     className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
                     transition={{ duration: 0.7, delay: 0.9 }}
                     variants={{
                         hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
@@ -74,6 +77,7 @@ const ForBuilding = () => {
                      before:w-full before:max-w-[400px] md:before:max-w-[600px]  before:opacity-20 before:h-full before:border-4 before:border-white before:z-[-1]"
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                     variants={{
                         hidden: { opacity: 0, scale: 0 },
@@ -153,7 +157,7 @@ const ForBuilding = () => {
                             <Image
                                 className="z-0"
                                 loader={imageLoader}
-                                src="/tilia/tilia-dvor-2.webp" 
+                                src="/tilia/tilia-dvor-2.webp"
                                 alt="picture"
                                 width={5120}
                                 height={2880}
@@ -175,12 +179,14 @@ const ForBuilding = () => {
 
                             <motion.div
                                 variants={rowVariant}
+                                viewport={{ once: true }}
                             >
                                 <p className="sm:text-xl text-black font-bold">Фасада</p>
                                 <li className="text-sm sm:text-lg text-gray-900 text-justify">Окачена, вентилируема, с каменна облицовка от варовик и декоративни елементи от композитен панел - еталбонд. Топлоизолация от каменна вата. </li>
                                 <br />
                             </motion.div>
                             <motion.div
+                                viewport={{ once: true }}
                                 variants={rowVariant}
                             >
 
@@ -190,6 +196,7 @@ const ForBuilding = () => {
 
                             </motion.div>
                             <motion.div
+                                viewport={{ once: true }}
                                 variants={rowVariant}
                             >
                                 <p className="sm:text-xl text-black font-bold">Дограма</p>
@@ -198,6 +205,7 @@ const ForBuilding = () => {
 
                             </motion.div>
                             <motion.div
+                                viewport={{ once: true }}
                                 variants={rowVariant}
                             >
                                 <p className="sm:text-xl text-black font-bold">Асансьор</p>
@@ -228,7 +236,7 @@ const ForBuilding = () => {
                             <Image
                                 className="z-0"
                                 loader={imageLoader}
-                                src="/tilia/tilia-dvor-3.webp" 
+                                src="/tilia/tilia-dvor-3.webp"
                                 alt="picture"
                                 width={5568}
                                 height={3132}
@@ -247,6 +255,7 @@ const ForBuilding = () => {
                             viewport={{ once: true, amount: 0.2 }}
                         >
                             <motion.div
+                                viewport={{ once: true }}
                                 variants={rowVariant}
                             >
 
@@ -256,6 +265,7 @@ const ForBuilding = () => {
 
                             </motion.div>
                             <motion.div
+                                viewport={{ once: true }}
                                 variants={rowVariant}
                             >
 
@@ -265,6 +275,7 @@ const ForBuilding = () => {
 
                             </motion.div>
                             <motion.div
+                                viewport={{ once: true }}
                                 variants={rowVariant}
                             >
 
@@ -274,6 +285,7 @@ const ForBuilding = () => {
 
                             </motion.div>
                             <motion.div
+                                viewport={{ once: true }}
                                 variants={rowVariant}
                             >
 
@@ -306,7 +318,7 @@ const ForBuilding = () => {
                             <Image
                                 className="z-0"
                                 loader={imageLoader}
-                                src="/tilia/tilia-three.webp" 
+                                src="/tilia/tilia-three.webp"
                                 alt="picture"
                                 width={4946}
                                 height={3341}
@@ -325,6 +337,7 @@ const ForBuilding = () => {
                             viewport={{ once: true, amount: 0.2 }}
                         >
                             <motion.div
+                                viewport={{ once: true }}
                                 variants={rowVariant}
                             >
 
@@ -334,6 +347,7 @@ const ForBuilding = () => {
 
                             </motion.div>
                             <motion.div
+                                viewport={{ once: true }}
                                 variants={rowVariant}
                             >
 
@@ -343,6 +357,7 @@ const ForBuilding = () => {
 
                             </motion.div>
                             <motion.div
+                                viewport={{ once: true }}
                                 variants={rowVariant}
                             >
                                 <p className="sm:text-xl text-black font-bold">Озеленяване</p>

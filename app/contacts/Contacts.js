@@ -33,7 +33,7 @@ export default function Contacts() {
                 <div className="investorIntroBg pb-10">
                     <motion.div
                         className={`flex flex-row justify-center items-center ${noto.className} welcomeTextOnImg text-[#D7D7DF] text-left py-5 text-6xl md:text-8xl lg:text-[150px] xl:text-[200px]`}
-
+                        viewport={{ once: true }}
                         variants={container}
                         initial="hidden"
                         whileInView="visible"

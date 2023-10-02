@@ -16,6 +16,7 @@ const PicsLightbox = ({ isOpen, onClose, url, alt }) => {
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
             >
                 {/* Add your modal content here */}
                 <div className="justify-start items-end">

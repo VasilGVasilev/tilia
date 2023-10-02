@@ -87,15 +87,7 @@ const Navbar = () => {
         // animation works only on Home page:
         // the Navbar is fixed, meaning when we start the page, it is hidden and scroll makes it appear
         // but also if we refresh down the Home page, due to Navbar also being fixed to viewport, it will appear since being fixed makes it also constanlty inView
-        <motion.div
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.2 }}
-            variants={{
-                hidden: pathName === '/' ? { opacity: 1 } : {},
-                visible: pathName === '/' ? { opacity: 0 } : {},
-            }}
-
+        <div
         >
             <nav className={`bg-tilia-white flex flex-col z-40 w-full fixed top-0 shadow-xl`} >
                 <div className="group bg-tilia-yellow-block hover:bg-black w-full flex flex-row gap-3 justify-center items-center px-2">
@@ -204,6 +196,7 @@ const Navbar = () => {
                                     </motion.div>
                                     <motion.div
                                         variants={navbarVariant}
+                                        viewport={{ once: true }}
                                     >
                                         <LinkMobileTemplate
                                             urlLink='/description'
@@ -213,6 +206,7 @@ const Navbar = () => {
                                     </motion.div>
                                     <motion.div
                                         variants={navbarVariant}
+                                        viewport={{ once: true }}
                                     >
                                         <LinkMobileTemplate
                                             urlLink='/apartments'
@@ -222,6 +216,7 @@ const Navbar = () => {
                                     </motion.div>
                                     <motion.div
                                         variants={navbarVariant}
+                                        viewport={{ once: true }}
                                     >
 
                                         <LinkMobileTemplate
@@ -232,6 +227,7 @@ const Navbar = () => {
                                     </motion.div>
                                     <motion.div
                                         variants={navbarVariant}
+                                        viewport={{ once: true }}
                                     >
 
                                         <LinkMobileTemplate
@@ -246,7 +242,7 @@ const Navbar = () => {
                     )}
                 </div>
             </nav>
-        </motion.div>
+        </div>
     );
 };
 

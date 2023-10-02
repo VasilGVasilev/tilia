@@ -19,6 +19,7 @@ export const IxoraDescription = () => {
                 }}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
             >
                 <motion.span variants={letterVariant}>Ixora</motion.span>
                 <motion.span variants={letterVariant}> </motion.span>
@@ -136,6 +137,7 @@ export const DaliaDescription = () => {
                 }}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
             >
                 <motion.span variants={letterVariant}>Едно</motion.span>
                 <motion.span variants={letterVariant}> </motion.span>
@@ -211,6 +213,7 @@ export const WestEndDescription = () => {
                 }}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
             >
                 <motion.span variants={letterVariant}>В</motion.span>
                 <motion.span variants={letterVariant}> </motion.span>

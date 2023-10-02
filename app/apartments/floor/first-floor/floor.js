@@ -41,6 +41,7 @@ export default function Floor() {
                     className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
                     transition={{ duration: 0.7, delay: 0.3 }}
                     variants={{
                         hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },

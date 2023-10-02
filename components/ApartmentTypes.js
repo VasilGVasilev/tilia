@@ -11,6 +11,7 @@ const TypeApp = ({ title, img, imgW, imgH }) => {
     return (
         <motion.div
             className="bg-tilia-gray p-7 flex flex-col justify-center items-center gap-7 sm:h-[500px] sm:w-[500px]"
+            viewport={{ once: true }}
             variants={{
                 hidden: { opacity: 0, scale: 1.3 },
                 visible: { opacity: 1, scale: 1 },
@@ -85,6 +86,7 @@ const ApartmentTypes = () => {
             </div>
             <motion.div
                 className="flex flex-col sm:flex-row justify-center items-center gap-5"
+                viewport={{ once: true }}
                 variants={{
                     hidden: {},
                     visible: {

@@ -24,6 +24,7 @@ const Tree = ({ title, subtitle }) => {
         <motion.div
             className="flex flex-col justify-center items-center h-20 w-20 m-5 lg:h-32 lg:w-32"
             variants={treeVariant}
+            viewport={{ once: true }}
         >
             <div className="text-sm lg:text-xl">
                 {title}
@@ -52,6 +53,7 @@ const WalkingDistance = () => {
                     className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
                     transition={{ duration: 0.7, delay: 0.3 }}
                     variants={{
                         hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },

@@ -68,6 +68,7 @@ export default function Home() {
                         variants={container}
                         initial="hidden"
                         whileInView="visible"
+                        viewport={{ once: true }}
                     >
                         <motion.span variants={letterVariant}>И</motion.span>
                         <motion.span variants={letterVariant}>З</motion.span>
@@ -124,6 +125,7 @@ export default function Home() {
                             initial="hidden"
                             whileInView="visible"
                             transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
                             variants={{
                                 hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
                                 visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
