@@ -2,13 +2,10 @@
 
 import './globals.css'
 import Navbar from '../components/Navbar'
-import { usePathname } from 'next/navigation'
 import Footer from '../components/Footer'
 
 
 export default function RootLayout({ children }) {
-  const pathName = usePathname();
-
   
 // #837667
 // #716657
@@ -17,11 +14,11 @@ export default function RootLayout({ children }) {
     
     <html lang="bg-tilia-white" className={`scroll-smooth overflow-x-hidden`}>
       <body className='bg-tilia-white overflow-x-hidden'>
-
+        
+        {/* tried to extract dynamically ref.current.offsetHeight but didnt work so this hacky bar to push down the content otherwise hidden by Navbar */}
+                <div  className={`py-[52px] sm:py-[58px] bg-tilia-white`}></div>
         <Navbar
         />
- 
-        <div className='py-12 sm:py-[64px] bg-tilia-white'></div>
         <main>
           {children}
         </main>
