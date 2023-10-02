@@ -55,6 +55,7 @@ export default function Home() {
                     alt="dvor"
                     width={5568}
                     height={3132}
+                    priority={true}
                 ></Image>
 
                 <div className="absolute top-[10%] left-4 md:top-[10%] md:left-10 w-full h-full flex flex-col items-start justify-center">
@@ -113,6 +114,7 @@ export default function Home() {
                             alt="tilia one"
                             width={4946}
                             height={3216}
+                            priority={true}
                         ></Image>
                     </div>
 
