@@ -13,8 +13,8 @@ const PicsLightbox = ({ isOpen, onClose, url, alt }) => {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
             <motion.div
                 className="h-auto sm:h-screen w-screen bg-white p-5 flex flex-col"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0,  }}
+                animate={{ opacity: 1,  }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
             >
