@@ -1,11 +1,9 @@
 
 'use client'
 
-import { useState } from "react";
 import { imageLoader } from "@/utils/imgLoader";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Modal from "@/components/Modal";
 import Link from "next/link";
 import { noto } from "@/utils/fonts";
 
