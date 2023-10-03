@@ -169,7 +169,7 @@ const ForBuilding = () => {
                     </motion.div>
 
                     <div className="lg:basis-1/2 lg:order-1">
-                        <motion.ul
+                        <motion.div
                             className="p-10 "
                             variants={container}
                             initial="hidden"
@@ -182,7 +182,7 @@ const ForBuilding = () => {
                                 viewport={{ once: true }}
                             >
                                 <p className="sm:text-xl text-black font-bold">Фасада</p>
-                                <li className="text-sm sm:text-lg text-gray-900 text-justify">Окачена, вентилируема, с каменна облицовка от варовик и декоративни елементи от композитен панел - еталбонд. Топлоизолация от каменна вата. </li>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Окачена, вентилируема, с каменна облицовка от варовик и декоративни елементи от композитен панел - еталбонд. Топлоизолация от каменна вата. </p>
                                 <br />
                             </motion.div>
                             <motion.div
@@ -191,7 +191,7 @@ const ForBuilding = () => {
                             >
 
                                 <p className="sm:text-xl text-black font-bold">Фоайе и общи части</p>
-                                <li className="text-sm sm:text-lg text-gray-900 text-justify">По специален интериорен проект с каменно оформление от мрамор и оникс.</li>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">По специален интериорен проект с каменно оформление от мрамор и оникс.</p>
                                 <br />
 
                             </motion.div>
@@ -200,7 +200,7 @@ const ForBuilding = () => {
                                 variants={rowVariant}
                             >
                                 <p className="sm:text-xl text-black font-bold">Дограма</p>
-                                <li className="text-sm sm:text-lg text-gray-900 text-justify">Алуминиева дограма от най-висок клас "WEISS PROFIL" THERMO PRO 85 с цвят антрацит. </li>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Алуминиева дограма от най-висок клас "WEISS PROFIL" THERMO PRO 85 с цвят антрацит. </p>
                                 <br />
 
                             </motion.div>
@@ -209,11 +209,11 @@ const ForBuilding = () => {
                                 variants={rowVariant}
                             >
                                 <p className="sm:text-xl text-black font-bold">Асансьор</p>
-                                <li className="text-sm sm:text-lg text-gray-900 text-justify">Висок клас асансьор - КОНЕ. </li>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Висок клас асансьор - КОНЕ. </p>
                                 <br />
 
                             </motion.div>
-                        </motion.ul>
+                        </motion.div>
                     </div>
 
 
@@ -247,7 +247,7 @@ const ForBuilding = () => {
                     </motion.div>
 
                     <div className="lg:basis-1/2">
-                        <motion.ul
+                        <motion.div
                             className="p-10 "
                             variants={container}
                             initial="hidden"
@@ -260,7 +260,7 @@ const ForBuilding = () => {
                             >
 
                                 <p className="sm:text-xl text-black font-bold">Врати</p>
-                                <li className="text-sm sm:text-lg text-gray-900 text-justify">Блиндирани входни врати SOLID с цвят дъб - модел "iDoor 20-22" Серия 50.</li>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Блиндирани входни врати SOLID с цвят дъб - модел "iDoor 20-22" Серия 50.</p>
                                 <br />
 
                             </motion.div>
@@ -270,7 +270,7 @@ const ForBuilding = () => {
                             >
 
                                 <p className="sm:text-xl text-black font-bold">ВиК</p>
-                                <li className="text-sm sm:text-lg text-gray-900 text-justify">Обезшумяваща канализационна система - Пайплайф MASTER 3</li>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Обезшумяваща канализационна система - Пайплайф MASTER 3</p>
                                 <br />
 
                             </motion.div>
@@ -280,7 +280,7 @@ const ForBuilding = () => {
                             >
 
                                 <p className="sm:text-xl text-black font-bold">Отопление</p>
-                                <li className="text-sm sm:text-lg text-gray-900 text-justify">Централно газоснабдена сграда. Етаж 1 и 2 са заложени с висок клас енергоефективни радиатори тип Jaga. Етаж 3 и 4 са изпълнени с подово отопление със самостоятелен термостат за всяко помещение.  </li>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Централно газоснабдена сграда. Етаж 1 и 2 са заложени с висок клас енергоефективни радиатори тип Jaga. Етаж 3 и 4 са изпълнени с подово отопление със самостоятелен термостат за всяко помещение.  </p>
                                 <br />
 
                             </motion.div>
@@ -290,11 +290,11 @@ const ForBuilding = () => {
                             >
 
                                 <p className="sm:text-xl text-black font-bold">Гаражи</p>
-                                <li className="text-sm sm:text-lg text-gray-900 text-justify">Голям брой гаражи в сутерена и допълнителни паркоместа извън сградата. </li>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Голям брой гаражи в сутерена и допълнителни паркоместа извън сградата. </p>
                                 <br />
 
                             </motion.div>
-                        </motion.ul>
+                        </motion.div>
                     </div>
 
 
@@ -329,7 +329,7 @@ const ForBuilding = () => {
                     </motion.div>
 
                     <div className="lg:basis-1/2 lg:order-1">
-                        <motion.ul
+                        <motion.div
                             className="p-10 "
                             variants={container}
                             initial="hidden"
@@ -342,7 +342,7 @@ const ForBuilding = () => {
                             >
 
                                 <p className="sm:text-xl text-black font-bold">Сигурност</p>
-                                <li className="text-sm sm:text-lg text-gray-900 text-justify">Ограда. Контролиран достъп с чип и разпознаване на автомобилен номер. 24/7 жива охрана. </li>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Ограда. Контролиран достъп с чип и разпознаване на автомобилен номер. 24/7 жива охрана. </p>
                                 <br />
 
                             </motion.div>
@@ -352,7 +352,7 @@ const ForBuilding = () => {
                             >
 
                                 <p className="sm:text-xl text-black font-bold">Удобства</p>
-                                <li className="text-sm sm:text-lg text-gray-900 text-justify">Самостоятелен фитнес с уреди TECHNOGYM. Спа център с джакузи, парна баня и сауна, оборудвани с топли лежанки. </li>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Самостоятелен фитнес с уреди TECHNOGYM. Спа център с джакузи, парна баня и сауна, оборудвани с топли лежанки. </p>
                                 <br />
 
                             </motion.div>
@@ -361,9 +361,9 @@ const ForBuilding = () => {
                                 variants={rowVariant}
                             >
                                 <p className="sm:text-xl text-black font-bold">Озеленяване</p>
-                                <li className="text-sm sm:text-lg text-gray-900 text-justify">Вертикалната планировка по специален ландшафтен проект оформя зелен пояс около сградата, който създава усещане за живот в паркова среда. </li>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Вертикалната планировка по специален ландшафтен проект оформя зелен пояс около сградата, който създава усещане за живот в паркова среда. </p>
                             </motion.div>
-                        </motion.ul>
+                        </motion.div>
                     </div>
 
 

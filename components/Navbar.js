@@ -147,6 +147,7 @@ const Navbar = () => {
                         <button
                             className="rounded-full text-black p-2"
                             onClick={() => setIsMenuToggled(!isMenuToggled)}
+                            aria-label="menu"
                         >
                             <GiHamburgerMenu size={24} />
                         </button>
@@ -172,7 +173,10 @@ const Navbar = () => {
                             >
                                 {/* CLOSE ICON */}
                                 <div className="flex justify-end p-12">
-                                    <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                                    <button 
+                                        onClick={() => setIsMenuToggled(!isMenuToggled)} 
+                                        aria-label="close"
+                                    >
                                         <AiOutlineClose size={24} className="text-neutral-600" />
                                     </button>
                                 </div>

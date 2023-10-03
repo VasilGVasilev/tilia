@@ -20,7 +20,7 @@ const PicsLightbox = ({ isOpen, onClose, url, alt }) => {
             >
                 {/* Add your modal content here */}
                 <div className="justify-start items-end">
-                    <button onClick={onClose}>
+                    <button aria-label="close" onClick={onClose}>
                         <AiOutlineClose size={24} className="text-neutral-600" />
                     </button>
                 </div>
