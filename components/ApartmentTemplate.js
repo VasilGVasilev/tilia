@@ -16,14 +16,14 @@ const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, titl
                 {/* IMG APARTMENT */}
                 <div className="mx-auto grid grid-cols-1 py-5">
                     <div className="grid md:h-1/2 md:w-1/2 mx-auto">
-                        <img src={apartmentImgUrl} alt="" />
-                        {/* <Image
+                        {/* <img src={apartmentImgUrl} alt="" /> */}
+                        <Image
                             loader={imageLoader}
                             src={apartmentImgUrl}
                             alt="apartment"
                             width={apartmentW}
                             height={apartmentH}
-                        ></Image> */}
+                        ></Image>
                     </div>
 
                 </div>
