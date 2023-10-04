@@ -59,14 +59,14 @@ export default function Floor() {
                         <Link href={`/apartments/app/A2`}><div className={`absolute app-A2-2 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         <Link href={`/apartments/app/B3`}><div className={`absolute app-B3-2 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         <Link href={`/apartments/app/B6`}><div className={`absolute app-B6 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
-                        <Link href={`/apartments/app/B6`}><div className={`absolute app-B7 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                        <Link href={`/apartments/app/B7`}><div className={`absolute app-B7 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         
                         <div className='relative '>
                             {/* <img src="/plans/second-floor.webp" alt="" /> */}
                             <Image
                                 loader={imageLoader}
-                                src='/plans/third-floor.webp'
-                                alt="Ixora Plan"
+                                src='/plans/second-floor.webp'
+                                alt="Tilia Plan"
                                 width={9850}
                                 height={5900}
                             ></Image>

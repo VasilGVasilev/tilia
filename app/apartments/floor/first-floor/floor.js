@@ -70,7 +70,7 @@ export default function Floor() {
                             <Image
                                 loader={imageLoader}
                                 src='/plans/third-floor.webp'
-                                alt="Ixora Plan"
+                                alt="Tilia Plan"
                                 width={9850}
                                 height={6400}
                             ></Image>

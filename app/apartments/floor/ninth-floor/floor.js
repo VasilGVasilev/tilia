@@ -59,14 +59,14 @@ export default function Floor() {
 
 
 
-                        {/* <img src="/plans/third-floor.webp" alt="Ixora Plan" className="relative" /> */}
+                        {/* <img src="/plans/third-floor.webp" alt="Tilia Plan" className="relative" /> */}
 
                         <div className='relative '>
                             {/* <img src="/plans/ninth-floor.webp" alt="" /> */}
                             <Image
                                 loader={imageLoader}
-                                src='/plans/third-floor.webp'
-                                alt="Ixora Plan"
+                                src='/plans/ninth-floor.webp'
+                                alt="Tilia Plan"
                                 width={3509}
                                 height={4967}
                             ></Image>

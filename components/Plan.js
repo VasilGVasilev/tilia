@@ -28,7 +28,7 @@ const Plan = () => {
             <Link href={`/apartments/floor/garage-1/`}><div className="absolute garage-1 cursor-pointer h-full w-full z-20 bg-tilia-yellow-block opacity-0 hover:opacity-80 duration-150 ease-in" title="Първи Подземен Етаж" ></div></Link>
             <Link href={`/apartments/floor/garage-2/`}><div className="absolute garage-2 cursor-pointer h-full w-full z-20 bg-tilia-yellow-block opacity-0 hover:opacity-80 duration-150 ease-in" title="Втори Подземен Етаж" ></div></Link>
             {/* <div className='absolute outside cursor-pointer h-full w-full bg-white opacity-50 z-10'  ></div> */}
-            {/* <img src="/ixora-apartments-plan.webp" alt="Ixora Plan" className="relative" /> */}
+            {/* <img src="/ixora-apartments-plan.webp" alt="Tilia Plan" className="relative" /> */}
 
             <div>
                 {/* <img src="/tilia/tilia-plan.webp" alt="" /> */}

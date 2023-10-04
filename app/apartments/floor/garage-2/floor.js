@@ -74,14 +74,14 @@ export default function Floor() {
                         <div className={`absolute maze-8 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
 
 
-                        {/* <img src="/plans/third-floor.webp" alt="Ixora Plan" className="relative" /> */}
+                        {/* <img src="/plans/third-floor.webp" alt="Tilia Plan" className="relative" /> */}
 
                         <div className='relative '>
                             {/* <img src="/plans/parking-2.webp" alt="" /> */}
                             <Image
                                 loader={imageLoader}
-                                src='/plans/third-floor.webp'
-                                alt="Ixora Plan"
+                                src='/plans/parking-2.webp'
+                                alt="Tilia Plan"
                                 width={9850}
                                 height={6200}
                             ></Image>
