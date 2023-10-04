@@ -69,7 +69,7 @@ export default function Floor() {
                             {/* <img src="/plans/first-floor.webp" alt="" /> */}
                             <Image
                                 loader={imageLoader}
-                                src='/plans/third-floor.webp'
+                                src='/plans/first-floor.webp'
                                 alt="Tilia Plan"
                                 width={9850}
                                 height={6400}
