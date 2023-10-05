@@ -3,14 +3,9 @@
 
 import Image from "next/image"
 import { imageLoader } from "../../utils/imgLoader";
-import Maps from "@/components/Location";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { SlLocationPin } from 'react-icons/sl'
-import { BsTelephone } from 'react-icons/bs'
-import { TfiEmail } from 'react-icons/tfi'
-import { noto, playfair, roboto } from "@/utils/fonts";
+import { noto, roboto } from "@/utils/fonts";
 import { container, letterVariant } from "../Home";
 
 

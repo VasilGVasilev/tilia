@@ -1,12 +1,10 @@
 'use client'
-import Link from "next/link"
 import Image from "next/image"
 import { imageLoader } from "../utils/imgLoader"
-import Maps from "@/components/Location"
 import Timeline from "@/components/Timeline"
 import ForBuilding from "@/components/ForBuidling"
 import { motion } from "framer-motion"
-import { noto, playfair, roboto } from "@/utils/fonts"
+import { noto, roboto } from "@/utils/fonts"
 import ApartmentTypes from "@/components/ApartmentTypes"
 import WalkingDistance from "@/components/WalkingDistance"
 
@@ -14,9 +12,6 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 // TODO:
 // sitemap update
-// img to Image
-// all images to webp
-// lighthouse optimal 
 // when an apartment is sold, set available status to false
 
 

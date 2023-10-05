@@ -1,16 +1,12 @@
 'use client'
 
 import Link from "next/link";
-import Image from "next/image"
-import { imageLoader } from "../../utils/imgLoader";
-import { lato, tenor } from "@/utils/fonts";
+import { lato } from "@/utils/fonts";
 import { motion } from "framer-motion";
 
 import { letterVariant, container } from "../Home";
 
 import { noto } from "@/utils/fonts";
-
-
 
 import { useState } from "react";
 import { ImageSquare } from "@/components/InvestorImage";
