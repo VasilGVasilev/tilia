@@ -12,54 +12,33 @@ const Footer = () => {
         <div className="h-fit w-full flex-col p-10 bg-tilia-yellow-block lg:px-40">
 
 
-            <div className='flex flex-col justify-center items-center md:flex-row md:justify-center md:items-center gap-5'>
-                {/* Logo */}
-                {/* <Image
-                    className="h-auto w-auto sm:h-20 sm:w-30"
-                    loader={imageLoader}
-                    src="/assets/tilia-logo.webp"
-                    alt="Ixora Logo"
-                    width={979}
-                    height={350}
-                /> */}
-                <div className="relative overflow-hidden">
-
-                    <Image
-                        className='h-auto w-auto sm:h-28 sm:w-44'
-                        loader={imageLoader}
-                        src="/assets/tilia-logo.webp"
-                        alt="logo"
-                        width={1834}
-                        height={1480}
-                    ></Image>
-
-                    <span className="absolute inset-0 z-10 shadow-inner-xl"></span>
-
+            <div className='flex flex-col justify-center items-center md:flex-row gap-5'>
+                {/* Description */}
+                <div className='md:text-center'>
+                    <div className='text-black font-mono text-xl'>Tilia Residence</div>
+                    <div className='p-3 text-neutral-700 font-mono text-sm'> Tilia Residence - многофамилна жилищна сграда в затворен комплекс с богата растителност, в непосредствена близост до метростанция Ломско Шосе.</div>
                 </div>
 
-                <div className='flex flex-col sm:flex-row'>
 
-                    {/* Description */}
-                    <div className='md:text-center'>
-                        <div className='text-black font-mono text-xl'>Tilia Residence</div>
-                        <div className='p-3 text-neutral-700 font-mono text-sm'> Tilia Residence е бутикова сграда със спа център и финтес, ситуирана в подножието на Витоша</div>
-                    </div>
-                    {/* Contacts */}
-                    <div className='md:text-center'>
-                        <div className='text-black font-mono text-xl'>Контакти</div>
-                        <div className='p-3'>
-                            <div className="py-2 flex space-x-3 items-center">
-                                <BsTelephone size={24} className='text-black' />
-                                <div className="text-sm text-neutral-700 font-semibold hover:text-white"><a href={`tel:00359886879993`}>+359886879993</a></div>
-                            </div>
-                            <div className="py-2 flex space-x-2 items-center">
-                                <TfiEmail size={24} className='text-black' />
 
-                                <div className="text-sm text-neutral-700 font-semibold hover:text-white"><a href="mailto:office@creativestudiobg.com">office@creativestudiobg.com</a></div>
-                            </div>
+
+                {/* Contacts */}
+                <div className='md:text-center'>
+                    <div className='text-black font-mono text-xl'>Контакти</div>
+                    <div className='p-3'>
+                        <div className="py-2 flex space-x-3 items-center">
+                            <BsTelephone size={24} className='text-black' />
+                            <div className="text-sm text-neutral-700 font-semibold hover:text-white"><a href={`tel:00359886879993`}>+359886879993</a></div>
+                        </div>
+                        <div className="py-2 flex space-x-2 items-center">
+                            <TfiEmail size={24} className='text-black' />
+
+                            <div className="text-sm text-neutral-700 font-semibold hover:text-white"><a href="mailto:office@creativestudiobg.com">office@creativestudiobg.com</a></div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
 
 

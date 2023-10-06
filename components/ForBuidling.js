@@ -182,7 +182,7 @@ const ForBuilding = () => {
                                 viewport={{ once: true }}
                             >
                                 <p className="sm:text-xl text-black font-bold">Фасада</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Окачена, вентилируема, с каменна облицовка от варовик и декоративни елементи от композитен панел - еталбонд. Топлоизолация от каменна вата. </p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Фасадата предстои да бъде изпълнена от силикатна мазилка Caparol или San Marco и декоративна рамка от еталбонд и HPL- опасваща сградата.</p>
                                 <br />
                             </motion.div>
                             <motion.div
@@ -190,8 +190,8 @@ const ForBuilding = () => {
                                 variants={rowVariant}
                             >
 
-                                <p className="sm:text-xl text-black font-bold">Фоайе и общи части</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">По специален интериорен проект с каменно оформление от мрамор и оникс.</p>
+                                <p className="sm:text-xl text-black font-bold">Хидроизолация</p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Цялостна допълнителна хидроизолация на сутерена и водоплътен бетон.</p>
                                 <br />
 
                             </motion.div>
@@ -200,7 +200,7 @@ const ForBuilding = () => {
                                 variants={rowVariant}
                             >
                                 <p className="sm:text-xl text-black font-bold">Дограма</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Алуминиева дограма от най-висок клас "WEISS PROFIL" THERMO PRO 85 с цвят антрацит. </p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Алуминиева дограма най-висок клас с профили Weiss Profil Thermo Pro WP85.</p>
                                 <br />
 
                             </motion.div>
@@ -208,8 +208,8 @@ const ForBuilding = () => {
                                 viewport={{ once: true }}
                                 variants={rowVariant}
                             >
-                                <p className="sm:text-xl text-black font-bold">Асансьор</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Висок клас асансьор - КОНЕ. </p>
+                                <p className="sm:text-xl text-black font-bold">Отопление</p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Отоплението е решено с електрически конвектори и климатици.</p>
                                 <br />
 
                             </motion.div>
@@ -259,8 +259,18 @@ const ForBuilding = () => {
                                 variants={rowVariant}
                             >
 
+                                <p className="sm:text-xl text-black font-bold">Материали и асансьор</p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Тухли Винербергер за зидарии. Асансьори КОНЕ.</p>
+                                <br />
+
+                            </motion.div>
+                            <motion.div
+                                viewport={{ once: true }}
+                                variants={rowVariant}
+                            >
+
                                 <p className="sm:text-xl text-black font-bold">Врати</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Блиндирани входни врати SOLID с цвят дъб - модел "iDoor 20-22" Серия 50.</p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Блиндирани входни врати SOLID idoor, обърнати с мрамор.</p>
                                 <br />
 
                             </motion.div>
@@ -269,18 +279,8 @@ const ForBuilding = () => {
                                 variants={rowVariant}
                             >
 
-                                <p className="sm:text-xl text-black font-bold">ВиК</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Обезшумяваща канализационна система - Пайплайф MASTER 3</p>
-                                <br />
-
-                            </motion.div>
-                            <motion.div
-                                viewport={{ once: true }}
-                                variants={rowVariant}
-                            >
-
-                                <p className="sm:text-xl text-black font-bold">Отопление</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Централно газоснабдена сграда. Етаж 1 и 2 са заложени с висок клас енергоефективни радиатори тип Jaga. Етаж 3 и 4 са изпълнени с подово отопление със самостоятелен термостат за всяко помещение.  </p>
+                                <p className="sm:text-xl text-black font-bold">Фоайе и общи части</p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Фоайе и общи части по специален интериорен проект - с вътрешно оформление от мрамор, съчетан с декоративни елементи ламинам.</p>
                                 <br />
 
                             </motion.div>
@@ -290,7 +290,7 @@ const ForBuilding = () => {
                             >
 
                                 <p className="sm:text-xl text-black font-bold">Гаражи</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Голям брой гаражи в сутерена и допълнителни паркоместа извън сградата. </p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Предвидени са достатъчен брой гаражи в сутерена, разпределени на две нива и допълнителни паркоместа извън сградата.</p>
                                 <br />
 
                             </motion.div>
@@ -342,7 +342,7 @@ const ForBuilding = () => {
                             >
 
                                 <p className="sm:text-xl text-black font-bold">Сигурност</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Ограда. Контролиран достъп с чип и разпознаване на автомобилен номер. 24/7 жива охрана. </p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Ограда и контролиран достъп с чип до двора и сградата.</p>
                                 <br />
 
                             </motion.div>
@@ -351,17 +351,24 @@ const ForBuilding = () => {
                                 variants={rowVariant}
                             >
 
-                                <p className="sm:text-xl text-black font-bold">Удобства</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Самостоятелен фитнес с уреди TECHNOGYM. Спа център с джакузи, парна баня и сауна, оборудвани с топли лежанки. </p>
+                                <p className="sm:text-xl text-black font-bold">Мезонети и пентхауси</p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Партерни апартаменти - мезонети с озеленен двор. Просторни пентхауси на последен етаж, притежаващи голяма прилежаща тераса.</p>
                                 <br />
 
+                            </motion.div>
+                            <motion.div
+                                viewport={{ once: true }}
+                                variants={rowVariant}
+                            >
+                                <p className="sm:text-xl text-black font-bold">Изложение</p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Функционални вътрешни разпределения на апартаментите с необезпокоявани гледки към София и Витоша.</p>
                             </motion.div>
                             <motion.div
                                 viewport={{ once: true }}
                                 variants={rowVariant}
                             >
                                 <p className="sm:text-xl text-black font-bold">Озеленяване</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Вертикалната планировка по специален ландшафтен проект оформя зелен пояс около сградата, който създава усещане за живот в паркова среда. </p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Озеленяването и вертикалната планировка са друг акцент на сградата - с голям процент паркова зеленина и различни алпинеуми с екзотична растителност.</p>
                             </motion.div>
                         </motion.div>
                     </div>
