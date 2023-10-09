@@ -2,9 +2,14 @@
 
 This is a Next.js Static Site Generation freelance project developed via Tailwind, React and Framer Motion. It promotes the sales of aparments.
 
-## [Go to Website](https://ixorabg.com/)
+## [Go to Website](https://vgvchat.online/)
 
-[![alt text](https://github.com/VasilGVasilev/nextJS/blob/ixoraInter/ixora/welcome-img-ixora.png)](https://ixorabg.com/)
+[![alt text](https://github.com/VasilGVasilev/tilia/blob/main/NB/welcome-img-tilia.png)](https://vgvchat.online/)
+
+---
+
+[![alt text](https://github.com/VasilGVasilev/tilia/blob/main/NB/second-img.png)](https://vgvchat.online/)
+
 
 ## What's in the stack
 
