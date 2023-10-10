@@ -10,7 +10,7 @@ import { HiExternalLink } from 'react-icons/hi'
 const TypeApp = ({ title, img, imgW, imgH }) => {
     return (
         <motion.div
-            className="bg-tilia-gray p-7 flex flex-col justify-center items-center gap-7 sm:h-[500px] sm:w-[500px]"
+            className="bg-tilia-gray p-7 flex flex-col justify-center items-center gap-5 "
             viewport={{ once: true }}
             variants={{
                 hidden: { opacity: 0, scale: 1.3 },
@@ -19,7 +19,7 @@ const TypeApp = ({ title, img, imgW, imgH }) => {
         >
             <div className="font-semibold md:text-xl lg:text-2xl">{title}</div>
             <Image
-                className="hover:scale-110 transition duration-300 sm:w-[300px] sm:h-[300px]"
+                className="hover:scale-110 transition duration-300 md:w-[300px] md:h-[300px]"
                 loader={imageLoader}
                 src={img}
                 alt="type"
@@ -33,19 +33,25 @@ const TypeApp = ({ title, img, imgW, imgH }) => {
 const ApartmentTypes = () => {
     const [typeAparts, setTypeAparts] = useState([
         {
+            title: 'ЕДНОСТАЙНИ АПАРТАМЕНТИ',
+            imgUrl: '/assets/no-beds.webp',
+            imgW: '3000',
+            imgH: '3000'
+        },
+        {
             title: 'ДВУСТАЙНИ АПАРТАМЕНТИ',
-            imgUrl: '/assets/two-beds.webp',
+            imgUrl: '/assets/one-beds.webp',
             imgW: '3000',
             imgH: '3000'
         },
         {
             title: 'ТРИСТАЙНИ АПАРТАМЕНТИ',
-            imgUrl: '/assets/three-beds.webp',
+            imgUrl: '/assets/two-beds.webp',
             imgW: '3000',
             imgH: '3000'
         },
         {
-            title: 'МЕЗОНЕТИ',
+            title: 'ЧЕТИРИСТАЙНИ АПАРТАМЕНТИ',
             imgUrl: '/assets/penthouse.webp',
             imgW: '3000',
             imgH: '3000'
@@ -85,7 +91,7 @@ const ApartmentTypes = () => {
                 </motion.div>
             </div>
             <motion.div
-                className="flex flex-col sm:flex-row justify-center items-center gap-5"
+                className="grid grid-cols-1 sm:grid-cols-2 justify-center items-center gap-5"
                 viewport={{ once: true }}
                 variants={{
                     hidden: {},
@@ -104,7 +110,7 @@ const ApartmentTypes = () => {
 
 
             <Link href={'/apartments'} >
-                <div className="flex flex-row gap-1 rounded-full bg-tilia-yellow-block w-fit h-fit p-2 font-semibold sm:text-xl hover:bg-black hover:text-white transition">
+                <div className="flex flex-row gap-1 rounded-full bg-tilia-yellow-block w-fit h-fit p-3 font-semibold sm:text-xl hover:bg-black hover:text-white transition">
                     <div>
                         Разгледай имотите
                     </div>
