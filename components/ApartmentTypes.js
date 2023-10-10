@@ -40,7 +40,7 @@ const ApartmentTypes = () => {
         },
         {
             title: 'ДВУСТАЙНИ АПАРТАМЕНТИ',
-            imgUrl: '/assets/one-beds.webp',
+            imgUrl: '/assets/one-bed.webp',
             imgW: '3000',
             imgH: '3000'
         },
