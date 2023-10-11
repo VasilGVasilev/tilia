@@ -68,7 +68,7 @@ const WalkingDistance = () => {
 
             {/* BIG MAP */}
             <div className=" flex flex-col justify-center items-center gap-5">
-                <Link href={'https://goo.gl/maps/aJhyFrUMrpakMc1d6'} >
+                <Link href={'https://maps.app.goo.gl/FASw8QWZRoibVTqd9'} >
                     <div className="flex flex-row gap-1 rounded-full bg-tilia-yellow-block w-fit h-fit p-3 font-semibold sm:text-xl hover:bg-black hover:text-white transition">
                         <div>
                             Виж на Google Maps
@@ -96,7 +96,7 @@ const WalkingDistance = () => {
                 viewport={{ once: true, amount: 0.2 }}
             >
 
-                <Tree title={'Метростанция Ломско шосе'} subtitle={'200 м'} ></Tree>
+                <Tree title={'Метростанция Ломско шосе'} subtitle={'50 м'} ></Tree>
                 <Tree title={'61 ОУ “Св. св. Кирил и Методий”'} subtitle={'200 м'} ></Tree>
                 <Tree title={'74 ОУ “Гоце Делчев”'} subtitle={'500 м'} ></Tree>
                 <Tree title={'супермаркет БИЛА'} subtitle={'500 м'} ></Tree>
