@@ -46,21 +46,21 @@ export default function Home() {
                 </video> */}
                 <Image
                     loader={imageLoader}
-                    src="/tilia/tilia-dvor.webp"
+                    src="/tilia/tilia-walking-people.webp"
                     alt="dvor"
                     width={5568}
                     height={3132}
                     priority={true}
                 ></Image>
 
-                <div className="absolute top-[10%] left-4 md:top-[10%] md:left-10 w-full h-full flex flex-col items-start justify-center">
+                <div className="absolute bottom-[5%] left-4 md:left-10 w-full h-full flex flex-col items-start justify-center">
                     <div
-                        className={`${roboto.className} welcomeTextOnImg md:pb-16 text-white text-center md:text-xl lg:text-3xl xl:text-5xl`}
+                        className={`${roboto.className} welcomeTextOnImgBlc md:pb-16 text-[#F0D5CA] text-center md:text-xl lg:text-3xl `}
                     >
                         НА КРАЧКИ ОТ МЕТРОТО
                     </div>
                     <motion.div
-                        className={`${roboto.className} welcomeTextOnImg text-white text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px]`}
+                        className={`${roboto.className} welcomeTextOnImgBlc text-[#F0D5CA] text-center text-xl md:text-3xl lg:text-5xl `}
                         variants={container}
                         initial="hidden"
                         whileInView="visible"

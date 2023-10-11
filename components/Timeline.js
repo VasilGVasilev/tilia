@@ -20,7 +20,7 @@ const treeVariant = {
 const Tree = ({ title, subtitle }) => {
     return (
         <motion.div
-            className="flex flex-col justify-center items-center  h-20 w-20 m-5 lg:h-32 lg:w-32 xl:h-40 xl:w-40 gap-3"
+            className="flex flex-col justify-center items-center whitespace-nowrap  h-20 w-20 m-5 lg:h-32 lg:w-32 xl:h-40 xl:w-40 gap-3"
             variants={treeVariant}
             viewport={{ once: true }}
         >
@@ -76,10 +76,10 @@ const Timeline = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
             >
-                <Tree title={'Септември 2023'} subtitle={'Проектиране '} ></Tree>
+                <Tree title={'Август 2022'} subtitle={'Проектиране '} ></Tree>
                 <Tree title={'Ноември 2023'} subtitle={'Първа копка'} ></Tree>
-                <Tree title={'Март 2025'} subtitle={'Акт 14'} ></Tree>
-                <Tree title={'Април 2026'} subtitle={'Акт 16'} ></Tree>
+                <Tree title={'Август 2024'} subtitle={'Акт 14'} ></Tree>
+                <Tree title={'Септември 2025'} subtitle={'Акт 16'} ></Tree>
 
             </motion.div>
         </div>

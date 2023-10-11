@@ -249,7 +249,7 @@ export default function Investor() {
                                     }}
                                 >
 
-                                    DALIA
+                                    DAHLIA
                                 </motion.div>
                             </div>
 

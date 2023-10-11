@@ -22,9 +22,9 @@ const ForBuilding = () => {
 
 
             {/* TITLE */}
-            <div className="text-white flex flex-row pb-5 gap-5 bg-tilia-yellow-block p-10">
+            <div className="text-white flex flex-col sm:flex-row pb-5 sm:gap-5 bg-tilia-yellow-block px-10 sm:p-10">
                 <motion.div
-                    className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
+                    className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
                     initial="hidden"
                     whileInView="visible"
                     transition={{ duration: 0.7, delay: 0.3 }}
@@ -34,11 +34,10 @@ const ForBuilding = () => {
                         visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
                     }}
                 >
-
-                    ВИЗИЯ
+                    КОНЦЕПЦИЯ
                 </motion.div>
                 <motion.div
-                    className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
+                    className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -48,11 +47,10 @@ const ForBuilding = () => {
                         visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
                     }}
                 >
-
-                    И
+                    TILIA
                 </motion.div>
                 <motion.div
-                    className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
+                    className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -62,8 +60,7 @@ const ForBuilding = () => {
                         visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
                     }}
                 >
-
-                    МАТЕРИАЛИ
+                    RESIDENCE
                 </motion.div>
             </div>
 
@@ -99,7 +96,7 @@ const ForBuilding = () => {
 
                     {/* small intro text 1 */}
                     <motion.div
-                        className=" xl:text-xl"
+                        className=" xl:text-xl text-justify"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.5 }}
@@ -109,13 +106,13 @@ const ForBuilding = () => {
                             visible: { opacity: 1, scale: 1 },
                         }}
                     >
-                        Lorem Ipsum is simply dumy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        Всяка сграда носи свето послание и въздейства върху ползвателите й и минувачите около нея със своята визия, обем и посока. Името на сградата е избрано преднамерено - за нас зелените площи и високата дървесна растителност са част от архитектурата.
 
                     </motion.div>
 
                     {/* small intro text  */}
                     <motion.div
-                        className=" xl:text-xl"
+                        className=" xl:text-xl text-justify"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.5 }}
@@ -125,7 +122,7 @@ const ForBuilding = () => {
                             visible: { opacity: 1, scale: 1 },
                         }}
                     >
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        Пространството около сградата ще бъде богато озеленено и ще бъдат посадени множество дървета Липа. Ароматът на липа събужда още едно от сетивата, с които човек може да усети и запомни една сграда и пространството около нея.
 
                     </motion.div>
                 </div>
@@ -137,7 +134,7 @@ const ForBuilding = () => {
 
             {/* DETAILS */}
 
-            <div className=" flex flex-col gap-10 bg-white p-10">
+            <div className=" flex flex-col gap-10 bg-white p-10 text-justify">
 
                 <div className="flex flex-col lg:flex-row justify-center items-center ">
                     <motion.div

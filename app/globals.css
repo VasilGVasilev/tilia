@@ -14,6 +14,10 @@
         white 100%);
   }
 
+  .welcomeTextOnImgBlc {
+    text-shadow: 0.5px 0.5px 5px black;
+  }
+
   .welcomeTextOnImg {
     text-shadow: 0.5px 0.5px 5px white;
   }

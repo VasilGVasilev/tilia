@@ -21,6 +21,7 @@ module.exports = {
         'tilia-brown': '#464646',
         'tilia-orange': '#ea580c',
         'tilia-white': '#FFFFFF',
+        'tilia-black': '#000000',
         'tilia-yellow-text': '#D29815',
         'tilia-yellow-block': '#FBC54C',
         'tilia-gray': '#F6F6F6',
