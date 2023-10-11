@@ -2,13 +2,13 @@
 
 This is a Next.js Static Site Generation freelance project developed via Tailwind, React and Framer Motion. It promotes the sales of aparments.
 
-## [Go to Website](https://vgvchat.online/)
+## [Go to Website](https://tiliabg.com/)
 
-[![alt text](https://github.com/VasilGVasilev/tilia/blob/main/NB/welcome-img-tilia.png)](https://vgvchat.online/)
+[![alt text](https://github.com/VasilGVasilev/tilia/blob/main/NB/welcome-img-tilia.png)](https://tiliabg.com/)
 
 ---
 
-[![alt text](https://github.com/VasilGVasilev/tilia/blob/main/NB/second-img.png)](https://vgvchat.online/)
+[![alt text](https://github.com/VasilGVasilev/tilia/blob/main/NB/second-img.png)](https://tiliabg.com/)
 
 
 ## What's in the stack

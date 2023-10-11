@@ -1,5 +1,5 @@
 export const imageLoader = ({ src, width, quality }) => {
-    return `https://vgvchat.online${src}?w=${width}&q=${quality || 75}`;
+    return `https://tiliabg.com${src}?w=${width}&q=${quality || 75}`;
 };
 
 

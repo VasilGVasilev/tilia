@@ -5,6 +5,17 @@ const nextConfig = {
     trailingSlash: true,
     // Optional: Change the output directory `out` -> `dist`
     // distDir: 'dist',
+    // optimization: {
+    //     minimizer: [
+    //         new TerserPlugin({
+    //             terserOptions: {
+    //                 compress: {
+    //                     drop_console: true,
+    //                 },
+    //             },
+    //         }),
+    //     ],
+    // },
 }
 
 module.exports = nextConfig
