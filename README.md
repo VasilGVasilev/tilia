@@ -33,7 +33,7 @@ Features:
 
 ## Performance, Accessibility, Best Practices, SEO:
 
-![alt text](https://github.com/VasilGVasilev/nextJS/blob/ixoraInter/ixora/lighthouse.png) 
+![alt text](https://github.com/VasilGVasilev/tilia/blob/main/NB/lighthouse.png) 
 
 
 ## Other dependencies:
