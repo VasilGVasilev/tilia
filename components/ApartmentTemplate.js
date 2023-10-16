@@ -1,7 +1,7 @@
 import { imageLoader } from "@/utils/imgLoader"
 import Image from "next/image"
 
-const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, title, textOne, textTwo, floorPlan, apartmentW, apartmentH, floorW, floorH }) => {
+const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, sizeFull, title, textOne, textTwo, floorPlan, apartmentW, apartmentH, floorW, floorH }) => {
     return (
         <>
             {/* Necessary to lower the Title be visible */}
@@ -33,31 +33,35 @@ const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, titl
                     {/* TABLE */}
                     <ul className="text-xl font-thin sm:text-2xl md:text-3xl text-green-900 border-tilia-yellow-text border-t">
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
-                            <span>етаж</span>
+                            <span>Етаж</span>
                             <span className="text-tilia-yellow-text">{floor}</span>
                         </li>
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
-                            <span>спални</span>
+                            <span>Спални</span>
                             <span className="text-tilia-yellow-text">{beds}</span>
                         </li>
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
-                            <span>изложение</span>
+                            <span>Изложение</span>
                             <span className="text-tilia-yellow-text">{direction}</span>
                         </li>
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
-                            <span>площ</span>
+                            <span>ЗП</span>
                             <span className="text-tilia-yellow-text">{size} кв. м.</span>
                         </li>
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
-                            <span>статус</span>
+                            <span>Общо</span>
+                            <span className="text-tilia-yellow-text">{sizeFull} кв. м.</span>
+                        </li>
+                        <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
+                            <span>Статус</span>
                             <span className="text-green-500 font-semibold">свободен</span>
                         </li>
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
-                            <span>цена</span>
+                            <span>Цена</span>
                             <span className="text-tilia-yellow-text">По запитване</span>
                         </li>
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
-                            <span>телефон</span>
+                            <span>Телефон</span>
                             <span className="text-tilia-yellow-text"><a href={`tel:00359886879993`} className="font-semibold">+359886879993</a></span>
                         </li>
                     </ul>

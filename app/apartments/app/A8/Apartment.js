@@ -21,6 +21,7 @@ export default function Apartament() {
                         beds={data.appA8.beds}
                         direction={data.appA8.direction}
                         size={data.appA8.size}
+                        sizeFull={data.appA8.sizeFull}
                         title={data.appA8.title}
                         textOne={data.appA8.textOne}
                         textTwo={data.appA8.textTwo}
