@@ -18,11 +18,11 @@ const rowVariant = {
 // TODO: motion.div animation apply
 const ForBuilding = () => {
     return (
-        <div className="flex flex-col bg-tilia-yellow-block pt-10">
+        <div className="flex flex-col bg-tilia-yellow-block">
 
 
             {/* TITLE CONCEPT */}
-            <div className="text-white flex flex-col sm:flex-row pb-5 sm:gap-5 bg-tilia-yellow-block px-10 sm:p-10">
+            <div className="text-black flex flex-col sm:flex-row p-10 sm:gap-5 bg-tilia-yellow-block">
                 <motion.div
                     className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
                     initial="hidden"
@@ -132,7 +132,7 @@ const ForBuilding = () => {
             </div>
 
             {/* TITLE DESCRIPTION*/}
-            <div className="text-tilia-yellow-block flex flex-col sm:flex-row p-5 sm:gap-5 bg-white px-10 sm:p-10">
+            <div className="text-black flex flex-col sm:flex-row p-10 sm:gap-5 bg-white">
                 <motion.div
                     className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
                     initial="hidden"
@@ -151,7 +151,7 @@ const ForBuilding = () => {
 
             {/* DESCRIPTION */}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-justify bg-white p-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-justify bg-white px-10 pb-10">
 
                 <motion.span
                     initial="hidden"
@@ -175,7 +175,7 @@ const ForBuilding = () => {
                         visible: { opacity: 1, scale: 1 },
                     }}
                 >
-Подземните нива са проектирани с гаражи, като за някои от гаражите е предвидена и платформа за двойно независимо паркиране, които заедно с надземните паркоместа за посетители осигуряват на живущите общо 35 броя самостоятелни и независими места за паркиране.
+                    Подземните нива са проектирани с гаражи, като за някои от гаражите е предвидена и платформа за двойно независимо паркиране, които заедно с надземните паркоместа за посетители осигуряват на живущите общо 35 броя самостоятелни и независими места за паркиране.
                 </motion.span>
                 <motion.span
                     initial="hidden"
@@ -187,7 +187,7 @@ const ForBuilding = () => {
                         visible: { opacity: 1, scale: 1 },
                     }}
                 >
-                 Тилия Резидънс предлага девет жилищни етажа и общо 31 функционално разпределени едностайни, двустайни и тристайни апартаменти, както и ексклузивни тристайни и четиристайни мезонети, предлагащи самостоятелен двор.
+                    Тилия Резидънс предлага девет жилищни етажа и общо 31 функционално разпределени едностайни, двустайни и тристайни апартаменти, както и ексклузивни тристайни и четиристайни мезонети, предлагащи самостоятелен двор.
                 </motion.span>
                 <motion.span
                     initial="hidden"
@@ -211,7 +211,7 @@ const ForBuilding = () => {
                         visible: { opacity: 1, scale: 1 },
                     }}
                 >
-Директен достъп до метромрежата чрез станция Ломско Шосе (на 50 метра от сградата) ,както и до автобуси 85, 285 и трамвай 6.
+                    Директен достъп до метромрежата чрез станция Ломско Шосе (на 50 метра от сградата) ,както и до автобуси 85, 285 и трамвай 6.
                 </motion.span>
                 <motion.span
                     initial="hidden"
@@ -233,7 +233,7 @@ const ForBuilding = () => {
 
             {/* DETAILS */}
 
-            <div className=" flex flex-col gap-10 bg-tilia-yellow-block p-10 text-justify">
+            <div className=" flex flex-col gap-5 bg-tilia-yellow-block p-5 text-justify">
 
                 <div className="flex flex-col lg:flex-row justify-center items-center ">
                     <motion.div

@@ -12,11 +12,11 @@ const Footer = () => {
         <div className="h-fit w-full flex-col p-10 bg-tilia-yellow-block lg:px-40">
 
 
-            <div className='flex flex-col justify-center items-center md:flex-row gap-5'>
+            <div className='flex flex-col justify-center items-start md:flex-row gap-5'>
                 {/* Description */}
                 <div className='md:text-center'>
                     <div className='text-black font-mono text-xl'>Tilia Residence</div>
-                    <div className='p-3 text-neutral-700 font-mono text-sm'> Tilia Residence - многофамилна жилищна сграда в затворен комплекс с богата растителност, в непосредствена близост до метростанция Ломско Шосе.</div>
+                    <div className='p-3 text-neutral-700 font-mono text-sm text-justify'> Tilia Residence - многофамилна жилищна сграда в затворен комплекс с богата растителност, в непосредствена близост до метростанция Ломско Шосе.</div>
                 </div>
 
 
