@@ -21,7 +21,7 @@ const ForBuilding = () => {
         <div className="flex flex-col bg-tilia-yellow-block pt-10">
 
 
-            {/* TITLE */}
+            {/* TITLE CONCEPT */}
             <div className="text-white flex flex-col sm:flex-row pb-5 sm:gap-5 bg-tilia-yellow-block px-10 sm:p-10">
                 <motion.div
                     className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
@@ -65,7 +65,7 @@ const ForBuilding = () => {
             </div>
 
 
-            {/* DESCRIPTION */}
+            {/* CONCEPT */}
 
             <div className="flex flex-col md:flex-row gap-10 bg-tilia-yellow-block p-10">
                 {/* IMAGE */}
@@ -131,10 +131,109 @@ const ForBuilding = () => {
 
             </div>
 
+            {/* TITLE DESCRIPTION*/}
+            <div className="text-tilia-yellow-block flex flex-col sm:flex-row p-5 sm:gap-5 bg-white px-10 sm:p-10">
+                <motion.div
+                    className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ duration: 0.7, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    variants={{
+                        hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
+                        visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                    }}
+                >
+                    ОПИСАНИЕ
+                </motion.div>
+            </div>
+
+
+            {/* DESCRIPTION */}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-justify bg-white p-10">
+
+                <motion.span
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.3, duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, scale: 1.3 },
+                        visible: { opacity: 1, scale: 1 },
+                    }}
+                >
+                    Тилия Резидънс се състои от две подземни нива и девет надземни етажа. Сградата е проектирана с два отделни входа, като всеки от тях разполага с фоайе, асансьор и стълбищна клетка с директен достъп до сутерен и гаражи.
+                </motion.span>
+                <motion.span
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.3, duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, scale: 1.3 },
+                        visible: { opacity: 1, scale: 1 },
+                    }}
+                >
+Подземните нива са проектирани с гаражи, като за някои от гаражите е предвидена и платформа за двойно независимо паркиране, които заедно с надземните паркоместа за посетители осигуряват на живущите общо 35 броя самостоятелни и независими места за паркиране.
+                </motion.span>
+                <motion.span
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.3, duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, scale: 1.3 },
+                        visible: { opacity: 1, scale: 1 },
+                    }}
+                >
+                 Тилия Резидънс предлага девет жилищни етажа и общо 31 функционално разпределени едностайни, двустайни и тристайни апартаменти, както и ексклузивни тристайни и четиристайни мезонети, предлагащи самостоятелен двор.
+                </motion.span>
+                <motion.span
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.3, duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, scale: 1.3 },
+                        visible: { opacity: 1, scale: 1 },
+                    }}
+                >
+                    Липсата на големи индустриални предприятия и близостта до обширния и облагороден Северен Парк създават условия за живот в среда с чист въздух и възможности за спортуване на открито.
+                </motion.span>
+                <motion.span
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.3, duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, scale: 1.3 },
+                        visible: { opacity: 1, scale: 1 },
+                    }}
+                >
+Директен достъп до метромрежата чрез станция Ломско Шосе (на 50 метра от сградата) ,както и до автобуси 85, 285 и трамвай 6.
+                </motion.span>
+                <motion.span
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ delay: 0.3, duration: 0.5 }}
+                    variants={{
+                        hidden: { opacity: 0, scale: 1.3 },
+                        visible: { opacity: 1, scale: 1 },
+                    }}
+                >
+                    В имота се предвижда озеленена зона за ползване от живущите.
+
+                </motion.span>
+
+
+            </div>
+
 
             {/* DETAILS */}
 
-            <div className=" flex flex-col gap-10 bg-white p-10 text-justify">
+            <div className=" flex flex-col gap-10 bg-tilia-yellow-block p-10 text-justify">
 
                 <div className="flex flex-col lg:flex-row justify-center items-center ">
                     <motion.div
