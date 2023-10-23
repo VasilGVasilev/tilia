@@ -19,7 +19,7 @@ const TypeApp = ({ title, img, imgW, imgH }) => {
         >
             <div className="font-semibold md:text-xl lg:text-2xl">{title}</div>
             <Image
-                className="transition duration-300 md:w-[300px] md:h-[300px]"
+                className="hover:scale-110 transition duration-300 md:w-[300px] md:h-[300px]"
                 loader={imageLoader}
                 src={img}
                 alt="type"

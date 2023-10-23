@@ -18,11 +18,21 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 const ParalaxWalking = dynamic(() => import('../components/ParalaxWalking'))
 
-export const containerAIText = {
+export const container = {
     hidden: {},
     visible: {
         transition: {
             staggerChildren: 0.3,
+        },
+    },
+};
+
+export const containerAIText = {
+    hidden: {},
+    visible: {
+        transition: {
+            delayChildren: 0.7,
+            staggerChildren: 0.2,
         },
     },
 };
@@ -76,7 +86,6 @@ export default function Home() {
                             alt="tilia one"
                             width={4946}
                             height={3216}
-                            priority={true}
                         ></Image>
                     </div>
 
@@ -102,26 +111,26 @@ export default function Home() {
                 </div>
 
                 {/* TEXT */}
-                <motion.span
+                <span
                     className="font-bold"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={{
-                        hidden: { opacity: 0, scale: 1.3 },
-                        visible: { opacity: 1, scale: 1 },
-                    }}
+                // initial="hidden"
+                // whileInView="visible"
+                // viewport={{ once: true }}
+                // variants={{
+                //     hidden: { opacity: 0, scale: 1.3 },
+                //     visible: { opacity: 1, scale: 1 },
+                // }}
                 >
                     Проектът е с осигурено финансиране до акт 16.
 
-                </motion.span>
+                </span>
 
                 <motion.div
                     className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-justify"
                     variants={containerAIText}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: true }}
                 >
                     <motion.span
                         variants={rowVariant}
@@ -174,7 +183,6 @@ export default function Home() {
                     alt="dvor"
                     width={5568}
                     height={3132}
-                    priority={true}
                 ></Image>
 
                 <div className="absolute bottom-[5%] left-4 md:left-10 w-full h-full flex flex-col items-start justify-center">
