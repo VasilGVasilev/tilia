@@ -45,7 +45,6 @@ export default function Home() {
 
             {/* WELCOME IMG AND TEXT */}
 
-
             <div className="flex flex-col justify-center items-center gap-10 px-10 pt-20 md:pt-40 pb-10 bg-white">
 
                 {/* IMG */}
@@ -93,6 +92,7 @@ export default function Home() {
                     className="font-bold"
                     initial="hidden"
                     whileInView="visible"
+                    viewport={{ once: true }}
                     transition={{ delay: 0.3, duration: 0.5 }}
                     variants={{
                         hidden: { opacity: 0, scale: 1.3 },
@@ -108,7 +108,7 @@ export default function Home() {
                     <motion.span
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.5 }}
+                        viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.5 }}
                         variants={{
                             hidden: { opacity: 0, scale: 1.3 },
@@ -120,7 +120,7 @@ export default function Home() {
                     <motion.span
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.5 }}
+                        viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.5 }}
                         variants={{
                             hidden: { opacity: 0, scale: 1.3 },
@@ -132,7 +132,7 @@ export default function Home() {
                     <motion.span
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.5 }}
+                        viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.5 }}
                         variants={{
                             hidden: { opacity: 0, scale: 1.3 },
@@ -144,7 +144,7 @@ export default function Home() {
                     <motion.span
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.5 }}
+                        viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.5 }}
                         variants={{
                             hidden: { opacity: 0, scale: 1.3 },
@@ -156,7 +156,7 @@ export default function Home() {
                     <motion.span
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, amount: 0.5 }}
+                        viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.5 }}
                         variants={{
                             hidden: { opacity: 0, scale: 1.3 },
