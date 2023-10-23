@@ -49,20 +49,20 @@ const WalkingDistance = () => {
         <div className="flex flex-col gap-10">
             {/* TITLE */}
             <div className="text-black flex flex-row p-5 md:p-10 gap-5">
-                <motion.div
+                <div
                     className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.3 }}
-                    variants={{
-                        hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
-                        visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
-                    }}
+                    // initial="hidden"
+                    // whileInView="visible"
+                    // viewport={{ once: true }}
+                    // transition={{ duration: 0.7, delay: 0.3 }}
+                    // variants={{
+                    //     hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
+                    //     visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                    // }}
                 >
 
                     ЛОКАЦИЯ
-                </motion.div>
+                </div>
 
             </div>
 

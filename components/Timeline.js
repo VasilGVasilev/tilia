@@ -50,20 +50,20 @@ const Timeline = () => {
         <div className="flex flex-col">
             {/* TITLE */}
             <div className="text-black flex flex-row p-10">
-                <motion.div
+                <div
                     className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.3 }}
-                    variants={{
-                        hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
-                        visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
-                    }}
+                    // initial="hidden"
+                    // whileInView="visible"
+                    // viewport={{ once: true }}
+                    // transition={{ duration: 0.7, delay: 0.3 }}
+                    // variants={{
+                    //     hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
+                    //     visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                    // }}
                 >
 
                     ЕТАПИ
-                </motion.div>
+                </div>
 
             </div>
 

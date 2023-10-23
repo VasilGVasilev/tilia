@@ -2,11 +2,12 @@ import { lato, noto } from "@/utils/fonts";
 import { imageLoader } from "@/utils/imgLoader";
 import { motion } from "framer-motion"
 import Image from "next/image";
+
 const container = {
     hidden: {},
     visible: {
         transition: {
-            staggerChildren: 0.2,
+            staggerChildren: 0.3,
         },
     },
 };
@@ -23,45 +24,19 @@ const ForBuilding = () => {
 
             {/* TITLE CONCEPT */}
             <div className="text-black flex flex-col sm:flex-row p-10 sm:gap-5 bg-tilia-yellow-block">
-                <motion.div
+                <div
                     className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{ duration: 0.7, delay: 0.3 }}
-                    viewport={{ once: true }}
-                    variants={{
-                        hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
-                        visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
-                    }}
+                    // initial="hidden"
+                    // whileInView="visible"
+                    // transition={{ duration: 0.7, delay: 0.3 }}
+                    // viewport={{ once: true }}
+                    // variants={{
+                    //     hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
+                    //     visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                    // }}
                 >
                     КОНЦЕПЦИЯ
-                </motion.div>
-                <motion.div
-                    className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.6 }}
-                    variants={{
-                        hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
-                        visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
-                    }}
-                >
-                    TILIA
-                </motion.div>
-                <motion.div
-                    className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: 0.9 }}
-                    variants={{
-                        hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
-                        visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
-                    }}
-                >
-                    RESIDENCE
-                </motion.div>
+                </div>
             </div>
 
 
@@ -69,17 +44,17 @@ const ForBuilding = () => {
 
             <div className="flex flex-col md:flex-row gap-10 bg-tilia-yellow-block p-10">
                 {/* IMAGE */}
-                <motion.div
+                <div
                     className="basis-1/2 relative z-0 ml-5 before:absolute before:-top-10 before:-left-10  before:rounded-t-[400px]
                      before:w-full before:max-w-[400px] md:before:max-w-[600px]  before:opacity-20 before:h-full before:border-4 before:border-white before:z-[-1]"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        hidden: { opacity: 0, scale: 0 },
-                        visible: { opacity: 1, scale: 1 },
-                    }}
+                    // initial="hidden"
+                    // whileInView="visible"
+                    // viewport={{ once: true }}
+                    // transition={{ duration: 0.5 }}
+                    // variants={{
+                    //     hidden: { opacity: 0, scale: 0 },
+                    //     visible: { opacity: 1, scale: 1 },
+                    // }}
                 >
 
                     <Image
@@ -90,7 +65,7 @@ const ForBuilding = () => {
                         width={4946}
                         height={3216}
                     ></Image>
-                </motion.div>
+                </div>
 
                 <div className="basis-1/2 flex flex-col gap-5">
 
@@ -133,19 +108,19 @@ const ForBuilding = () => {
 
             {/* TITLE DESCRIPTION*/}
             <div className="text-black flex flex-col sm:flex-row p-10 sm:gap-5 bg-white">
-                <motion.div
+                <div
                     className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
-                    initial="hidden"
-                    whileInView="visible"
-                    transition={{ duration: 0.7, delay: 0.3 }}
-                    viewport={{ once: true }}
-                    variants={{
-                        hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
-                        visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
-                    }}
+                    // initial="hidden"
+                    // whileInView="visible"
+                    // transition={{ duration: 0.7, delay: 0.3 }}
+                    // viewport={{ once: true }}
+                    // variants={{
+                    //     hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
+                    //     visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                    // }}
                 >
                     ОПИСАНИЕ
-                </motion.div>
+                </div>
             </div>
 
 
