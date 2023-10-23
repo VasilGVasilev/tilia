@@ -18,7 +18,16 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 const ParalaxWalking = dynamic(() => import('../components/ParalaxWalking'))
 
-export const container = {
+export const containerAIText = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.3,
+        },
+    },
+};
+
+export const containerWalking = {
     hidden: {},
     visible: {
         transition: {
@@ -35,6 +44,11 @@ export const letterVariant = {
 export const wordVariant = {
     hidden: { opacity: 0, translateY: 20, skew: -50 },
     visible: { opacity: 1, translateY: 0, skew: 0 },
+};
+
+const rowVariant = {
+    hidden: { opacity: 0, scale: 1.3 },
+    visible: { opacity: 1, scale: 1 },
 };
 
 export default function Home() {
@@ -93,7 +107,6 @@ export default function Home() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.3, duration: 0.5 }}
                     variants={{
                         hidden: { opacity: 0, scale: 1.3 },
                         visible: { opacity: 1, scale: 1 },
@@ -103,85 +116,46 @@ export default function Home() {
 
                 </motion.span>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-justify">
-
+                <motion.div
+                    className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-justify"
+                    variants={containerAIText}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                >
                     <motion.span
-                        initial="hidden"
-                        whileInView="visible"
+                        variants={rowVariant}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.3, duration: 0.5 }}
-                        variants={{
-                            hidden: { opacity: 0, scale: 1.3 },
-                            visible: { opacity: 1, scale: 1 },
-                        }}
                     >
                         В сърцето на квартал Връбница, в близост до Северен парк, се развива новият жилищен проект "Тилия Резидънс". Тук жителите могат да се насладят на спокойствието на квартала, без да се отказват от лесния достъп до търговски центрове, ресторанти и обществен транспорт. Идеално място за хора, които търсят съчетание от съвременен стил, удобства и близост до градските удоволствия.
                     </motion.span>
                     <motion.span
-                        initial="hidden"
-                        whileInView="visible"
+                        variants={rowVariant}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.3, duration: 0.5 }}
-                        variants={{
-                            hidden: { opacity: 0, scale: 1.3 },
-                            visible: { opacity: 1, scale: 1 },
-                        }}
                     >
                         Този обект в процес на строителство представлява комбинация от модерен дизайн, функционални разпределения, качествени материали и перфектна локация, която обещава уникално жилищно изживяване.
                     </motion.span>
                     <motion.span
-                        initial="hidden"
-                        whileInView="visible"
+                        variants={rowVariant}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.3, duration: 0.5 }}
-                        variants={{
-                            hidden: { opacity: 0, scale: 1.3 },
-                            visible: { opacity: 1, scale: 1 },
-                        }}
                     >
                         Сградата разполага с различни по площ апартаменти, предлагащи разнообразни възможности за клиентите. Светли стаи, големи прозорци и балкони с прекрасни изгледи създават уютна атмосфера във всеки от тях.
                     </motion.span>
                     <motion.span
-                        initial="hidden"
-                        whileInView="visible"
+                        variants={rowVariant}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.3, duration: 0.5 }}
-                        variants={{
-                            hidden: { opacity: 0, scale: 1.3 },
-                            visible: { opacity: 1, scale: 1 },
-                        }}
                     >
                         Съчетавайки съвременен стил и комфорт с идеалната локация, "Тилия Резидънс" обещава да бъде вашият дом, в който ще създавате спомени и усещания за комфорт и уют.
                     </motion.span>
                     <motion.span
-                        initial="hidden"
-                        whileInView="visible"
+                        variants={rowVariant}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.3, duration: 0.5 }}
-                        variants={{
-                            hidden: { opacity: 0, scale: 1.3 },
-                            visible: { opacity: 1, scale: 1 },
-                        }}
                     >
                         Независимо дали търсите първия си собствен дом или идеалната инвестиция в недвижими имоти, "Тилия Резидънс" предоставя всичко, от което се нуждаете.
-
                     </motion.span>
-                    {/* <motion.span
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.5 }}
-                        transition={{ delay: 0.3, duration: 0.5 }}
-                        variants={{
-                            hidden: { opacity: 0, scale: 1.3 },
-                            visible: { opacity: 1, scale: 1 },
-                        }}
-                    >
-                        В имота се предвижда озеленена зона за ползване от живущите.
 
-                    </motion.span> */}
+                </motion.div>
 
-
-                </div>
 
             </div>
 
@@ -211,7 +185,7 @@ export default function Home() {
                     </div>
                     <motion.div
                         className={`${roboto.className} welcomeTextOnImgBlc text-[#F0D5CA] text-center text-xl md:text-3xl lg:text-5xl `}
-                        variants={container}
+                        variants={containerWalking}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
