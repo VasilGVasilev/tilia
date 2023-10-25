@@ -69,7 +69,7 @@ export default function Home() {
 
             {/* WELCOME IMG AND TEXT */}
 
-            <div className="flex flex-col justify-center items-center gap-10 px-10 pt-20 md:pt-40 pb-10 bg-white">
+            <div className="flex flex-col justify-center items-center gap-10 px-10 pt-20 md:pt-32 mt-7 pb-10 bg-white">
 
                 {/* IMG */}
                 <div className={`relative text-center`}>
@@ -175,15 +175,15 @@ export default function Home() {
                     <source src="/video.MP4" type="video/MP4" />
                     Your browser does not support the video tag.
                 </video> */}
-                {/* <img src="/tilia/tilia-walking-people.webp" alt="dvor" width={5568} height={3132} /> */}
+                <img src="/tilia/tilia-walking-people.webp" alt="dvor" width={5568} height={3132} />
 
-                <Image
+                {/* <Image
                     loader={imageLoader}
                     src="/tilia/tilia-walking-people.webp"
                     alt="dvor"
                     width={5568}
                     height={3132}
-                ></Image>
+                ></Image> */}
 
                 <div className="absolute bottom-[5%] left-4 md:left-10 w-full h-full flex flex-col items-start justify-center">
                     <div
