@@ -14,7 +14,8 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 
 const red = "hover:bg-red-700 hover:opacity-50";
-const green = "hover:bg-green-400 hover:opacity-50 cursor-pointer";
+const blue = "hover:bg-blue-700 hover:opacity-50";
+const green = "hover:bg-green-400 hover:opacity-50";
 
 
 
@@ -53,7 +54,7 @@ export default function Floor() {
 
                 <div>
                     <div className="relative inline-block">
-                        <Link href={`/apartments/app/A8`}><div className={`absolute app-A8 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                        <div className={`absolute app-A8 h-full w-full z-10 ${red}`} title='ПРОДАДЕН'></div>
                         <Link href={`/apartments/app/A9`}><div className={`absolute app-A9 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         <Link href={`/apartments/app/B10`}><div className={`absolute app-B10 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         <Link href={`/apartments/app/B11`}><div className={`absolute app-B11 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>

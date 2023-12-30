@@ -15,7 +15,8 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 
 const red = "hover:bg-red-700 hover:opacity-50";
-const green = "hover:bg-green-400 hover:opacity-50 cursor-pointer";
+const blue = "hover:bg-blue-700 hover:opacity-50";
+const green = "hover:bg-green-400 hover:opacity-50";
 
 
 
@@ -58,7 +59,7 @@ export default function Floor() {
                         <Link href={`/apartments/app/A5`}><div className={`absolute app-A5 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         <Link href={`/apartments/app/A2`}><div className={`absolute app-A2-2 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         <Link href={`/apartments/app/B3`}><div className={`absolute app-B3-2 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
-                        <Link href={`/apartments/app/B6`}><div className={`absolute app-B6 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                        <div className={`absolute app-B6 h-full w-full z-10 ${red}`} title='ПРОДАДЕН'></div>
                         <Link href={`/apartments/app/B7`}><div className={`absolute app-B7 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         
                         <div className='relative '>

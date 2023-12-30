@@ -14,7 +14,8 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 
 const red = "hover:bg-red-700 hover:opacity-50";
-const green = "hover:bg-green-400 hover:opacity-50 cursor-pointer";
+const blue = "hover:bg-blue-700 hover:opacity-50";
+const green = "hover:bg-green-400 hover:opacity-50";
 
 
 
@@ -56,9 +57,9 @@ export default function Floor() {
 
 
                         <Link href={`/apartments/app/A20`}><div className={`absolute app-A20 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
-                        <Link href={`/apartments/app/A21`}><div className={`absolute app-A21 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                        <div className={`absolute app-A21 h-full w-full z-10 ${blue}`} title='КАПАРИРАН'></div>
                         <Link href={`/apartments/app/B22`}><div className={`absolute app-B22 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
-                        <Link href={`/apartments/app/B23`}><div className={`absolute app-B23 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                        <div className={`absolute app-B23 h-full w-full z-10 ${blue}`} title='КАПАРИРАН'></div>
 
 
                         {/* <img src="/plans/third-floor.webp" alt="Tilia Plan" className="relative" /> */}

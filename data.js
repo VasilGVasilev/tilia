@@ -1,3 +1,6 @@
+// sold B6 B14 A8
+// reserved B23 A21
+
 export const data = {
     appA1: {
         apartmentImgUrl: '/apartments/A1.webp',
@@ -109,7 +112,7 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'B6',
         appCss: 'app-B6' 
     },
@@ -147,7 +150,7 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'A8',
         appCss: 'app-A8' 
     },
@@ -261,7 +264,7 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'B14',
         appCss: 'app-B14' 
     },
@@ -394,7 +397,7 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'A21',
         appCss: 'app-A21' 
     },
@@ -432,7 +435,7 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'B23',
         appCss: 'app-B23' 
     },
