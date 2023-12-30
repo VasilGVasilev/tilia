@@ -1,7 +1,6 @@
 
 'use client'
 
-import { useState } from "react";
 import { imageLoader } from "@/utils/imgLoader";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -14,8 +13,8 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 
 const red = "hover:bg-red-700 hover:opacity-50";
-const green = "hover:bg-green-400 hover:opacity-50 cursor-pointer";
-
+const blue = "hover:bg-blue-700 hover:opacity-50";
+const green = "hover:bg-green-400 hover:opacity-50";
 
 
 export default function Floor() {

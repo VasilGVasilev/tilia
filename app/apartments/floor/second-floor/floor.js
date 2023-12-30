@@ -1,14 +1,12 @@
 
 'use client'
 
-import { useState } from "react";
 import { imageLoader } from "@/utils/imgLoader";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 import Link from "next/link";
 import { noto } from "@/utils/fonts";
-import { data } from "@/data";
 
 
 export const revalidate = 0; // revalidate this page every 60 seconds

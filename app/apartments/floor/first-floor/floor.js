@@ -1,22 +1,20 @@
 
 'use client'
 
-import { useState } from "react";
 import { imageLoader } from "@/utils/imgLoader";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 import Link from "next/link";
 import { noto } from "@/utils/fonts";
-import { data } from "@/data";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
 // THERE IS A PROBLEM WITH TEMPLATE LITERALS AND CONDITIONS
 
 const red = "hover:bg-red-700 hover:opacity-50";
-const green = "hover:bg-green-400 hover:opacity-50 cursor-pointer";
-const reserved = "hover:bg-blue-400 hover:opacity-50 cursor-pointer";
+const blue = "hover:bg-blue-700 hover:opacity-50";
+const green = "hover:bg-green-400 hover:opacity-50";
 
 
 // this is exemplary because tailwind does not work adequatly with dynamic template strings
