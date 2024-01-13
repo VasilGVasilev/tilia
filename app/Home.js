@@ -125,45 +125,51 @@ export default function Home() {
 
                 </span>
 
-                <motion.div
+                <div
                     className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-justify"
-                    variants={containerAIText}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
                 >
-                    <motion.span
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
                         variants={rowVariant}
                         viewport={{ once: true }}
                     >
                         В сърцето на квартал Връбница, в близост до Северен парк, се развива новият жилищен проект "Тилия Резидънс". Тук жителите могат да се насладят на спокойствието на квартала, без да се отказват от лесния достъп до търговски центрове, ресторанти и обществен транспорт. Идеално място за хора, които търсят съчетание от съвременен стил, удобства и близост до градските удоволствия.
-                    </motion.span>
-                    <motion.span
+                    </motion.div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
                         variants={rowVariant}
                         viewport={{ once: true }}
                     >
                         Този обект в процес на строителство представлява комбинация от модерен дизайн, функционални разпределения, качествени материали и перфектна локация, която обещава уникално жилищно изживяване.
-                    </motion.span>
-                    <motion.span
+                    </motion.div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
                         variants={rowVariant}
                         viewport={{ once: true }}
                     >
                         Сградата разполага с различни по площ апартаменти, предлагащи разнообразни възможности за клиентите. Светли стаи, големи прозорци и балкони с прекрасни изгледи създават уютна атмосфера във всеки от тях.
-                    </motion.span>
-                    <motion.span
+                    </motion.div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
                         variants={rowVariant}
                         viewport={{ once: true }}
                     >
                         Съчетавайки съвременен стил и комфорт с идеалната локация, "Тилия Резидънс" обещава да бъде вашият дом, в който ще създавате спомени и усещания за комфорт и уют.
-                    </motion.span>
-                    <motion.span
+                    </motion.div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
                         variants={rowVariant}
                         viewport={{ once: true }}
                     >
                         Независимо дали търсите първия си собствен дом или идеалната инвестиция в недвижими имоти, "Тилия Резидънс" предоставя всичко, от което се нуждаете.
-                    </motion.span>
+                    </motion.div>
 
-                </motion.div>
+                </div>
 
 
             </div>
