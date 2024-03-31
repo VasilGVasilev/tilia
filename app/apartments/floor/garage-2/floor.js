@@ -56,7 +56,7 @@ export default function Floor() {
 
                         <div className={`absolute parking-12 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
                         <div className={`absolute parking-13 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
-                        <div className={`absolute parking-14 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute parking-14 h-full w-full z-10 ${red}`} title='СВОБОДЕН'></div>
                         <div className={`absolute parking-15 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
                         <div className={`absolute parking-16 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
                         <div className={`absolute parking-17 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
