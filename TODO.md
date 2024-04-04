@@ -1,1 +1,0 @@
-Add filter and table with all apartments

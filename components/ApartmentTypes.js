@@ -1,13 +1,12 @@
-import { container } from "@/app/Home"
-import { noto } from "@/utils/fonts"
-import { imageLoader } from "@/utils/imgLoader"
-import { motion } from "framer-motion"
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
-import { HiExternalLink } from 'react-icons/hi'
+import { container } from "@/app/Home";
+import { noto } from "@/utils/fonts";
+import { imageLoader } from "@/utils/imgLoader";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { HiExternalLink } from "react-icons/hi";
 
-const TypeApp = ({ title, img, imgW, imgH }) => {
+const TypeApp = ({ title, img, imgW, imgH, bedrooms }) => {
     return (
         <div
             className="bg-tilia-gray p-7 flex flex-col justify-center items-center gap-5 "
@@ -18,45 +17,51 @@ const TypeApp = ({ title, img, imgW, imgH }) => {
             // }}
         >
             <div className="font-semibold md:text-xl lg:text-2xl">{title}</div>
-            <Image
-                className="hover:scale-110 transition duration-300 md:w-[300px] md:h-[300px]"
-                loader={imageLoader}
-                src={img}
-                alt="type"
-                width={imgW}
-                height={imgH}
-            ></Image>
+            <Link href={`/apartments?param=${bedrooms}`}>
+                <Image
+                    className="hover:scale-110 transition duration-300 md:w-[300px] md:h-[300px]"
+                    loader={imageLoader}
+                    src={img}
+                    alt="type"
+                    width={imgW}
+                    height={imgH}
+                ></Image>
+            </Link>
         </div>
-    )
-}
+    );
+};
 
 const ApartmentTypes = () => {
-    const [typeAparts, setTypeAparts] = useState([
+    const apartmentTypes = [
         {
-            title: 'ЕДНОСТАЙНИ АПАРТАМЕНТИ',
-            imgUrl: '/assets/no-beds.webp',
-            imgW: '3000',
-            imgH: '3000'
+            title: "ЕДНОСТАЙНИ АПАРТАМЕНТИ",
+            imgUrl: "/assets/no-beds.webp",
+            imgW: "3000",
+            imgH: "3000",
+            bedrooms: "none",
         },
         {
-            title: 'ДВУСТАЙНИ АПАРТАМЕНТИ',
-            imgUrl: '/assets/one-bed.webp',
-            imgW: '3000',
-            imgH: '3000'
+            title: "ДВУСТАЙНИ АПАРТАМЕНТИ",
+            imgUrl: "/assets/one-bed.webp",
+            imgW: "3000",
+            imgH: "3000",
+            bedrooms: "one",
         },
         {
-            title: 'ТРИСТАЙНИ АПАРТАМЕНТИ',
-            imgUrl: '/assets/two-beds.webp',
-            imgW: '3000',
-            imgH: '3000'
+            title: "ТРИСТАЙНИ АПАРТАМЕНТИ",
+            imgUrl: "/assets/two-beds.webp",
+            imgW: "3000",
+            imgH: "3000",
+            bedrooms: "two",
         },
         {
-            title: 'ЧЕТИРИСТАЙНИ АПАРТАМЕНТИ',
-            imgUrl: '/assets/penthouse.webp',
-            imgW: '3000',
-            imgH: '3000'
+            title: "ЧЕТИРИСТАЙНИ АПАРТАЙНИ",
+            imgUrl: "/assets/penthouse.webp",
+            imgW: "3000",
+            imgH: "3000",
+            bedrooms: "three",
         },
-    ])
+    ];
 
     return (
         <div className="flex flex-col gap-5">
@@ -72,7 +77,6 @@ const ApartmentTypes = () => {
                     //     visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
                     // }}
                 >
-
                     ТИПОВЕ
                 </div>
                 <div
@@ -86,7 +90,6 @@ const ApartmentTypes = () => {
                     //     visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
                     // }}
                 >
-
                     ИМОТИ
                 </div>
             </div>
@@ -104,21 +107,26 @@ const ApartmentTypes = () => {
                 // initial="hidden"
                 // whileInView="visible"
             >
-                {typeAparts.map(t => <TypeApp key={t.title} title={t.title} img={t.imgUrl} imgW={t.imgW} imgH={t.imgH} />)}
-
+                {apartmentTypes.map((t) => (
+                    <TypeApp
+                        key={t.title}
+                        title={t.title}
+                        img={t.imgUrl}
+                        imgW={t.imgW}
+                        imgH={t.imgH}
+                        bedrooms={t.bedrooms}
+                    />
+                ))}
             </div>
 
-
-            <Link href={'/apartments'} >
+            <Link href={`/apartments?param=all`}>
                 <div className="flex flex-row gap-1 rounded-full bg-tilia-yellow-block w-fit h-fit p-3 font-semibold sm:text-xl hover:bg-black hover:text-white transition">
-                    <div>
-                        Разгледай имотите
-                    </div>
+                    <div>Разгледай всички</div>
                     <HiExternalLink size={16} />
                 </div>
             </Link>
         </div>
-    )
-}
+    );
+};
 
-export default ApartmentTypes
+export default ApartmentTypes;

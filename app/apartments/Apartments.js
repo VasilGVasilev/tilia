@@ -4,13 +4,15 @@ import Plan from '@/components/Plan';
 import { noto } from '@/utils/fonts';
 import { motion } from 'framer-motion';
 import { container, letterVariant } from '../Home';
+import { useSearchParams } from 'next/navigation';
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
 
 export default function Apartments() {
 
-
+    const searchParams = useSearchParams();
+    const bedrooms = searchParams.get('param');
 
     return (
         <>
