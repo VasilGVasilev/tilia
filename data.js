@@ -80,7 +80,7 @@ export const data = {
     appA5: {
         apartmentImgUrl: '/apartments/A5.webp',
         floor: '2',
-        beds: '-',
+        beds: '0',
         direction: 'Изток, Югоизток',
         size: '38,12',
         sizeFull: '46,09',
@@ -99,7 +99,7 @@ export const data = {
     appB6: {
         apartmentImgUrl: '/apartments/B6.webp',
         floor: '2',
-        beds: '-',
+        beds: '0',
         direction: 'Изток, Югоизток',
         size: '38,12',
         sizeFull: '46,09',

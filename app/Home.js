@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import { noto, roboto } from "@/utils/fonts"
 import ApartmentTypes from "@/components/ApartmentTypes"
 import WalkingDistance from "@/components/WalkingDistance"
+import Floors from "@/components/Floors"
 import dynamic from "next/dynamic"
 
 export const revalidate = 0; // revalidate this page every 60 seconds
@@ -232,9 +233,17 @@ export default function Home() {
                 <Timeline></Timeline>
             </div>
 
+
+
+
+
             {/* TYPES OF APARTMENTS */}
             <div className="bg-white p-10">
                 <ApartmentTypes></ApartmentTypes>
+            </div>
+                                    {/* Floors */}
+                                    <div className="bg-tilia-gray">
+                <Floors></Floors>
             </div>
 
             {/* DESCRIPTION */}

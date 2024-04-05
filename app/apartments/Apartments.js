@@ -1,21 +1,18 @@
 "use client";
 
-import Plan from "@/components/Plan";
-import { noto } from "@/utils/fonts";
-import { motion } from "framer-motion";
-import { container, letterVariant } from "../Home";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { data } from "@/data";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
 export default function Apartments() {
     const searchParams = useSearchParams();
     const bedrooms = searchParams.get("param");
-    // the below works if we have no subsequent setting of the bedroom type, but we have - it is a filter
-    // const [selectedBedroomType, setSelectedBedroomType] = useState(bedrooms || "all");
-    const [selectedBedroomType, setSelectedBedroomType] = useState("all");
+    const [selectedBedroomType, setSelectedBedroomType] = useState(bedrooms || "all");
+    const [filterApplied, setFilterApplied] = useState(bedrooms || "all");
 
+    console.log(selectedBedroomType);
     useEffect(() => {
         if (bedrooms !== null) {
             setSelectedBedroomType(bedrooms);
@@ -24,32 +21,79 @@ export default function Apartments() {
 
     return (
         <>
-            {/* INTRO */}
-            <div>
-                {/* Necessary to lower the Title be visible */}
-                <div className="bg-white w-full h-10"></div>
-                {/* Investor tag */}
-                <div className="bg-white">
-                    <motion.div
-                        className={`flex flex-row justify-center items-center ${noto.className} welcomeTextOnImg text-[#D7D7DF] text-left py-5 text-4xl sm:text-6xl lg:text-8xl`}
-                        viewport={{ once: true }}
-                        variants={container}
-                        initial="hidden"
-                        whileInView="visible"
-                    >
-                        <motion.span variants={letterVariant}>Е</motion.span>
-                        <motion.span variants={letterVariant}>Т</motion.span>
-                        <motion.span variants={letterVariant}>А</motion.span>
-                        <motion.span variants={letterVariant}>Ж</motion.span>
-                        <motion.span variants={letterVariant}>И</motion.span>
-                    </motion.div>
+            <div className="m-5 flex flex-col gap-5 justify-center items-center">
+
+                {/* filter */}
+                <div className="bg-tilia-white w-fit sm:p-5 flex flex-row justify-center items-center shadow-2xl">
+                    <div className="flex flex-row justify-center items-center text-sm sm:text-xl font-bold">
+                        <button
+                            onClick={() => setSelectedBedroomType("all")}
+                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "all" ? "text-tilia-yellow-text" : "text-black"}`}
+                        >
+                            Всички
+                        </button>
+                        <button
+                            onClick={() => setSelectedBedroomType("none")}
+                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "none" ? "text-tilia-yellow-text" : "text-black"}`}
+                        >
+                            Едностаен
+                        </button>
+                        <button
+                            onClick={() => setSelectedBedroomType("one")}
+                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "one" ? "text-tilia-yellow-text" : "text-black"}`}
+                        >
+                            Двустаен
+                        </button>
+                        <button
+                            onClick={() => setSelectedBedroomType("two")}
+                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "two" ? "text-tilia-yellow-text" : "text-black"}`}
+                        >
+                            Тристаен
+                        </button>
+                        <button
+                            onClick={() => setSelectedBedroomType("three")}
+                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "three" ? "text-tilia-yellow-text" : "text-black"}`}
+                        >
+                            Четиристаен
+                        </button>
+                    </div>
+                </div>
+
+                {/* Table */}
+                <div className="flex flex-col justify-center items-center text-xxs sm:text-base">
+
+
+                    <table className="h-full w-[35%]">
+                        <thead>
+                            <tr className="bg-tilia-yellow-block border-b-2 border-black">
+                                <th className="px-5 text-left">Номер</th>
+                                <th className="px-5 text-left ">Етаж</th>
+                                <th className="px-5 text-ledt ">Стаи</th>
+                                <th className="px-5 text-left ">Площ</th>
+                                <th className="px-5 text-left ">Обща площ</th>
+                            </tr>
+                        </thead>
+                        <tbody className="">
+                            {
+                                Object.entries(data).map(([index, apartament]) => {
+                                    return (
+                                        <tr className={`${apartament.available ? 'bg-green-400' : 'bg-red-400'} border-b-2 border-white`} key={index}>
+                                            <td className="p-3 text-left">{apartament.title}</td>
+                                            <td className="p-3 text-center">{apartament.floor}</td>
+                                            <td className="p-3 text-center">{Number(apartament.beds) + 1}</td>
+                                            <td className="p-3 text-center">{apartament.size}</td>
+                                            <td className="p-3 text-center">{apartament.sizeFull}</td>
+                                        </tr>
+                                    )
+                                })
+                            }
+                        </tbody>
+
+                    </table>
+
                 </div>
             </div>
 
-            {/* FLOOR PLAN */}
-            <div className="bg-tilia-gray">
-                <Plan></Plan>
-            </div>
         </>
     );
 }
