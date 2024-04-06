@@ -18,8 +18,8 @@ export default function Apartments() {
             <div className="m-5 flex flex-col gap-5 justify-center items-center">
 
                 {/* filter */}
-                <div className="bg-tilia-white w-fit sm:p-5 flex flex-row justify-center items-center shadow-2xl">
-                    <div className="flex flex-row justify-center items-center text-sm sm:text-xl font-bold">
+                <div className="bg-white w-fit sm:p-5 flex flex-row justify-center items-center shadow-2xl">
+                    <div className="flex flex-row justify-center items-center text-xs sm:text-xl font-bold">
                         <button
                             onClick={() => setSelectedBedroomType("all")}
                             className={`p-1 sm:p-2 sm:m-2  ${selectedBedroomType === "all" ? "text-tilia-yellow-text border-2 border-tilia-yellow-text" : "text-black"}`}
@@ -67,7 +67,7 @@ export default function Apartments() {
                                 <th className="px-5 text-left ">Обща площ</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody key={selectedBedroomType}> {/* key is used to re-render the table when the selectedBedroomType changes */}
                             {
                                 selectedBedroomType === "all" ?
                                     Object.entries(data).map(([index, apartment]) => {
