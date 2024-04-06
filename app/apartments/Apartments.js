@@ -1,23 +1,17 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { data } from "@/data";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
 export default function Apartments() {
+    const router = useRouter();
     const searchParams = useSearchParams();
     const bedrooms = searchParams.get("param");
     const [selectedBedroomType, setSelectedBedroomType] = useState(bedrooms || "all");
-    const [filterApplied, setFilterApplied] = useState(bedrooms || "all");
 
-    console.log(selectedBedroomType);
-    useEffect(() => {
-        if (bedrooms !== null) {
-            setSelectedBedroomType(bedrooms);
-        }
-    }, [bedrooms]);
 
     return (
         <>
@@ -28,31 +22,31 @@ export default function Apartments() {
                     <div className="flex flex-row justify-center items-center text-sm sm:text-xl font-bold">
                         <button
                             onClick={() => setSelectedBedroomType("all")}
-                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "all" ? "text-tilia-yellow-text" : "text-black"}`}
+                            className={`p-1 sm:p-2 sm:m-2  ${selectedBedroomType === "all" ? "text-tilia-yellow-text border-2 border-tilia-yellow-text" : "text-black"}`}
                         >
                             Всички
                         </button>
                         <button
-                            onClick={() => setSelectedBedroomType("none")}
-                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "none" ? "text-tilia-yellow-text" : "text-black"}`}
+                            onClick={() => setSelectedBedroomType("0")}
+                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "0" ? "text-tilia-yellow-text border-2 border-tilia-yellow-text" : "text-black"}`}
                         >
                             Едностаен
                         </button>
                         <button
-                            onClick={() => setSelectedBedroomType("one")}
-                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "one" ? "text-tilia-yellow-text" : "text-black"}`}
+                            onClick={() => setSelectedBedroomType("1")}
+                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "1" ? "text-tilia-yellow-text border-2 border-tilia-yellow-text" : "text-black"}`}
                         >
                             Двустаен
                         </button>
                         <button
-                            onClick={() => setSelectedBedroomType("two")}
-                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "two" ? "text-tilia-yellow-text" : "text-black"}`}
+                            onClick={() => setSelectedBedroomType("2")}
+                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "2" ? "text-tilia-yellow-text border-2 border-tilia-yellow-text" : "text-black"}`}
                         >
                             Тристаен
                         </button>
                         <button
-                            onClick={() => setSelectedBedroomType("three")}
-                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "three" ? "text-tilia-yellow-text" : "text-black"}`}
+                            onClick={() => setSelectedBedroomType("3")}
+                            className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "3" ? "text-tilia-yellow-text border-2 border-tilia-yellow-text" : "text-black"}`}
                         >
                             Четиристаен
                         </button>
@@ -64,7 +58,7 @@ export default function Apartments() {
 
 
                     <table className="h-full w-[35%]">
-                        <thead>
+                        <thead className="relative z-20">
                             <tr className="bg-tilia-yellow-block border-b-2 border-black">
                                 <th className="px-5 text-left">Номер</th>
                                 <th className="px-5 text-left ">Етаж</th>
@@ -73,19 +67,33 @@ export default function Apartments() {
                                 <th className="px-5 text-left ">Обща площ</th>
                             </tr>
                         </thead>
-                        <tbody className="">
+                        <tbody>
                             {
-                                Object.entries(data).map(([index, apartament]) => {
-                                    return (
-                                        <tr className={`${apartament.available ? 'bg-green-400' : 'bg-red-400'} border-b-2 border-white`} key={index}>
-                                            <td className="p-3 text-left">{apartament.title}</td>
-                                            <td className="p-3 text-center">{apartament.floor}</td>
-                                            <td className="p-3 text-center">{Number(apartament.beds) + 1}</td>
-                                            <td className="p-3 text-center">{apartament.size}</td>
-                                            <td className="p-3 text-center">{apartament.sizeFull}</td>
-                                        </tr>
-                                    )
-                                })
+                                selectedBedroomType === "all" ?
+                                    Object.entries(data).map(([index, apartment]) => {
+                                        return (
+                                            <tr className={`${apartment.available ? 'bg-green-400 cursor-pointer' : 'bg-red-400 pointer-events-none'} animateApartmentFilterResults border-b-2 border-white z-0`} key={index} onClick={() => router.push(`/apartments/app/${apartment.appLink}`)}>
+                                                <td className="p-3 text-left">{apartment.title}</td>
+                                                <td className="p-3 text-center">{apartment.floor}</td>
+                                                <td className="p-3 text-center">{Number(apartment.beds) + 1}</td>
+                                                <td className="p-3 text-center">{apartment.size}</td>
+                                                <td className="p-3 text-center">{apartment.sizeFull}</td>
+                                            </tr>
+                                        )
+                                    }) :
+                                    Object.entries(data)
+                                        .filter(([index, apartment]) => apartment.beds === selectedBedroomType)
+                                        .map(([index, apartment]) => {
+                                            return (
+                                                <tr className={`${apartment.available ? 'bg-green-400 cursor-pointer' : 'bg-red-400 pointer-events-none'} animateApartmentFilterResults border-b-2 border-white z-0`} key={index} onClick={() => router.push(`/apartments/app/${apartment.appLink}`)}>
+                                                    <td className="p-3 text-left">{apartment.title}</td>
+                                                    <td className="p-3 text-center">{apartment.floor}</td>
+                                                    <td className="p-3 text-center">{Number(apartment.beds) + 1}</td>
+                                                    <td className="p-3 text-center">{apartment.size}</td>
+                                                    <td className="p-3 text-center">{apartment.sizeFull}</td>
+                                                </tr>
+                                            )
+                                        })
                             }
                         </tbody>
 

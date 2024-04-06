@@ -38,28 +38,28 @@ const ApartmentTypes = () => {
             imgUrl: "/assets/no-beds.webp",
             imgW: "3000",
             imgH: "3000",
-            bedrooms: "none",
+            bedrooms: "0",
         },
         {
             title: "ДВУСТАЙНИ АПАРТАМЕНТИ",
             imgUrl: "/assets/one-bed.webp",
             imgW: "3000",
             imgH: "3000",
-            bedrooms: "one",
+            bedrooms: "1",
         },
         {
             title: "ТРИСТАЙНИ АПАРТАМЕНТИ",
             imgUrl: "/assets/two-beds.webp",
             imgW: "3000",
             imgH: "3000",
-            bedrooms: "two",
+            bedrooms: "2",
         },
         {
             title: "ЧЕТИРИСТАЙНИ АПАРТАЙНИ",
             imgUrl: "/assets/penthouse.webp",
             imgW: "3000",
             imgH: "3000",
-            bedrooms: "three",
+            bedrooms: "3",
         },
     ];
 

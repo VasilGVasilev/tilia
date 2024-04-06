@@ -76,12 +76,12 @@ export default function Home() {
                 <div className={`relative text-center`}>
                     <div
                         // before:w-full before:max-w-[400px] md:before:max-w-[600px], biggest width but not more than 400px, 600px
-                        className="relative z-0 ml-5 before:absolute before:-top-25 before:-left-5 sm:before:-top-20 sm:before:-left-20  before:rounded-t-[400px]
-            before:w-full before:max-w-[400px] md:before:max-w-[600px]  before:opacity-20 before:h-full before:border-2 before:border-tilia-yellow-block before:z-[-1]"
+                        className="relative z-0 ml-5 before:absolute before:-top-25 before:-left-5 sm:before:-top-20 sm:before:-left-20  before:rounded-t-[1200px]
+            before:w-full before:max-w-[1200px] md:before:max-w-[1400px]  before:opacity-20 before:h-full before:border-2 before:border-tilia-yellow-block before:z-[-1]"
                     >
 
                         <Image
-                            className="z-10 w-full rounded-t-[400px] max-w-[400px] md:max-w-[600px]"
+                            className="z-10 w-full rounded-t-[1200px] max-w-[1200px] md:max-w-[1400px]"
                             loader={imageLoader}
                             src="/tilia/tilia-one.webp"
                             alt="tilia one"
