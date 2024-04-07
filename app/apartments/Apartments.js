@@ -3,6 +3,7 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { data } from "@/data";
+import Link from "next/link";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
@@ -20,36 +21,41 @@ export default function Apartments() {
                 {/* filter */}
                 <div className="bg-white w-fit sm:p-5 flex flex-row justify-center items-center shadow-2xl">
                     <div className="flex flex-row justify-center items-center text-xs sm:text-xl font-bold">
-                        <button
-                            onClick={() => setSelectedBedroomType("all")}
+                        <Link 
+                            href={`/apartments?param=all`}
                             className={`p-1 sm:p-2 sm:m-2  ${selectedBedroomType === "all" ? "text-tilia-yellow-text border-2 border-tilia-yellow-text" : "text-black"}`}
+                            onClick={() => setSelectedBedroomType('all')}
                         >
                             Всички
-                        </button>
-                        <button
-                            onClick={() => setSelectedBedroomType("0")}
+                        </Link>
+                        <Link
+                            href={`/apartments?param=0`}
                             className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "0" ? "text-tilia-yellow-text border-2 border-tilia-yellow-text" : "text-black"}`}
+                            onClick={() => setSelectedBedroomType('0')}
                         >
                             Едностаен
-                        </button>
-                        <button
-                            onClick={() => setSelectedBedroomType("1")}
+                        </Link>
+                        <Link
+                            href={`/apartments?param=1`}
                             className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "1" ? "text-tilia-yellow-text border-2 border-tilia-yellow-text" : "text-black"}`}
+                            onClick={() => setSelectedBedroomType('1')}
                         >
                             Двустаен
-                        </button>
-                        <button
-                            onClick={() => setSelectedBedroomType("2")}
+                        </Link>
+                        <Link
+                            href={`/apartments?param=2`}
                             className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "2" ? "text-tilia-yellow-text border-2 border-tilia-yellow-text" : "text-black"}`}
+                            onClick={() => setSelectedBedroomType('2')}
                         >
                             Тристаен
-                        </button>
-                        <button
-                            onClick={() => setSelectedBedroomType("3")}
+                        </Link>
+                        <Link
+                            href={`/apartments?param=3`}
                             className={`p-1 sm:p-2 sm:m-2 ${selectedBedroomType === "3" ? "text-tilia-yellow-text border-2 border-tilia-yellow-text" : "text-black"}`}
+                            onClick={() => setSelectedBedroomType('3')}
                         >
                             Четиристаен
-                        </button>
+                        </Link>
                     </div>
                 </div>
 

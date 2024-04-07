@@ -233,16 +233,13 @@ export default function Home() {
                 <Timeline></Timeline>
             </div>
 
-
-
-
-
             {/* TYPES OF APARTMENTS */}
             <div className="bg-white p-10">
                 <ApartmentTypes></ApartmentTypes>
             </div>
-                                    {/* Floors */}
-                                    <div className="bg-tilia-gray">
+
+            {/* Floors */}
+            <div className="bg-tilia-gray">
                 <Floors></Floors>
             </div>
 
