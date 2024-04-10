@@ -4,6 +4,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { data } from "@/data";
 import Link from "next/link";
+import Floors from "@/components/Floors";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
@@ -107,7 +108,7 @@ export default function Apartments() {
 
                 </div>
             </div>
-
+            <Floors></Floors>
         </>
     );
 }
