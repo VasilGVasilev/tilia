@@ -441,7 +441,7 @@ export const data = {
     appA24: {
         apartmentImgUrl: '/apartments/A24.webp',
         floor: '7',
-        beds: '1',
+        beds: '2',
         direction: 'Изток, Запад',
         size: '88,21',
         sizeFull: '106,64',
