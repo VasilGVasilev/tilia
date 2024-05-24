@@ -1,4 +1,4 @@
-// sold B6 B14 A8 A5 B23 A21 B22
+// sold flats B6 B14 A8 A5 B23 A21 B22
 
 export const data = {
     appA1: {
