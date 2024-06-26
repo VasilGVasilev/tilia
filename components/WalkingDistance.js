@@ -79,7 +79,7 @@ const WalkingDistance = () => {
                 <Image
                     className="rounded-sm shadow-lg md:h-1/2 md:w-1/2"
                     loader={imageLoader}
-                    src="/maps-big.webp"
+                    src="/maps-google.webp"
                     alt='maps'
                     width={1669}
                     height={1213}
