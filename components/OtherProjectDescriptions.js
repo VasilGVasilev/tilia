@@ -221,7 +221,7 @@ export const WestEndDescription = () => {
                 <motion.span variants={letterVariant}> </motion.span>
                 <motion.span variants={letterVariant}>на</motion.span>
                 <motion.span variants={letterVariant}> </motion.span>
-                <motion.span variants={letterVariant}>изграждане</motion.span>
+                <motion.span variants={letterVariant}>проектиране</motion.span>
                 <motion.span variants={letterVariant}> </motion.span>
                 <motion.span variants={letterVariant}>е</motion.span>
                 <motion.span variants={letterVariant}> </motion.span>
