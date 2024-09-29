@@ -77,9 +77,9 @@ const Timeline = () => {
                 viewport={{ once: true, amount: 0.2 }}
             >
                 <Tree title={'Август 2022'} subtitle={'Проектиране '} ></Tree>
-                <Tree title={'Ноември 2023'} subtitle={'Първа копка'} ></Tree>
-                <Tree title={'Август 2024'} subtitle={'Акт 14'} ></Tree>
-                <Tree title={'Септември 2025'} subtitle={'Акт 16'} ></Tree>
+                <Tree title={'Февруари 2024'} subtitle={'Първа копка'} ></Tree>
+                <Tree title={'Март 2025'} subtitle={'Акт 14'} ></Tree>
+                <Tree title={'Декември 2025'} subtitle={'Акт 16'} ></Tree>
 
             </motion.div>
         </div>
