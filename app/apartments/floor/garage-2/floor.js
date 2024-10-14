@@ -54,7 +54,7 @@ export default function Floor() {
                 <div>
                     <div className="relative inline-block">
 
-                        <div className={`absolute parking-12 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        {/* <div className={`absolute parking-12 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
                         <div className={`absolute parking-13 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
                         <div className={`absolute parking-14 h-full w-full z-10 ${red}`} title='СВОБОДЕН'></div>
                         <div className={`absolute parking-15 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
@@ -71,7 +71,7 @@ export default function Floor() {
                         <div className={`absolute maze-5 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
                         <div className={`absolute maze-6 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
                         <div className={`absolute maze-7 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
-                        <div className={`absolute maze-8 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute maze-8 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div> */}
 
 
                         {/* <img src="/plans/third-floor.webp" alt="Tilia Plan" className="relative" /> */}
@@ -80,7 +80,7 @@ export default function Floor() {
                             {/* <img src="/plans/parking-2.webp" alt="" /> */}
                             <Image
                                 loader={imageLoader}
-                                src='/plans/parking-2.webp'
+                                src='/plans/parking-2-formative.webp'
                                 alt="Tilia Plan"
                                 width={9850}
                                 height={6200}

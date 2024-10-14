@@ -52,7 +52,7 @@ export default function Floor() {
 
                 <div>
                     <div className="relative inline-block">
-                        <div className={`absolute parking-1 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        {/* <div className={`absolute parking-1 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
                         <div className={`absolute parking-2 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
                         <div className={`absolute parking-3 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
                         <div className={`absolute parking-4 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
@@ -68,7 +68,7 @@ export default function Floor() {
                         <div className={`absolute maze-1 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
                         <div className={`absolute maze-2 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
                         <div className={`absolute maze-3 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
-                        <div className={`absolute technichesko h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div>
+                        <div className={`absolute technichesko h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div> */}
 
 
 
@@ -78,7 +78,7 @@ export default function Floor() {
                             {/* <img src="/plans/parking-1.webp" alt="" /> */}
                             <Image
                                 loader={imageLoader}
-                                src='/plans/parking-1.webp'
+                                src='/plans/parking-1-formative.webp'
                                 alt="Tilia Plan"
                                 width={9850}
                                 height={6200}
