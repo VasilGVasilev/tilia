@@ -29,7 +29,7 @@ const Tree = ({ title, subtitle }) => {
             </div>
             <Image
                 loader={imageLoader}
-                src="/assets/tilia-basic-tree-nobg.webp"
+                src="/assets/tilia-basic-tree-nobg.png"
                 alt='plan'
                 width={612}
                 height={407}
@@ -76,7 +76,7 @@ const Timeline = () => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
             >
-                <Tree title={'Август 2022'} subtitle={'Проектиране '} ></Tree>
+                <Tree title={'2023'} subtitle={'Проектиране '} ></Tree>
                 <Tree title={'Февруари 2024'} subtitle={'Първа копка'} ></Tree>
                 <Tree title={'Март 2025'} subtitle={'Акт 14'} ></Tree>
                 <Tree title={'Декември 2025'} subtitle={'Акт 16'} ></Tree>

@@ -307,7 +307,7 @@ const ForBuilding = () => {
                             <Image
                                 className="z-0"
                                 loader={imageLoader}
-                                src="/tilia/tilia-dvor-3.webp"
+                                src="/tilia/tilia-three.webp"
                                 alt="picture"
                                 width={5568}
                                 height={3132}
@@ -389,7 +389,7 @@ const ForBuilding = () => {
                             <Image
                                 className="z-0"
                                 loader={imageLoader}
-                                src="/tilia/tilia-three.webp"
+                                src="/tilia/tilia-dvor-3.webp"
                                 alt="picture"
                                 width={4946}
                                 height={3341}
