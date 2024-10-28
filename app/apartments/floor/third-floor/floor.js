@@ -56,7 +56,7 @@ export default function Floor() {
                         <div className={`absolute app-A8 h-full w-full z-10 ${red}`} title='ПРОДАДЕН'></div>
                         <Link href={`/apartments/app/A9`}><div className={`absolute app-A9 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         <Link href={`/apartments/app/B10`}><div className={`absolute app-B10 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
-                        <Link href={`/apartments/app/B11`}><div className={`absolute app-B11 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                        <div className={`absolute app-B11 h-full w-full z-10 ${red}`} title='ПРОДАДЕН'></div>
 
 
 
