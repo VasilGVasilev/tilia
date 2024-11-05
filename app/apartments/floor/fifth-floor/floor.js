@@ -55,7 +55,7 @@ export default function Floor() {
                         <Link href={`/apartments/app/A16`}><div className={`absolute app-A16 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         <Link href={`/apartments/app/A17`}><div className={`absolute app-A17 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         <Link href={`/apartments/app/B18`}><div className={`absolute app-B18 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
-                        <Link href={`/apartments/app/B19`}><div className={`absolute app-B19 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                       <div className={`absolute app-B19 h-full w-full z-10 ${red}`} title='ПРОДАДЕН'></div>
 
 
 

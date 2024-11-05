@@ -1,4 +1,4 @@
-// sold flats B6 B14 A8 A5 B23 A21 B22
+// sold flats B6 B14 A8 B11 A5 B7 B23 A21 B22 B19 B15
 
 export const data = {
     appA1: {
@@ -282,7 +282,7 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'B15',
         appCss: 'app-B15' 
     },
@@ -358,7 +358,7 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'B19',
         appCss: 'app-B19' 
     },
