@@ -1,14 +1,15 @@
-'use client'
-import Image from "next/image"
-import { imageLoader } from "../utils/imgLoader"
-import Timeline from "@/components/Timeline"
-import ForBuilding from "@/components/ForBuidling"
-import { motion } from "framer-motion"
-import { noto, roboto } from "@/utils/fonts"
-import ApartmentTypes from "@/components/ApartmentTypes"
-import WalkingDistance from "@/components/WalkingDistance"
-import Floors from "@/components/Floors"
-import dynamic from "next/dynamic"
+"use client";
+import Image from "next/image";
+import { imageLoader } from "../utils/imgLoader";
+import Timeline from "@/components/Timeline";
+import ForBuilding from "@/components/ForBuidling";
+import { motion } from "framer-motion";
+import { noto, roboto } from "@/utils/fonts";
+import ApartmentTypes from "@/components/ApartmentTypes";
+import WalkingDistance from "@/components/WalkingDistance";
+import Floors from "@/components/Floors";
+import dynamic from "next/dynamic";
+import Kota0 from "@/components/kota0";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
@@ -16,8 +17,7 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 // sitemap update
 // when an apartment is sold, set available status to false
 
-
-const ParalaxWalking = dynamic(() => import('../components/ParalaxWalking'))
+const ParalaxWalking = dynamic(() => import("../components/ParalaxWalking"));
 
 export const container = {
     hidden: {},
@@ -65,13 +65,9 @@ const rowVariant = {
 export default function Home() {
     return (
         <div>
-
-
-
             {/* WELCOME IMG AND TEXT */}
 
             <div className="flex flex-col justify-center items-center gap-10 px-10 pt-20 md:pt-32 mt-7 pb-10 bg-white">
-
                 {/* IMG */}
                 <div className={`relative text-center`}>
                     <div
@@ -79,7 +75,6 @@ export default function Home() {
                         className="relative z-0 ml-5 before:absolute before:-top-25 before:-left-5 sm:before:-top-20 sm:before:-left-20  before:rounded-t-[1200px]
             before:w-full before:max-w-[1200px] md:before:max-w-[1400px]  before:opacity-20 before:h-full before:border-2 before:border-tilia-yellow-block before:z-[-1]"
                     >
-
                         <Image
                             className="z-10 w-full rounded-t-[1200px] max-w-[1200px] md:max-w-[1400px]"
                             loader={imageLoader}
@@ -96,46 +91,48 @@ export default function Home() {
                         </div>
                         <div
                             className={`${noto.className} text-black text-center py-5 text-4xl md:text-7xl lg:text-[140px]`}
-                        // initial="hidden"
-                        // whileInView="visible"
-                        // transition={{ duration: 0.3 }}
-                        // variants={{
-                        //     hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
-                        //     visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
-                        // }}
+                            // initial="hidden"
+                            // whileInView="visible"
+                            // transition={{ duration: 0.3 }}
+                            // variants={{
+                            //     hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
+                            //     visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                            // }}
                         >
-
                             ТИЛИЯ
                         </div>
-
                     </div>
                 </div>
 
                 {/* TEXT */}
                 <span
                     className="font-bold"
-                // initial="hidden"
-                // whileInView="visible"
-                // viewport={{ once: true }}
-                // variants={{
-                //     hidden: { opacity: 0, scale: 1.3 },
-                //     visible: { opacity: 1, scale: 1 },
-                // }}
+                    // initial="hidden"
+                    // whileInView="visible"
+                    // viewport={{ once: true }}
+                    // variants={{
+                    //     hidden: { opacity: 0, scale: 1.3 },
+                    //     visible: { opacity: 1, scale: 1 },
+                    // }}
                 >
                     Проектът е с осигурено банково финансиране до акт 16.
-
                 </span>
 
-                <div
-                    className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-justify"
-                >
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-justify">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
                         variants={rowVariant}
                         viewport={{ once: true }}
                     >
-                        В сърцето на квартал Връбница, в близост до Северен парк, се развива новият жилищен проект "Тилия Резидънс". Тук жителите могат да се насладят на спокойствието на квартала, без да се отказват от лесния достъп до търговски центрове, ресторанти и обществен транспорт. Идеално място за хора, които търсят съчетание от съвременен стил, удобства и близост до градските удоволствия.
+                        В сърцето на квартал Връбница, в близост до Северен
+                        парк, се развива новият жилищен проект "Тилия Резидънс".
+                        Тук жителите могат да се насладят на спокойствието на
+                        квартала, без да се отказват от лесния достъп до
+                        търговски центрове, ресторанти и обществен транспорт.
+                        Идеално място за хора, които търсят съчетание от
+                        съвременен стил, удобства и близост до градските
+                        удоволствия.
                     </motion.div>
                     <motion.div
                         initial="hidden"
@@ -143,7 +140,10 @@ export default function Home() {
                         variants={rowVariant}
                         viewport={{ once: true }}
                     >
-                        Този обект в процес на строителство представлява комбинация от модерен дизайн, функционални разпределения, качествени материали и перфектна локация, която обещава уникално жилищно изживяване.
+                        Този обект в процес на строителство представлява
+                        комбинация от модерен дизайн, функционални
+                        разпределения, качествени материали и перфектна локация,
+                        която обещава уникално жилищно изживяване.
                     </motion.div>
                     <motion.div
                         initial="hidden"
@@ -151,7 +151,10 @@ export default function Home() {
                         variants={rowVariant}
                         viewport={{ once: true }}
                     >
-                        Сградата разполага с различни по площ апартаменти, предлагащи разнообразни възможности за клиентите. Светли стаи, големи прозорци и балкони с прекрасни изгледи създават уютна атмосфера във всеки от тях.
+                        Сградата разполага с различни по площ апартаменти,
+                        предлагащи разнообразни възможности за клиентите. Светли
+                        стаи, големи прозорци и балкони с прекрасни изгледи
+                        създават уютна атмосфера във всеки от тях.
                     </motion.div>
                     <motion.div
                         initial="hidden"
@@ -159,7 +162,9 @@ export default function Home() {
                         variants={rowVariant}
                         viewport={{ once: true }}
                     >
-                        Съчетавайки съвременен стил и комфорт с идеалната локация, "Тилия Резидънс" обещава да бъде вашият дом, в който ще създавате спомени и усещания за комфорт и уют.
+                        Съчетавайки съвременен стил и комфорт с идеалната
+                        локация, "Тилия Резидънс" обещава да бъде вашият дом, в
+                        който ще създавате спомени и усещания за комфорт и уют.
                     </motion.div>
                     <motion.div
                         initial="hidden"
@@ -167,12 +172,11 @@ export default function Home() {
                         variants={rowVariant}
                         viewport={{ once: true }}
                     >
-                        Независимо дали търсите първия си собствен дом или идеалната инвестиция в недвижими имоти, "Тилия Резидънс" предоставя всичко, от което се нуждаете.
+                        Независимо дали търсите първия си собствен дом или
+                        идеалната инвестиция в недвижими имоти, "Тилия Резидънс"
+                        предоставя всичко, от което се нуждаете.
                     </motion.div>
-
                 </div>
-
-
             </div>
 
             {/* WELCOME IMG WALKING AND METRO CLOSE */}
@@ -182,7 +186,12 @@ export default function Home() {
                     <source src="/video.MP4" type="video/MP4" />
                     Your browser does not support the video tag.
                 </video> */}
-                <img src="/tilia/tilia-walking-people.webp" alt="dvor" width={5568} height={3132} />
+                <img
+                    src="/tilia/tilia-walking-people.webp"
+                    alt="dvor"
+                    width={5568}
+                    height={3132}
+                />
 
                 {/* <Image
                     loader={imageLoader}
@@ -233,6 +242,11 @@ export default function Home() {
                 <Timeline></Timeline>
             </div>
 
+            {/* kota 0 */}
+            <div className="bg-tilia-gray">
+                <Kota0></Kota0>
+            </div>
+
             {/* TYPES OF APARTMENTS */}
             <div className="bg-white p-10">
                 <ApartmentTypes></ApartmentTypes>
@@ -252,14 +266,10 @@ export default function Home() {
 
             <ParalaxWalking />
 
-
-
             {/* NEXT TO METRO */}
             <div className="bg-white">
                 <WalkingDistance></WalkingDistance>
             </div>
-
-
         </div>
-    )
+    );
 }
