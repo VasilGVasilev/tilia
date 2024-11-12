@@ -21,69 +21,64 @@ const Kota0 = () => {
     return (
         <div className="relative">
             <div className="flex flex-col">
+                {/* First row: two images -side by side */}
                 <div className="flex flex-row">
-                <div className="w-full p-2">
+                    <div className="w-1/2 p-2">
                         <Image
                             loader={imageLoader}
-                            src="/kota0/image-1.webp"
-                            alt="Image 2"
+                            src="/kota0/image-01.webp"
+                            alt="Image"
                             width={1500}
                             height={1500}
                             className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-1.webp")}
+                            onClick={() => openModal("/kota0/image-01.webp")}
+                        />
+                    </div>
+
+                    <div className="w-1/2 p-2">
+                        <Image
+                            loader={imageLoader}
+                            src="/kota0/image-02.webp"
+                            alt="Image"
+                            width={1500}
+                            height={1500}
+                            className="object-cover cursor-pointer"
+                            onClick={() => openModal("/kota0/image-02.webp")}
                         />
                     </div>
                 </div>
+                {/* Second row: three images first col long, second col other 2, one under the other */}
 
                 <div className="flex flex-row">
-                    <div className="w-1/2 p-2">
+                    <div className="flex flex-col w-1/2 p-2 ">
                         <Image
                             loader={imageLoader}
-                            src="/kota0/image-2.webp"
-                            alt="Image 1"
+                            src="/kota0/image-03.webp"
+                            alt="Image"
                             width={1500}
                             height={1500}
                             className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-2.webp")}
+                            onClick={() => openModal("/kota0/image-03.webp")}
                         />
                     </div>
-
-                    <div className="w-1/2 p-2">
+                    <div className="flex flex-col w-1/2 p-2 gap-4">
                         <Image
                             loader={imageLoader}
-                            src="/kota0/image-3.webp"
-                            alt="Image 3"
+                            src="/kota0/image-04.webp"
+                            alt="Image"
                             width={1500}
                             height={1500}
                             className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-3.webp")}
+                            onClick={() => openModal("/kota0/image-04.webp")}
                         />
-                    </div>
-                </div>
-                {/* First row: two images */}
-
-                <div className="flex flex-row">
-
-                    <div className="w-1/2 p-2">
                         <Image
                             loader={imageLoader}
-                            src="/kota0/image-4.webp"
-                            alt="Image 4"
+                            src="/kota0/image-05.webp"
+                            alt="Image"
                             width={1500}
                             height={1500}
                             className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-4.webp")}
-                        />
-                    </div>
-                    <div className="w-1/2 p-2">
-                        <Image
-                            loader={imageLoader}
-                            src="/kota0/image-5.webp"
-                            alt="Image 5"
-                            width={1500}
-                            height={1500}
-                            className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-5.webp")}
+                            onClick={() => openModal("/kota0/image-05.webp")}
                         />
                     </div>
                 </div>
@@ -94,7 +89,7 @@ const Kota0 = () => {
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
                     <div className="relative">
                         <button
-                            className="absolute top-0 right-0 m-4 text-white text-2xl"
+                            className="absolute top-0 right-0 m-4 text-white text-4xl"
                             onClick={closeModal}
                         >
                             &times;
