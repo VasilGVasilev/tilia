@@ -30,6 +30,7 @@ export default function Apartament() {
                         apartmentH={data.appA4.apartmentH}
                         floorW={data.appA4.floorW}
                         floorH={data.appA4.floorH}
+                        priceVat={data.appA4?.price_with_vat}
                         ></ApartmentTemplate>
                     : <AppUnavailable></AppUnavailable>
             }
