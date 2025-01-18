@@ -134,9 +134,7 @@ export default function Apartments() {
                                                       {apartment.sizeFull}
                                                   </td>
                                                   <td className="p-3 text-center">
-                                                      {
-                                                          apartment?.price_with_vat
-                                                      }
+                                                    {apartment.available ? apartment.price_with_vat : ""}
                                                   </td>
                                               </tr>
                                           );
