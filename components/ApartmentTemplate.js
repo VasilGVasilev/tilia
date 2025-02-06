@@ -1,7 +1,7 @@
 import { imageLoader } from "@/utils/imgLoader"
 import Image from "next/image"
 
-const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, sizeFull, title, textOne, textTwo, floorPlan, apartmentW, apartmentH, floorW, floorH }) => {
+const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, sizeFull, title, textOne, textTwo, floorPlan, apartmentW, apartmentH, floorW, floorH, priceVat }) => {
     return (
         <>
             {/* Necessary to lower the Title be visible */}
@@ -57,13 +57,14 @@ const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, size
                             <span className="text-green-500 font-semibold">свободен</span>
                         </li>
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
-                            <span>Цена</span>
-                            <span className="text-tilia-yellow-text">По запитване</span>
-                        </li>
-                        <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
                             <span>Телефон</span>
                             <span className="text-tilia-yellow-text"><a href={`tel:00359886879993`} className="font-semibold">+359886879993</a></span>
                         </li>
+                        <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
+                            <span>Цена* с ДДС</span>
+                            <span className="text-tilia-yellow-text">{priceVat}</span>
+                        </li>
+                        <div className="text-base">* Цената от 1600 евро/м2 с ДДС е валидна до 28.02.2025. От дата 01.03.2025 цената се изчислява на база 1700 евро/м2 с ДДС. От дата 01.08.2025 цената се изчислява на база 1800 евро/м2 с ДДС.</div>
                     </ul>
                     {/* DETAILS */}
                     <div className="grid gap-5">

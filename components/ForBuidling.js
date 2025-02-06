@@ -271,7 +271,7 @@ const ForBuilding = () => {
                                 variants={rowVariant}
                             >
                                 <p className="sm:text-xl text-black font-bold">Дограма</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Алуминиева дограма най-висок клас с профили Weiss Profil Thermo Pro WP85.</p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Най-висок клас алуминиева система за врати и прозорци с прекъснат термомост - Thermo Smart WP78 с троен стъклопакет 44мм/ цвят антрацит - Ral 7016</p>
                                 <br />
 
                             </motion.div>

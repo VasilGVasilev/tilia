@@ -55,7 +55,7 @@ export default function Floor() {
                         <Link href={`/apartments/app/A24`}><div className={`absolute app-A24 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
                         <div className={`absolute app-A25 h-full w-full z-10 ${red}`} title='ПРОДАДЕН'></div>
                         <Link href={`/apartments/app/B26`}><div className={`absolute app-B26 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
-                        <Link href={`/apartments/app/B27`}><div className={`absolute app-B27 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
+                        <div className={`absolute app-B27 h-full w-full z-10 ${red}`} title='ПРОДАДЕН'></div>
 
 
                         {/* <img src="/plans/third-floor.webp" alt="Tilia Plan" className="relative" /> */}

@@ -373,3 +373,8 @@
 .animateApartmentFilterResults:nth-child(odd) {
   animation: slideFromLeft 1s ease-in-out;
 }
+
+.text-xxxs {
+  font-size: 8px;
+  line-height: 10px;
+}
