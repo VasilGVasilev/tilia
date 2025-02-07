@@ -26,63 +26,105 @@ const Kota0 = () => {
                     <div className="w-1/2 p-2">
                         <Image
                             loader={imageLoader}
-                            src="/kota0/image-01.webp"
+                            src="/kota0/image-001.webp"
                             alt="Image"
                             width={1500}
                             height={1500}
                             className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-01.webp")}
+                            onClick={() => openModal("/kota0/image-001.webp")}
                         />
                     </div>
 
                     <div className="w-1/2 p-2">
                         <Image
                             loader={imageLoader}
-                            src="/kota0/image-02.webp"
+                            src="/kota0/image-002.webp"
                             alt="Image"
                             width={1500}
                             height={1500}
                             className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-02.webp")}
+                            onClick={() => openModal("/kota0/image-002.webp")}
                         />
                     </div>
                 </div>
-                {/* Second row: three images first col long, second col other 2, one under the other */}
+                {/* Second row: one image */}
+                <div className="flex flex-row">
+                    <div className="w-1/2 p-2">
+                        <Image
+                            loader={imageLoader}
+                            src="/kota0/image-003.webp"
+                            alt="Image"
+                            width={1500}
+                            height={1500}
+                            className="object-cover cursor-pointer"
+                            onClick={() => openModal("/kota0/image-003.webp")}
+                        />
+                    </div>
+
+                    <div className="w-1/2 p-2"></div>
+                </div>
+                {/* third row: three images first col long, second col other 2, one under the other */}
 
                 <div className="flex flex-row">
                     <div className="flex flex-col w-1/2 p-2 ">
                         <Image
                             loader={imageLoader}
-                            src="/kota0/image-03.webp"
+                            src="/kota0/image-006.webp"
                             alt="Image"
                             width={1500}
                             height={1500}
                             className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-03.webp")}
+                            onClick={() => openModal("/kota0/image-006.webp")}
                         />
                     </div>
                     <div className="flex flex-col w-1/2 p-2 gap-4">
                         <Image
                             loader={imageLoader}
-                            src="/kota0/image-04.webp"
+                            src="/kota0/image-004.webp"
                             alt="Image"
                             width={1500}
                             height={1500}
                             className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-04.webp")}
+                            onClick={() => openModal("/kota0/image-004.webp")}
                         />
                         <Image
                             loader={imageLoader}
-                            src="/kota0/image-05.webp"
+                            src="/kota0/image-005.webp"
                             alt="Image"
                             width={1500}
                             height={1500}
                             className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-05.webp")}
+                            onClick={() => openModal("/kota0/image-005.webp")}
                         />
                     </div>
                 </div>
-                {/* Second row: three images */}
+                {/* Fourth row: two images */}
+                <div className="flex flex-row">
+                    <div className="w-1/2 p-2">
+                        <Image
+                            loader={imageLoader}
+                            src="/kota0/image-007.webp"
+                            alt="Image"
+                            width={1500}
+                            height={1500}
+                            className="object-cover cursor-pointer"
+                            onClick={() => openModal("/kota0/image-007.webp")}
+                        />
+                    </div>
+
+                    <div className="w-1/2 p-2">
+                        <Image
+                            loader={imageLoader}
+                            src="/kota0/image-008.webp"
+                            alt="Image"
+                            width={1500}
+                            height={1500}
+                            className="object-cover cursor-pointer"
+                            onClick={() => openModal("/kota0/image-008.webp")}
+                        />
+                    </div>
+                </div>
+
             </div>
 
             {isModalOpen && (
