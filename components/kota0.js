@@ -26,6 +26,32 @@ const Kota0 = () => {
                     <div className="w-1/2 p-2">
                         <Image
                             loader={imageLoader}
+                            src="/kota0/image-0001.webp"
+                            alt="Image"
+                            width={1500}
+                            height={1500}
+                            className="object-cover cursor-pointer"
+                            onClick={() => openModal("/kota0/image-0001.webp")}
+                        />
+                    </div>
+
+                    <div className="w-1/2 p-2">
+                        <Image
+                            loader={imageLoader}
+                            src="/kota0/image-0002.webp"
+                            alt="Image"
+                            width={1500}
+                            height={1500}
+                            className="object-cover cursor-pointer"
+                            onClick={() => openModal("/kota0/image-0002.webp")}
+                        />
+                    </div>
+                </div>
+                {/* Second row: two images -side by side */}
+                <div className="flex flex-row">
+                    <div className="w-1/2 p-2">
+                        <Image
+                            loader={imageLoader}
                             src="/kota0/image-001.webp"
                             alt="Image"
                             width={1500}
@@ -47,7 +73,7 @@ const Kota0 = () => {
                         />
                     </div>
                 </div>
-                {/* Second row: one image */}
+                {/* Third row: one image */}
                 <div className="flex flex-row">
                     <div className="w-1/2 p-2">
                         <Image
@@ -63,7 +89,7 @@ const Kota0 = () => {
 
                     <div className="w-1/2 p-2"></div>
                 </div>
-                {/* third row: three images first col long, second col other 2, one under the other */}
+                {/* Fourth row: three images first col long, second col other 2, one under the other */}
 
                 <div className="flex flex-row">
                     <div className="flex flex-col w-1/2 p-2 ">
@@ -98,7 +124,7 @@ const Kota0 = () => {
                         />
                     </div>
                 </div>
-                {/* Fourth row: two images */}
+                {/* Fifth row: two images */}
                 <div className="flex flex-row">
                     <div className="w-1/2 p-2">
                         <Image
@@ -124,7 +150,6 @@ const Kota0 = () => {
                         />
                     </div>
                 </div>
-
             </div>
 
             {isModalOpen && (
