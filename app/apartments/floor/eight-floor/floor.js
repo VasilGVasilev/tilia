@@ -52,10 +52,10 @@ export default function Floor() {
 
                 <div>
                     <div className="relative inline-block">
-                        <Link href={`/apartments/app/A28`}><div className={`absolute app-A28 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
-                        <Link href={`/apartments/app/A29`}><div className={`absolute app-A29-1 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
-                        <Link href={`/apartments/app/B30`}><div className={`absolute app-B30-1 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
-                        <div className={`absolute app-B31 h-full w-full z-10 ${red}`} title='ПРОДАДЕН'></div>
+                        <Link href={`/apartments/app/A28`}><div className={`absolute app-A28 h-full w-full z-10 ${green}`} title='A28 - СВОБОДЕН'></div></Link>
+                        <Link href={`/apartments/app/A29`}><div className={`absolute app-A29-1 h-full w-full z-10 ${green}`} title='A29 - СВОБОДЕН'></div></Link>
+                        <Link href={`/apartments/app/B30`}><div className={`absolute app-B30-1 h-full w-full z-10 ${green}`} title='B30 - СВОБОДЕН'></div></Link>
+                        <div className={`absolute app-B31 h-full w-full z-10 ${red}`} title='B31 - ПРОДАДЕН'></div>
 
 
 
