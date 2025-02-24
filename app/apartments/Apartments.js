@@ -3,8 +3,10 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { data } from "@/data";
+import { dataGarage } from "@/data-garage";
 import Link from "next/link";
 import Floors from "@/components/Floors";
+import { noto } from "@/utils/fonts";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
@@ -18,15 +20,31 @@ export default function Apartments() {
 
     return (
         <>
-            <div className="m-5 flex flex-col gap-5 justify-center items-center">
-                {/* Apartments Filter Title */}
-                <div className="bg-white w-fit sm:p-5 flex flex-row justify-center items-center shadow-2xl">
-                    <div className="flex flex-row justify-center items-center text-xs sm:text-xl font-bold">
+            <div className=" flex flex-col">
+                {/* Apartments Title */}
+                <div className="text-black bg-tilia-yellow-block flex flex-row p-10">
+                    <div
+                        className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
+                        // initial="hidden"
+                        // whileInView="visible"
+                        // viewport={{ once: true }}
+                        // transition={{ duration: 0.7, delay: 0.3 }}
+                        // variants={{
+                        //     hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
+                        //     visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                        // }}
+                    >
+                        Апартаменти
+                    </div>
+                </div>
+                {/* Apartments Filter */}
+                <div className="bg-tilia-yellow-text  sm:p-5 flex flex-row justify-center items-center">
+                    <div className="flex flex-row text-xs sm:text-xl font-bold">
                         <Link
                             href={`/apartments?param=all`}
                             className={`p-1 sm:p-2 sm:m-2  ${
                                 selectedBedroomType === "all"
-                                    ? "text-tilia-yellow-text border-2 border-tilia-yellow-text"
+                                    ? "text-white border-2 border-white"
                                     : "text-black"
                             }`}
                             onClick={() => setSelectedBedroomType("all")}
@@ -37,7 +55,7 @@ export default function Apartments() {
                             href={`/apartments?param=0`}
                             className={`p-1 sm:p-2 sm:m-2 ${
                                 selectedBedroomType === "0"
-                                    ? "text-tilia-yellow-text border-2 border-tilia-yellow-text"
+                                    ? "text-white border-2 border-white"
                                     : "text-black"
                             }`}
                             onClick={() => setSelectedBedroomType("0")}
@@ -48,7 +66,7 @@ export default function Apartments() {
                             href={`/apartments?param=1`}
                             className={`p-1 sm:p-2 sm:m-2 ${
                                 selectedBedroomType === "1"
-                                    ? "text-tilia-yellow-text border-2 border-tilia-yellow-text"
+                                    ? "text-white border-2 border-white"
                                     : "text-black"
                             }`}
                             onClick={() => setSelectedBedroomType("1")}
@@ -59,7 +77,7 @@ export default function Apartments() {
                             href={`/apartments?param=2`}
                             className={`p-1 sm:p-2 sm:m-2 ${
                                 selectedBedroomType === "2"
-                                    ? "text-tilia-yellow-text border-2 border-tilia-yellow-text"
+                                    ? "text-white border-2 border-white"
                                     : "text-black"
                             }`}
                             onClick={() => setSelectedBedroomType("2")}
@@ -70,7 +88,7 @@ export default function Apartments() {
                             href={`/apartments?param=3`}
                             className={`p-1 sm:p-2 sm:m-2 ${
                                 selectedBedroomType === "3"
-                                    ? "text-tilia-yellow-text border-2 border-tilia-yellow-text"
+                                    ? "text-white border-2 border-white"
                                     : "text-black"
                             }`}
                             onClick={() => setSelectedBedroomType("3")}
@@ -81,10 +99,10 @@ export default function Apartments() {
                 </div>
 
                 {/* Table Apartments*/}
-                <div className="flex flex-col justify-center items-center w-full text-xxs sm:text-base">
+                <div className="flex flex-col my-5 justify-center items-center w-full text-xxs sm:text-base">
                     <table className="h-full w-[35%]">
                         <thead className="relative z-20">
-                            <tr className="bg-tilia-yellow-block border-b-2 border-black whitespace-nowrap">
+                            <tr className="bg-tilia-yellow-block border-b-2 border-black ">
                                 <th className="p-1 sm:p-2 text-center">№</th>
                                 <th className="p-1 sm:p-2 text-center">Етаж</th>
                                 <th className="p-1 sm:p-2 text-center">Стаи</th>
@@ -136,7 +154,7 @@ export default function Apartments() {
                                                   <td className="p-3 text-center">
                                                       {apartment.available
                                                           ? apartment.price_with_vat
-                                                          : ""}
+                                                          : "ПРОДАДЕН"}
                                                   </td>
                                               </tr>
                                           );
@@ -163,7 +181,7 @@ export default function Apartments() {
                                                       )
                                                   }
                                               >
-                                                  <td className="p-3 text-left">
+                                                  <td className="p-3 text-center">
                                                       {apartment.title}
                                                   </td>
                                                   <td className="p-3 text-center">
@@ -192,7 +210,7 @@ export default function Apartments() {
                 </div>
 
                 {/* Note */}
-                <div className="bg-white w-fit p-5 flex flex-row justify-center items-center shadow-2xl">
+                <div className="bg-white p-5 flex flex-row justify-center items-center shadow-2xl">
                     <div className="flex flex-col justify-center items-center text-xxxs sm:text-base gap-1">
                         <div>
                             * Цената от 1600 евро/м2 с ДДС е валидна до
@@ -227,115 +245,67 @@ export default function Apartments() {
                 </div>
 
                 {/* Garage Title */}
-                <div className="bg-white w-fit sm:p-5 flex flex-row justify-center items-center shadow-2xl">
-                    <div className="flex flex-row justify-center items-center text-xs sm:text-xl font-bold">
-                        <Link
-                            href={`/apartments?param=all`}
-                            className={`p-1 sm:p-2 sm:m-2  ${
-                                selectedBedroomType === "all"
-                                    ? "text-tilia-yellow-text border-2 border-tilia-yellow-text"
-                                    : "text-black"
-                            }`}
-                            onClick={() => setSelectedBedroomType("all")}
-                        >
-                            Всички
-                        </Link>
-                        <Link
-                            href={`/apartments?param=0`}
-                            className={`p-1 sm:p-2 sm:m-2 ${
-                                selectedBedroomType === "0"
-                                    ? "text-tilia-yellow-text border-2 border-tilia-yellow-text"
-                                    : "text-black"
-                            }`}
-                            onClick={() => setSelectedBedroomType("0")}
-                        >
-                            Едностаен
-                        </Link>
-                        <Link
-                            href={`/apartments?param=1`}
-                            className={`p-1 sm:p-2 sm:m-2 ${
-                                selectedBedroomType === "1"
-                                    ? "text-tilia-yellow-text border-2 border-tilia-yellow-text"
-                                    : "text-black"
-                            }`}
-                            onClick={() => setSelectedBedroomType("1")}
-                        >
-                            Двустаен
-                        </Link>
-                        <Link
-                            href={`/apartments?param=2`}
-                            className={`p-1 sm:p-2 sm:m-2 ${
-                                selectedBedroomType === "2"
-                                    ? "text-tilia-yellow-text border-2 border-tilia-yellow-text"
-                                    : "text-black"
-                            }`}
-                            onClick={() => setSelectedBedroomType("2")}
-                        >
-                            Тристаен
-                        </Link>
-                        <Link
-                            href={`/apartments?param=3`}
-                            className={`p-1 sm:p-2 sm:m-2 ${
-                                selectedBedroomType === "3"
-                                    ? "text-tilia-yellow-text border-2 border-tilia-yellow-text"
-                                    : "text-black"
-                            }`}
-                            onClick={() => setSelectedBedroomType("3")}
-                        >
-                            Четиристаен
-                        </Link>
+                <div className="text-black bg-tilia-yellow-block flex flex-row p-10">
+                    <div
+                        className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
+                        // initial="hidden"
+                        // whileInView="visible"
+                        // viewport={{ once: true }}
+                        // transition={{ duration: 0.7, delay: 0.3 }}
+                        // variants={{
+                        //     hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
+                        //     visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                        // }}
+                    >
+                        Гаражи
                     </div>
                 </div>
 
                 {/* Table Garages*/}
-                <div className="flex flex-col justify-center items-center w-full text-xxs sm:text-base">
+                <div className="flex flex-col my-5 justify-center items-center w-full text-xxs sm:text-base">
                     <table className="h-full w-[35%]">
                         <thead className="relative z-20">
-                            <tr className="bg-tilia-yellow-block border-b-2 border-black whitespace-nowrap">
+                            <tr className="bg-tilia-yellow-block border-b-2 border-black">
                                 <th className="p-1 sm:p-2 text-center">№</th>
-                                <th className="p-1 sm:p-2 text-center">Етаж</th>
+                                <th className="p-1 sm:p-2 text-center">Ниво</th>
                                 <th className="p-1 sm:p-2 text-center">Площ</th>
+                                <th className="p-1 sm:p-2 text-center">Система за двойно паркиране</th>
                                 <th className="p-1 sm:p-2 text-center">Цена</th>
                             </tr>
                         </thead>
                         <tbody key={selectedBedroomType}>
                             {" "}
                             {/* key is used to re-render the table when the selectedBedroomType changes */}
-                            {Object.entries(data).map(
-                                      ([index, apartment]) => {
-                                          return (
-                                              <tr
-                                                  className={`${
-                                                      apartment.available
-                                                          ? "bg-green-400 cursor-pointer"
-                                                          : "bg-red-400 pointer-events-none"
-                                                  } animateApartmentFilterResults border-b-2 border-white z-0 whitespace-nowrap`}
-                                                  key={index}
-                                                  onClick={() =>
-                                                      router.push(
-                                                          `/apartments/app/${apartment.appLink}`
-                                                      )
-                                                  }
-                                              >
-                                                  <td className="p-3 text-center">
-                                                      {apartment.title}
-                                                  </td>
-                                                  <td className="p-3 text-center">
-                                                      {apartment.floor}
-                                                  </td>
-            
-                                                  <td className="p-3 text-center">
-                                                      {apartment.size}
-                                                  </td>
-                                                  <td className="p-3 text-center">
-                                                      {apartment.available
-                                                          ? apartment.price_with_vat
-                                                          : ""}
-                                                  </td>
-                                              </tr>
-                                          );
-                                      }
-                                  )}
+                            {Object.entries(dataGarage).map(([index, garage]) => {
+                                return (
+                                    <tr
+                                        className={`${
+                                            garage.available
+                                                ? "bg-green-400"
+                                                : "bg-red-400"
+                                        } animateApartmentFilterResults border-b-2 border-white z-0 whitespace-nowrap`}
+                                        key={index}
+                                    >
+                                        <td className="p-3 text-center">
+                                            {garage.title}
+                                        </td>
+                                        <td className="p-3 text-center">
+                                            {garage.floor}
+                                        </td>
+                                        <td className="p-3 text-center">
+                                            {garage.size}
+                                        </td>
+                                        <td className="p-3 text-center">
+                                            {garage.extra}
+                                        </td>
+                                        <td className="p-3 text-center">
+                                            {garage.available
+                                                ? garage.price
+                                                : "ПРОДАДЕН"}
+                                        </td>
+                                    </tr>
+                                );
+                            })}
                         </tbody>
                     </table>
                 </div>
