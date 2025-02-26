@@ -52,10 +52,10 @@ export default function Floor() {
 
                 <div>
                     <div className="relative inline-block">
-                        <Link href={`/apartments/app/A24`}><div className={`absolute app-A24 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
-                        <div className={`absolute app-A25 h-full w-full z-10 ${red}`} title='ПРОДАДЕН'></div>
-                        <Link href={`/apartments/app/B26`}><div className={`absolute app-B26 h-full w-full z-10 ${green}`} title='СВОБОДЕН'></div></Link>
-                        <div className={`absolute app-B27 h-full w-full z-10 ${red}`} title='ПРОДАДЕН'></div>
+                        <Link href={`/apartments/app/A24`}><div className={`absolute app-A24 h-full w-full z-10 ${green}`} title='A24 - СВОБОДЕН'></div></Link>
+                        <div className={`absolute app-A25 h-full w-full z-10 ${red}`} title='A25 - ПРОДАДЕН'></div>
+                        <Link href={`/apartments/app/B26`}><div className={`absolute app-B26 h-full w-full z-10 ${green}`} title='B26 - СВОБОДЕН'></div></Link>
+                        <div className={`absolute app-B27 h-full w-full z-10 ${red}`} title='B27 - ПРОДАДЕН'></div>
 
 
                         {/* <img src="/plans/third-floor.webp" alt="Tilia Plan" className="relative" /> */}
