@@ -25,7 +25,7 @@ const ForBuilding = () => {
             {/* TITLE CONCEPT */}
             <div className="text-black flex flex-col sm:flex-row p-10 sm:gap-5 bg-tilia-yellow-block">
                 <div
-                    className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
+                   className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
                     // initial="hidden"
                     // whileInView="visible"
                     // transition={{ duration: 0.7, delay: 0.3 }}
@@ -109,7 +109,7 @@ const ForBuilding = () => {
             {/* TITLE DESCRIPTION*/}
             <div className="text-black flex flex-col sm:flex-row p-10 sm:gap-5 bg-white">
                 <div
-                    className={`${noto.className} text-xl md:text-4xl xl:text-[70px]`}
+                    className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
                     // initial="hidden"
                     // whileInView="visible"
                     // transition={{ duration: 0.7, delay: 0.3 }}
@@ -210,6 +210,19 @@ const ForBuilding = () => {
 
             <div className=" flex flex-col gap-5 bg-tilia-yellow-block p-5 text-justify">
 
+                <div
+                    className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
+                    // initial="hidden"
+                    // whileInView="visible"
+                    // transition={{ duration: 0.7, delay: 0.3 }}
+                    // viewport={{ once: true }}
+                    // variants={{
+                    //     hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
+                    //     visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
+                    // }}
+                >
+                    ДЕТАЙЛИ
+                </div>
                 <div className="flex flex-col lg:flex-row justify-center items-center ">
                     <motion.div
                         className="h-fit lg:basis-1/2 lg:order-2"
@@ -253,7 +266,7 @@ const ForBuilding = () => {
                                 viewport={{ once: true }}
                             >
                                 <p className="sm:text-xl text-black font-bold">Фасада</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Фасадата предстои да бъде изпълнена от силикатна мазилка Caparol или San Marco и декоративна рамка от еталбонд и HPL- опасваща сградата.</p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Фасадата предстои да бъде изпълнена от силикатна мазилка Caparol, San Marco или подобен клас и декоративна рамка от еталбонд и HPL- опасваща сградата.</p>
                                 <br />
                             </motion.div>
                             <motion.div
@@ -331,7 +344,7 @@ const ForBuilding = () => {
                             >
 
                                 <p className="sm:text-xl text-black font-bold">Материали и асансьор</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Тухли Винербергер за зидарии. Асансьори КОНЕ.</p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Тухли Винербергер за зидарии. Асансьори Orona.</p>
                                 <br />
 
                             </motion.div>
@@ -341,7 +354,7 @@ const ForBuilding = () => {
                             >
 
                                 <p className="sm:text-xl text-black font-bold">Врати</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Блиндирани входни врати SOLID idoor, обърнати с мрамор.</p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Блиндирани входни врати висок клас, дървесен фладер.</p>
                                 <br />
 
                             </motion.div>
@@ -351,7 +364,7 @@ const ForBuilding = () => {
                             >
 
                                 <p className="sm:text-xl text-black font-bold">Фоайе и общи части</p>
-                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Фоайе и общи части по специален интериорен проект - с вътрешно оформление от мрамор, съчетан с декоративни елементи ламинам.</p>
+                                <p className="text-sm sm:text-lg text-gray-900 text-justify">Фоайе и общи части по специален интериорен проект - с вътрешно оформление от гранит, съчетан с декоративни елементи ламинам.</p>
                                 <br />
 
                             </motion.div>
