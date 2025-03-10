@@ -111,7 +111,7 @@ export default function Apartments() {
                                     Обща площ
                                 </th>
                                 <th className="p-1 sm:p-2 text-center">
-                                    Цена* с ДДС
+                                    Цена* без ДДС
                                 </th>
                             </tr>
                         </thead>
@@ -153,7 +153,7 @@ export default function Apartments() {
                                                   </td>
                                                   <td className="p-3 text-center">
                                                       {apartment.available
-                                                          ? apartment.price_with_vat
+                                                          ? apartment.price_no_vat
                                                           : "ПРОДАДЕН"}
                                                   </td>
                                               </tr>
@@ -199,7 +199,7 @@ export default function Apartments() {
                                                   </td>
                                                   <td className="p-3 text-center">
                                                       {
-                                                          apartment?.price_with_vat
+                                                          apartment?.price_no_vat
                                                       }
                                                   </td>
                                               </tr>
@@ -213,9 +213,7 @@ export default function Apartments() {
                 <div className="bg-white p-5 flex flex-row justify-center items-center shadow-2xl">
                     <div className="flex flex-col justify-center items-center text-xxxs sm:text-base gap-1">
                         <div>
-                            * Цената от 1600 евро/м2 с ДДС е валидна до
-                            28.02.2025. От дата 01.03.2025 цената се изчислява
-                            на база 1700 евро/м2 с ДДС. От дата 01.08.2025
+                            * От дата 01.08.2025
                             цената се изчислява на база 1800 евро/м2 с ДДС.
                         </div>
                         <div> </div>
