@@ -268,7 +268,7 @@ export default function Apartments() {
                                 <th className="p-1 sm:p-2 text-center">Ниво</th>
                                 <th className="p-1 sm:p-2 text-center">Площ</th>
                                 <th className="p-1 sm:p-2 text-center">Система за двойно паркиране</th>
-                                <th className="p-1 sm:p-2 text-center">Цена</th>
+                                <th className="p-1 sm:p-2 text-center">Цена* без ДДС</th>
                             </tr>
                         </thead>
                         <tbody key={selectedBedroomType}>
