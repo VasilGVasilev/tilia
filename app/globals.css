@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* This is for the "import ImageGallery from "react-image-gallery";" */
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 @layer utilities {
 
 

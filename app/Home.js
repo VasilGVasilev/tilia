@@ -10,6 +10,7 @@ import WalkingDistance from "@/components/WalkingDistance";
 import Floors from "@/components/Floors";
 import dynamic from "next/dynamic";
 import Kota0 from "@/components/kota0";
+import Interior from "@/components/Interior";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
@@ -67,7 +68,7 @@ export default function Home() {
         <div>
             {/* WELCOME IMG AND TEXT */}
 
-            <div className="flex flex-col justify-center items-center gap-10 px-10 pt-20 md:pt-32 mt-7 pb-10 bg-white">
+            <div className="flex flex-col justify-center items-center gap-10 px-10 pt-6 md:pt-20 mt-7 pb-10">
                 {/* IMG */}
                 <div className={`relative text-center`}>
                     <div
@@ -78,19 +79,19 @@ export default function Home() {
                         <Image
                             className="z-10 w-full rounded-t-[1200px] max-w-[1200px] md:max-w-[1400px]"
                             loader={imageLoader}
-                            src="/tilia/tilia-one.webp"
+                            src="/interior/006.webp"
                             alt="tilia one"
                             width={4946}
                             height={3216}
                         ></Image>
                     </div>
 
-                    <div className="absolute top-0 left-1/2 translate-x-[-50%] translate-y-[-50%] flex flex-col justify-center items-center">
+                    <div className="absolute top-10 left-1/3 translate-x-[-50%] translate-y-[-50%] flex flex-col justify-end items-center">
                         <div className="text-black text-lg md:text-2xl lg:text-4xl ">
                             ЖИЛИЩНА СГРАДА
                         </div>
                         <div
-                            className={`${noto.className} text-black text-center py-5 text-4xl md:text-7xl lg:text-[140px]`}
+                            className={`${noto.className} text-tilia-yellow-block py-5 text-7xl md:text-[140px] welcomeTextOnImgBlc`}
                             // initial="hidden"
                             // whileInView="visible"
                             // transition={{ duration: 0.3 }}
@@ -237,6 +238,11 @@ export default function Home() {
                 </div>
             </div>
 
+            {/* INTERIOR */}
+            <div className="bg-tilia-yellow-block">
+                <Interior></Interior>
+            </div>
+
             {/* TIMELINE */}
             <div className="bg-tilia-gray">
                 <Timeline></Timeline>
@@ -248,7 +254,7 @@ export default function Home() {
             </div>
 
             {/* TYPES OF APARTMENTS */}
-            <div className="bg-white p-10">
+            <div className="bg-tilia-yellow-block">
                 <ApartmentTypes></ApartmentTypes>
             </div>
 
