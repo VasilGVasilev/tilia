@@ -9,7 +9,7 @@ import { HiExternalLink } from "react-icons/hi";
 const TypeApp = ({ title, img, imgW, imgH, bedrooms }) => {
     return (
         <div
-            className="bg-tilia-gray p-3 sm:p-10 mx-auto"
+            className=" p-3 sm:p-10 mx-auto"
         // viewport={{ once: true }}
         // variants={{
         //     hidden: { opacity: 0, scale: 1.3 },
@@ -17,7 +17,6 @@ const TypeApp = ({ title, img, imgW, imgH, bedrooms }) => {
         // }}
         >
             <Link href={`/apartments?param=${bedrooms}`}>
-                <div className="font-semibold md:text-xl lg:text-2xl">{title}</div>
                 <Image
                     className="hover:scale-105 transition duration-300 md:w-[300px] md:h-[300px]"
                     loader={imageLoader}
@@ -26,6 +25,8 @@ const TypeApp = ({ title, img, imgW, imgH, bedrooms }) => {
                     width={imgW}
                     height={imgH}
                 ></Image>
+                <div className="font-semibold md:text-2xl lg:text-3xl text-start">{title}</div>
+
             </Link>
         </div>
     );
@@ -35,28 +36,28 @@ const ApartmentTypes = () => {
     const apartmentTypes = [
         {
             title: "ЕДНОСТАЙНИ АПАРТАМЕНТИ",
-            imgUrl: "/assets/no-beds.webp",
+            imgUrl: "/assets/no-beds-v2.webp",
             imgW: "3000",
             imgH: "3000",
             bedrooms: "0",
         },
         {
             title: "ДВУСТАЙНИ АПАРТАМЕНТИ",
-            imgUrl: "/assets/one-bed.webp",
+            imgUrl: "/assets/one-bed-v2.webp",
             imgW: "3000",
             imgH: "3000",
             bedrooms: "1",
         },
         {
             title: "ТРИСТАЙНИ АПАРТАМЕНТИ",
-            imgUrl: "/assets/two-beds.webp",
+            imgUrl: "/assets/two-beds-v2.webp",
             imgW: "3000",
             imgH: "3000",
             bedrooms: "2",
         },
         {
             title: "ЧЕТИРИСТАЙНИ АПАРТАЙНИ",
-            imgUrl: "/assets/penthouse.webp",
+            imgUrl: "/assets/penthouse-v2.webp",
             imgW: "3000",
             imgH: "3000",
             bedrooms: "3",
@@ -64,7 +65,7 @@ const ApartmentTypes = () => {
     ];
 
     return (
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 p-10">
             <div className="text-black text-left flex flex-col">
                 <div
                     className={`${noto.className} text-2xl md:text-5xl lg:text-[80px]`}
@@ -120,7 +121,7 @@ const ApartmentTypes = () => {
             </div>
 
             <Link href={`/apartments?param=all`}>
-                <div className="flex flex-row gap-1 rounded-full bg-tilia-yellow-block w-fit h-fit p-3 font-semibold sm:text-xl hover:bg-black hover:text-white transition">
+                <div className="flex flex-row gap-1 rounded-full text-white bg-black w-fit h-fit p-3 font-semibold sm:text-xl hover:bg-white hover:text-black transition">
                     <div>Разгледай всички</div>
                     <HiExternalLink size={16} />
                 </div>
