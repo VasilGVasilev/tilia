@@ -3,176 +3,100 @@ import { lato, noto } from "@/utils/fonts";
 import { imageLoader } from "@/utils/imgLoader";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
+import BuildingProcess from "./BuildingProcess";
+const images3 = [
+    {
+        original: "/tilia-30-05/IMG_4821.JPG",
+        thumbnail: "/tilia-30-05/IMG_4821.JPG",
+    },
+    {
+        original: "/tilia-30-05/IMG_4822.JPG",
+        thumbnail: "/tilia-30-05/IMG_4822.JPG",
+    },
+    {
+        original: "/tilia-30-05/IMG_4823.JPG",
+        thumbnail: "/tilia-30-05/IMG_4823.JPG",
+    },
+    {
+        original: "/tilia-30-05/IMG_4824.JPG",
+        thumbnail: "/tilia-30-05/IMG_4824.JPG",
+    },
+    {
+        original: "/tilia-30-05/IMG_4825.JPG",
+        thumbnail: "/tilia-30-05/IMG_4825.JPG",
+    },
+    {
+        original: "/tilia-30-05/IMG_4826.JPG",
+        thumbnail: "/tilia-30-05/IMG_4826.JPG",
+    },
+    {
+        original: "/tilia-30-05/IMG_4827.JPG",
+        thumbnail: "/tilia-30-05/IMG_4827.JPG",
+    },
+    {
+        original: "/tilia-30-05/IMG_4828.JPG",
+        thumbnail: "/tilia-30-05/IMG_4828.JPG",
+    },
+    {
+        original: "/tilia-30-05/IMG_4829.JPG",
+        thumbnail: "/tilia-30-05/IMG_4829.JPG",
+    },
+];
+const images2 = [
+    {
+        original: "/kota0/third/image-001.webp",
+        thumbnail: "/kota0/third/image-001.webp",
+    },
+    {
+        original: "/kota0/image-0001.webp",
+        thumbnail: "/kota0/image-0001.webp",
+    },
+    {
+        original: "/kota0/image-0002.webp",
+        thumbnail: "/kota0/image-0002.webp",
+    },
+    {
+        original: "/kota0/image-001.webp",
+        thumbnail: "/kota0/image-001.webp",
+    },
+    {
+        original: "/kota0/image-002.webp",
+        thumbnail: "/kota0/image-002.webp",
+    },
+    {
+        original: "/kota0/image-003.webp",
+        thumbnail: "/kota0/image-003.webp",
+    }
+];
+const images1 = [
+    {
+        original: "/kota0/image-006.webp",
+        thumbnail: "/kota0/image-006.webp",
+    },
+    {
+        original: "/kota0/image-004.webp",
+        thumbnail: "/kota0/image-004.webp",
+    },
+    {
+        original: "/kota0/image-005.webp",
+        thumbnail: "/kota0/image-005.webp",
+    },
+    {
+        original: "/kota0/image-007.webp",
+        thumbnail: "/kota0/image-007.webp",
+    },
+    {
+        original: "/kota0/image-008.webp",
+        thumbnail: "/kota0/image-008.webp",
+    }
+];
 const Kota0 = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
-
-    const openModal = (imageSrc) => {
-        setSelectedImage(imageSrc);
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setSelectedImage(null);
-        setIsModalOpen(false);
-    };
 
     return (
-        <div className="relative">
-            <div className="flex flex-col">
-                {/* First row: two images -side by side */}
-                <div className="flex flex-row">
-                    <div className="w-1/2 p-2">
-                        <Image
-                            loader={imageLoader}
-                            src="/kota0/image-0001.webp"
-                            alt="Image"
-                            width={1500}
-                            height={1500}
-                            className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-0001.webp")}
-                        />
-                    </div>
-
-                    <div className="w-1/2 p-2">
-                        <Image
-                            loader={imageLoader}
-                            src="/kota0/image-0002.webp"
-                            alt="Image"
-                            width={1500}
-                            height={1500}
-                            className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-0002.webp")}
-                        />
-                    </div>
-                </div>
-                {/* Second row: two images -side by side */}
-                <div className="flex flex-row">
-                    <div className="w-1/2 p-2">
-                        <Image
-                            loader={imageLoader}
-                            src="/kota0/image-001.webp"
-                            alt="Image"
-                            width={1500}
-                            height={1500}
-                            className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-001.webp")}
-                        />
-                    </div>
-
-                    <div className="w-1/2 p-2">
-                        <Image
-                            loader={imageLoader}
-                            src="/kota0/image-002.webp"
-                            alt="Image"
-                            width={1500}
-                            height={1500}
-                            className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-002.webp")}
-                        />
-                    </div>
-                </div>
-                {/* Third row: one image */}
-                <div className="flex flex-row">
-                    <div className="w-1/2 p-2">
-                        <Image
-                            loader={imageLoader}
-                            src="/kota0/image-003.webp"
-                            alt="Image"
-                            width={1500}
-                            height={1500}
-                            className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-003.webp")}
-                        />
-                    </div>
-
-                    <div className="w-1/2 p-2"></div>
-                </div>
-                {/* Fourth row: three images first col long, second col other 2, one under the other */}
-
-                <div className="flex flex-row">
-                    <div className="flex flex-col w-1/2 p-2 ">
-                        <Image
-                            loader={imageLoader}
-                            src="/kota0/image-006.webp"
-                            alt="Image"
-                            width={1500}
-                            height={1500}
-                            className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-006.webp")}
-                        />
-                    </div>
-                    <div className="flex flex-col w-1/2 p-2 gap-4">
-                        <Image
-                            loader={imageLoader}
-                            src="/kota0/image-004.webp"
-                            alt="Image"
-                            width={1500}
-                            height={1500}
-                            className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-004.webp")}
-                        />
-                        <Image
-                            loader={imageLoader}
-                            src="/kota0/image-005.webp"
-                            alt="Image"
-                            width={1500}
-                            height={1500}
-                            className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-005.webp")}
-                        />
-                    </div>
-                </div>
-                {/* Fifth row: two images */}
-                <div className="flex flex-row">
-                    <div className="w-1/2 p-2">
-                        <Image
-                            loader={imageLoader}
-                            src="/kota0/image-007.webp"
-                            alt="Image"
-                            width={1500}
-                            height={1500}
-                            className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-007.webp")}
-                        />
-                    </div>
-
-                    <div className="w-1/2 p-2">
-                        <Image
-                            loader={imageLoader}
-                            src="/kota0/image-008.webp"
-                            alt="Image"
-                            width={1500}
-                            height={1500}
-                            className="object-cover cursor-pointer"
-                            onClick={() => openModal("/kota0/image-008.webp")}
-                        />
-                    </div>
-                </div>
-            </div>
-
-            {isModalOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
-                    <div className="relative">
-                        <button
-                            className="absolute top-0 right-0 m-4 text-white text-4xl"
-                            onClick={closeModal}
-                        >
-                            &times;
-                        </button>
-                        <Image
-                            style={{ maxHeight: "100vh" }}
-                            loader={imageLoader}
-                            src={selectedImage}
-                            alt="Selected Image"
-                            width={1500}
-                            height={1500}
-                            className="object-contain"
-                        />
-                    </div>
-                </div>
-            )}
+        <div className="flex flex-col gap-5 p-10">
+            <BuildingProcess images={images3}></BuildingProcess>
+            <BuildingProcess images={images2}></BuildingProcess>
+            <BuildingProcess images={images1}></BuildingProcess>
         </div>
     );
 };

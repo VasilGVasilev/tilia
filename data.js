@@ -1,4 +1,4 @@
-// sold flats B6 B14 A8 B11 A5 B7 B23 A21 B22 B19 B15
+// sold flats B6 B14 A8 B11 A5 B7 B23 A21 B22 B19 B15 B18
 
 export const data = {
     appA1: {
@@ -19,8 +19,7 @@ export const data = {
         available: true,
         appLink: 'A1',
         appCss: 'app-A1',
-        price_no_vat: '€ 154 330',
-        price_with_vat: '€ 185 200', 
+        price_no_vat: '€ 163 901,66', 
     },
     appA2: {
         apartmentImgUrl: '/apartments/A2.webp',
@@ -40,8 +39,7 @@ export const data = {
         available: true,
         appLink: 'A2',
         appCss: 'app-A2',
-        price_no_vat: '€ 208 462',
-        price_with_vat: '€ 250 155',  
+        price_no_vat: '€ 221 386,66',  
     },
     appB3: {
         apartmentImgUrl: '/apartments/B3.webp',
@@ -61,8 +59,7 @@ export const data = {
         available: true,
         appLink: 'B3',
         appCss: 'app-B3',
-        price_no_vat: '€ 208 462',
-        price_with_vat: '€ 250 155',  
+        price_no_vat: '€ 221 386,66',  
     },
     appA4: {
         apartmentImgUrl: '/apartments/A4.webp',
@@ -82,8 +79,7 @@ export const data = {
         available: true,
         appLink: 'A4',
         appCss: 'app-A4',
-        price_no_vat: '€ 129 316,5',
-        price_with_vat: '€ 153 264',   
+        price_no_vat: '€ 135 702,5',   
     },
     appA5: {
         apartmentImgUrl: '/apartments/A5.webp',
@@ -179,8 +175,7 @@ export const data = {
         available: true,
         appLink: 'A9',
         appCss: 'app-A9',
-        price_no_vat: '€ 163 444,5',
-        price_with_vat: '€ 193 712',  
+        price_no_vat: '€ 171 515,83',  
     },
     appB10: {
         apartmentImgUrl: '/apartments/B10.webp',
@@ -200,8 +195,7 @@ export const data = {
         available: true,
         appLink: 'B10',
         appCss: 'app-B10',
-        price_no_vat: '€ 163 444,5',
-        price_with_vat: '€ 193 712',   
+        price_no_vat: '€ 171 515,83',   
     },
     appB11: {
         apartmentImgUrl: '/apartments/B11.webp',
@@ -240,8 +234,7 @@ export const data = {
         available: true,
         appLink: 'A12',
         appCss: 'app-A12',
-        price_no_vat: '€ 144 909',
-        price_with_vat: '€ 171 744',    
+        price_no_vat: '€ 152 065',    
     },
     appA13: {
         apartmentImgUrl: '/apartments/A13.webp',
@@ -261,8 +254,7 @@ export const data = {
         available: true,
         appLink: 'A13',
         appCss: 'app-A13',
-        price_no_vat: '€ 163 444,5',
-        price_with_vat: '€ 193 712',   
+        price_no_vat: '€ 171 515,83',   
     },
     appB14: {
         apartmentImgUrl: '/apartments/B14.webp',
@@ -320,8 +312,7 @@ export const data = {
         available: true,
         appLink: 'A16',
         appCss: 'app-A16',
-        price_no_vat: '€ 144 909',
-        price_with_vat: '€ 171 744',    
+        price_no_vat: '€ 152 065',    
     },
     appA17: {
         apartmentImgUrl: '/apartments/A17.webp',
@@ -338,11 +329,10 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'A17',
         appCss: 'app-A17',
-        price_no_vat: '€ 163 444,5',
-        price_with_vat: '€ 193 712',    
+        price_no_vat: '€ 171 515,83',    
     },
     appB18: {
         apartmentImgUrl: '/apartments/B18.webp',
@@ -359,11 +349,10 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'B18',
         appCss: 'app-B18',
-        price_no_vat: '€ 163 444,5',
-        price_with_vat: '€ 193 712',    
+        price_no_vat: '€ 193 712',    
     },
     appB19: {
         apartmentImgUrl: '/apartments/B19.webp',
@@ -402,8 +391,7 @@ export const data = {
         available: true,
         appLink: 'A20',
         appCss: 'app-A20',
-        price_no_vat: '€ 144 909',
-        price_with_vat: '€ 171 744',  
+        price_no_vat: '€ 152 065',  
     },
     appA21: {
         apartmentImgUrl: '/apartments/A21.webp',
@@ -480,8 +468,7 @@ export const data = {
         available: true,
         appLink: 'A24',
         appCss: 'app-A24',
-        price_no_vat: '€ 144 909',
-        price_with_vat: '€ 171 744',   
+        price_no_vat: '€ 152 065',   
     },
     appA25: {
         apartmentImgUrl: '/apartments/A25.webp',
@@ -520,8 +507,7 @@ export const data = {
         available: true,
         appLink: 'B26',
         appCss: 'app-B26',
-        price_no_vat: '€ 163 444,5',
-        price_with_vat: '€ 193 712',   
+        price_no_vat: '€ 171 515,83',   
     },
     appB27: {
         apartmentImgUrl: '/apartments/B27.webp',
@@ -541,8 +527,7 @@ export const data = {
         available: false,
         appLink: 'B27',
         appCss: 'app-B27',
-        price_no_vat: '€ 96 700,5',
-        price_with_vat: '€ 114 608',    
+        price_no_vat: '€ 114 608',    
     },
     appA28: {
         apartmentImgUrl: '/apartments/A28.webp',
@@ -562,8 +547,7 @@ export const data = {
         available: true,
         appLink: 'A28',
         appCss: 'app-A28',
-        price_no_vat: '€ 144 922,5',
-        price_with_vat: '€ 171 760',    
+        price_no_vat: '€ 152 079,16',    
     },
     appA29: {
         apartmentImgUrl: '/apartments/A29.webp',
@@ -583,8 +567,7 @@ export const data = {
         available: true,
         appLink: 'A29',
         appCss: 'app-A29',
-        price_no_vat: '€ 236 196',
-        price_with_vat: '€ 279 936',   
+        price_no_vat: '€ 247 860',   
     },
     appB30: {
         apartmentImgUrl: '/apartments/B30.webp',
@@ -604,8 +587,7 @@ export const data = {
         available: true,
         appLink: 'B30',
         appCss: 'app-B30',
-        price_no_vat: '€ 236 196',
-        price_with_vat: '€ 279 936',    
+        price_no_vat: '€ 247 860',    
     },
     appB31: {
         apartmentImgUrl: '/apartments/B31.webp',
@@ -625,7 +607,6 @@ export const data = {
         available: false,
         appLink: 'B31',
         appCss: 'app-B31',
-        price_no_vat: '€ 96 768',
-        price_with_vat: '€ 114 688',  
+        price_no_vat: '€ 101 546,66',  
     },
 }
