@@ -97,7 +97,7 @@ export const dataGarage = {
         size: '25,64',
         price: '€ 26 500',
         extra: '',
-        available: true,
+        available: false,
     },
     garage13: {
         title: 'Гараж 13',
