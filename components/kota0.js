@@ -44,6 +44,10 @@ const images3 = [
 ];
 const images2 = [
     {
+        original: "/kota0/third/image-00001.JPG",
+        thumbnail: "/kota0/third/image-00001.JPG",
+    },
+    {
         original: "/kota0/third/image-001.webp",
         thumbnail: "/kota0/third/image-001.webp",
     },
