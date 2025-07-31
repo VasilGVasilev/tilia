@@ -210,7 +210,7 @@ export default function Apartments() {
                 </div>
 
                 {/* Note */}
-                <div className="bg-white p-5 flex flex-row justify-center items-center shadow-2xl">
+                {/* <div className="bg-white p-5 flex flex-row justify-center items-center shadow-2xl">
                     <div className="flex flex-col justify-center items-center text-xxxs sm:text-base gap-1">
                         <div>
                             * От дата 01.08.2025
@@ -240,7 +240,7 @@ export default function Apartments() {
                             </span>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Garage Title */}
                 <div className="text-black bg-tilia-yellow-block flex flex-row p-10">
