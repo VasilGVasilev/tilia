@@ -504,7 +504,7 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: false,
+        available: true,
         appLink: 'B26',
         appCss: 'app-B26',
         price_no_vat: '€ 171 515,83',   
