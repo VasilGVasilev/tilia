@@ -14,6 +14,7 @@ import PicsLightbox from "@/components/Lightbox";
 import {
     DaliaDescription,
     IxoraDescription,
+    MontierraDescription,
     WestEndDescription,
 } from "@/components/OtherProjectDescriptions";
 import { HiExternalLink } from "react-icons/hi";
@@ -41,6 +42,12 @@ export default function Investor() {
         "/ixora/ixora-two.webp",
         "/ixora/ixora-three.webp",
     ]);
+    const [montierra, setMontierra] = useState([
+        "/montierra/montierra-one.webp",
+        "/montierra/montierra-two.webp",
+        "/montierra/montierra-three.webp",
+    ]);
+
 
     const openModal = () => {
         setModalOpen(true);
@@ -308,6 +315,72 @@ export default function Investor() {
                                                 selectedPic={selectedPic}
                                                 urlW={5000}
                                                 urlH={2813}
+                                            />
+                                        ))}
+                                    </motion.div>
+                                </div>
+                            </div>
+                        </div>
+
+                    {/* Container for Montierra*/}
+                        <div className="flex flex-col gap-10">
+                                <div className="bg-tilia-white hover:bg-black text-tilia-yellow-text hover:text-white shadow-2xl flex flex-row gap-3 justify-center items-top">
+                                    <div className="flex flex-row gap-2 sm:gap-5 justify-center items-center ">
+                                        <motion.div
+                                            className={`  text-center font-mono  welcomeTextOnImg py-5 text-2xl md:text-5xl lg:text-[80px]`}
+                                            initial="hidden"
+                                            whileInView="visible"
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.7 }}
+                                            variants={{
+                                                hidden: {
+                                                    opacity: 0,
+                                                    translateY: 20,
+                                                    skewX: -80,
+                                                    rotateY: 50,
+                                                },
+                                                visible: {
+                                                    opacity: 1,
+                                                    translateY: 0,
+                                                    skewX: 0,
+                                                    rotateY: 0,
+                                                },
+                                            }}
+                                        >
+                                            MONTIERRA
+                                        </motion.div>
+                                    </div>
+                                </div>
+
+                            {/* Container for montierra images */}
+                            <div className=" px-5 xl:px-24 w-full h-full flex-col justify-center space-y-5">
+                                <div className="flex justify-center">
+                                    <motion.div
+                                        className="sm:grid sm:grid-cols-2 "
+                                        variants={{
+                                            hidden: {},
+                                            visible: {
+                                                transition: {
+                                                    staggerChildren: 0.7,
+                                                },
+                                            },
+                                        }}
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true, amount: 0.2 }}
+                                    >
+                                        <MontierraDescription />
+
+                                        {montierra.map((panel) => (
+                                            <ImageSquare
+                                                alt="montierra"
+                                                url={panel}
+                                                key={panel}
+                                                openModal={openModal}
+                                                setSelectedPic={setSelectedPic}
+                                                selectedPic={selectedPic}
+                                                urlW={5000}
+                                                urlH={3000}
                                             />
                                         ))}
                                     </motion.div>

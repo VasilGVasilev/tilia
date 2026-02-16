@@ -121,6 +121,114 @@ export const IxoraDescription = () => {
     )
 }
 
+export const MontierraDescription = () => {
+    return (
+        <div className={`m-auto w-full h-fit p-5`} >
+
+            <motion.div
+                className="text-left text-black md:text-xl"
+                variants={{
+                    hidden: {},
+                    visible: {
+                        transition: {
+                            staggerChildren: 0.06,
+                        },
+                    },
+                }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+            >
+                <motion.span variants={letterVariant}>В</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>очакване</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>на</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>разрешение</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>за</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>строеж</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>-</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>Montierra</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>Luxury</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>Residence</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>-</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>бутиков</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>жилищен</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>проект</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>с</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>луксозни</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>апартаменти</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>в</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>Драгалевци,</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>в</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>полите</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>на</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>Витоша.</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>Модерна</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>архитектура,</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>тишина</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>и</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>природа,</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>съчетани</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>с</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>бърз</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>достъп</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>до</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>града.</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>Дом</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>за</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>хора</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>с</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>усет</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>към</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>качеството</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>и</motion.span>
+                <motion.span variants={letterVariant}> </motion.span>
+                <motion.span variants={letterVariant}>детайла.</motion.span>
+            </motion.div>
+        </div>
+    )
+}
+
 export const DaliaDescription = () => {
     return (
         <div className={`m-auto w-full h-fit p-5`} >

@@ -79,7 +79,8 @@ const Timeline = () => {
                 <Tree title={'2023'} subtitle={'Проектиране '} ></Tree>
                 <Tree title={'Февруари 2024'} subtitle={'Първа копка'} ></Tree>
                 <Tree title={'Март 2025'} subtitle={'Акт 14'} ></Tree>
-                <Tree title={'Декември 2025'} subtitle={'Акт 16'} ></Tree>
+                <Tree title={'Февруари 2026'} subtitle={'Акт 15'} ></Tree>
+                <Tree title={'Юни 2026'} subtitle={'Акт 16'} ></Tree>
 
             </motion.div>
         </div>

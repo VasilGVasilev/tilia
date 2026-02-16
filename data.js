@@ -19,7 +19,7 @@ export const data = {
         available: true,
         appLink: 'A1',
         appCss: 'app-A1',
-        price_no_vat: '€ 187 500', 
+        price_no_vat: '€ 196 875', 
     },
     appA2: {
         apartmentImgUrl: '/apartments/A2.webp',
@@ -39,7 +39,7 @@ export const data = {
         available: true,
         appLink: 'A2',
         appCss: 'app-A2',
-        price_no_vat: '€ 245 833,3333',  
+        price_no_vat: '€ 258 125',  
     },
     appB3: {
         apartmentImgUrl: '/apartments/B3.webp',
@@ -59,7 +59,7 @@ export const data = {
         available: true,
         appLink: 'B3',
         appCss: 'app-B3',
-        price_no_vat: '€ 245 833,3333',  
+        price_no_vat: '€ 258 125',  
     },
     appA4: {
         apartmentImgUrl: '/apartments/A4.webp',
@@ -98,7 +98,8 @@ export const data = {
         floorH: '6000',
         available: false,
         appLink: 'A5',
-        appCss: 'app-A5' 
+        appCss: 'app-A5',
+        price_no_vat: '€ 71 500',   
     },
     appB6: {
         apartmentImgUrl: '/apartments/B6.webp',
@@ -172,10 +173,10 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'A9',
         appCss: 'app-A9',
-        price_no_vat: '€ 186 649,5833',  
+        price_no_vat: '€ 206 827,9167'  
     },
     appB10: {
         apartmentImgUrl: '/apartments/B10.webp',
@@ -195,7 +196,7 @@ export const data = {
         available: true,
         appLink: 'B10',
         appCss: 'app-B10',
-        price_no_vat: '€ 186 649,5833',   
+        price_no_vat: '€ 206 827,9167',   
     },
     appB11: {
         apartmentImgUrl: '/apartments/B11.webp',
@@ -234,7 +235,7 @@ export const data = {
         available: true,
         appLink: 'A12',
         appCss: 'app-A12',
-        price_no_vat: '€ 165 482,5', 
+        price_no_vat: '€ 183 372,5', 
     },
     appA13: {
         apartmentImgUrl: '/apartments/A13.webp',
@@ -254,7 +255,7 @@ export const data = {
         available: true,
         appLink: 'A13',
         appCss: 'app-A13',
-        price_no_vat: '€ 186 649,5833',   
+        price_no_vat: '€ 206 827,9167',   
     },
     appB14: {
         apartmentImgUrl: '/apartments/B14.webp',
@@ -309,10 +310,10 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'A16',
         appCss: 'app-A16',
-        price_no_vat: '€ 165 482,5',     
+        price_no_vat: '€ 174 427,5',     
     },
     appA17: {
         apartmentImgUrl: '/apartments/A17.webp',
@@ -388,10 +389,10 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'A20',
         appCss: 'app-A20',
-        price_no_vat: '€ 165 482,5',      
+        price_no_vat: '€ 174 427,5',      
     },
     appA21: {
         apartmentImgUrl: '/apartments/A21.webp',
@@ -468,7 +469,7 @@ export const data = {
         available: true,
         appLink: 'A24',
         appCss: 'app-A24',
-        price_no_vat: '€ 165 482,5',      
+        price_no_vat: '€ 183 372,5',      
     },
     appA25: {
         apartmentImgUrl: '/apartments/A25.webp',
@@ -504,10 +505,10 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'B26',
         appCss: 'app-B26',
-        price_no_vat: '€ 171 515,83',   
+        price_no_vat: '€ 186 649,5833',  
     },
     appB27: {
         apartmentImgUrl: '/apartments/B27.webp',
@@ -547,7 +548,7 @@ export const data = {
         available: true,
         appLink: 'A28',
         appCss: 'app-A28',
-        price_no_vat: '€ 165 497,9167',      
+        price_no_vat: '€ 183 389,5833' 
     },
     appA29: {
         apartmentImgUrl: '/apartments/A29.webp',
@@ -567,7 +568,7 @@ export const data = {
         available: true,
         appLink: 'A29',
         appCss: 'app-A29',
-        price_no_vat: '€ 269 730',   
+        price_no_vat: '€ 284 310',   
     },
     appB30: {
         apartmentImgUrl: '/apartments/B30.webp',
@@ -587,7 +588,7 @@ export const data = {
         available: true,
         appLink: 'B30',
         appCss: 'app-B30',
-        price_no_vat: '€ 269 730',    
+        price_no_vat: '€ 284 310',   
     },
     appB31: {
         apartmentImgUrl: '/apartments/B31.webp',

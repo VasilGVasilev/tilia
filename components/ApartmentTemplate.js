@@ -61,10 +61,9 @@ const ApartmentTemplate = ({ apartmentImgUrl, floor, beds, direction, size, size
                             <span className="text-tilia-yellow-text"><a href={`tel:00359886879993`} className="font-semibold">+359886879993</a></span>
                         </li>
                         <li className="flex justify-between border-tilia-yellow-text border-b md:pt-1 py-2">
-                            <span>Цена* без ДДС</span>
+                            <span>Цена без ДДС</span>
                             <span className="text-tilia-yellow-text">{priceVat}</span>
                         </li>
-                        <div className="text-base">* От дата 01.08.2025 цената се изчислява на база 1800 евро/м2 с ДДС.</div>
                     </ul>
                     {/* DETAILS */}
                     <div className="grid gap-5">
