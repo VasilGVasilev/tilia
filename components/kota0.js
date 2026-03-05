@@ -6,6 +6,10 @@ import Image from "next/image";
 import BuildingProcess from "./BuildingProcess";
 const images3 = [
     {
+        original: "/tilia-05-03/image-4DF0-9723-79-0.jpeg",
+        thumbnail: "/tilia-05-03/image-4DF0-9723-79-0.jpeg",
+    },
+    {
         original: "/tilia-25-01/IMG_2735.JPG",
         thumbnail: "/tilia-25-01/IMG_2735.JPG",
     },
