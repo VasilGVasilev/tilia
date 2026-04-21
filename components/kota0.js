@@ -4,7 +4,16 @@ import { imageLoader } from "@/utils/imgLoader";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import BuildingProcess from "./BuildingProcess";
+
 const images3 = [
+    {
+        original: "/tilia-21-04/IMG_4183.JPG",
+        thumbnail: "/tilia-21-04/IMG_4183.JPG",
+    },
+    {
+        original: "/tilia-21-04/IMG_4184.JPG",
+        thumbnail: "/tilia-21-04/IMG_4184.JPG",
+    },
     {
         original: "/tilia-05-03/image-4DF0-9723-79-0.jpeg",
         thumbnail: "/tilia-05-03/image-4DF0-9723-79-0.jpeg",
