@@ -92,16 +92,12 @@ export default function Home() {
                         </div>
                         <div
                             className={`${noto.className} text-tilia-yellow-block py-5 text-7xl md:text-[140px] welcomeTextOnImgBlc`}
-                            // initial="hidden"
-                            // whileInView="visible"
-                            // transition={{ duration: 0.3 }}
-                            // variants={{
-                            //     hidden: { opacity: 0, translateY: 20, skewX: -80, rotateY: 50 },
-                            //     visible: { opacity: 1, translateY: 0, skewX: 0, rotateY: 0 },
-                            // }}
                         >
                             ТИЛИЯ
                         </div>
+                    </div>
+                    <div className={`${noto.className} absolute bottom-4 right-4 md:bottom-8 md:right-8 text-tilia-yellow-block text-3xl md:text-6xl lg:text-9xl welcomeTextOnImgBlc`}>
+                        С АКТ 15
                     </div>
                 </div>
 
