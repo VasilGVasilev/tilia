@@ -96,7 +96,7 @@ export default function Home() {
                             ТИЛИЯ
                         </div>
                     </div>
-                    <div className={`${noto.className} absolute bottom-4 right-4 md:bottom-8 md:right-8 text-tilia-yellow-block text-3xl md:text-6xl lg:text-9xl welcomeTextOnImgBlc`}>
+                    <div className={`absolute bottom-4 right-4 md:bottom-8 md:right-8 text-tilia-yellow-block text-3xl md:text-6xl lg:text-9xl welcomeTextOnImgBlc font-medium`}>
                         С АКТ 15
                     </div>
                 </div>
