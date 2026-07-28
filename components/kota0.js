@@ -5,6 +5,40 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import BuildingProcess from "./BuildingProcess";
 
+const images4 = [
+    {
+        original: "/tilia-28-07-26/P1283267HDR.webp",
+        thumbnail: "/tilia-28-07-26/P1283267HDR.webp",
+    },
+    {
+        original: "/tilia-28-07-26/P1283270HDR.webp",
+        thumbnail: "/tilia-28-07-26/P1283270HDR.webp",
+    },
+    {
+        original: "/tilia-28-07-26/P1283273HDR.webp",
+        thumbnail: "/tilia-28-07-26/P1283273HDR.webp",
+    },
+    {
+        original: "/tilia-28-07-26/P1283339HDR-1.webp",
+        thumbnail: "/tilia-28-07-26/P1283339HDR-1.webp",
+    },
+    {
+        original: "/tilia-28-07-26/P1283342HDR.webp",
+        thumbnail: "/tilia-28-07-26/P1283342HDR.webp",
+    },
+    {
+        original: "/tilia-28-07-26/P1283426HDR.webp",
+        thumbnail: "/tilia-28-07-26/P1283426HDR.webp",
+    },
+    {
+        original: "/tilia-28-07-26/P1283429.webp",
+        thumbnail: "/tilia-28-07-26/P1283429.webp",
+    },
+    {
+        original: "/tilia-28-07-26/P1283431.webp",
+        thumbnail: "/tilia-28-07-26/P1283431.webp",
+    },
+];
 const images3 = [
     {
         original: "/tilia-21-04/IMG_4183.JPG",
@@ -115,6 +149,7 @@ const Kota0 = () => {
 
     return (
         <div className="flex flex-col gap-5 p-10">
+            <BuildingProcess images={images4}></BuildingProcess>
             <BuildingProcess images={images3}></BuildingProcess>
             <BuildingProcess images={images2}></BuildingProcess>
         </div>

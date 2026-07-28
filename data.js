@@ -232,7 +232,7 @@ export const data = {
         apartmentH: '3200',
         floorW: '9850',
         floorH: '6000',
-        available: true,
+        available: false,
         appLink: 'A12',
         appCss: 'app-A12',
         price_no_vat: '€ 183 372,5', 
