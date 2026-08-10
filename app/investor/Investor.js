@@ -324,6 +324,7 @@ export default function Investor() {
 
                     {/* Container for Montierra*/}
                         <div className="flex flex-col gap-10">
+                            <Link href={`https://montierrabg.com/`}>
                                 <div className="bg-tilia-white hover:bg-black text-tilia-yellow-text hover:text-white shadow-2xl flex flex-row gap-3 justify-center items-top">
                                     <div className="flex flex-row gap-2 sm:gap-5 justify-center items-center ">
                                         <motion.div
@@ -350,7 +351,33 @@ export default function Investor() {
                                             MONTIERRA
                                         </motion.div>
                                     </div>
+                                    <motion.div
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.7 }}
+                                        variants={{
+                                            hidden: {
+                                                opacity: 0,
+                                                translateY: 20,
+                                                skewX: -80,
+                                                rotateY: 50,
+                                            },
+                                            visible: {
+                                                opacity: 1,
+                                                translateY: 0,
+                                                skewX: 0,
+                                                rotateY: 0,
+                                            },
+                                        }}
+                                    >
+                                        <HiExternalLink
+                                            size={24}
+                                            className=""
+                                        />
+                                    </motion.div>
                                 </div>
+                            </Link>
 
                             {/* Container for montierra images */}
                             <div className=" px-5 xl:px-24 w-full h-full flex-col justify-center space-y-5">
